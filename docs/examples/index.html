@@ -651,6 +651,12 @@
         <li><a href="#cq2">CQ2</a></li>
         <li><a href="#cq3">CQ3</a></li>
         <li><a href="#cq4">CQ4</a></li>
+        <li><a href="#cq5">CQ5</a></li>
+        <li><a href="#cq6">CQ6</a></li>
+        <li><a href="#cq7">CQ7</a></li>
+        <li><a href="#cq8">CQ8</a></li>
+        <li><a href="#cq9">CQ9</a></li>
+        <li><a href="#cq10">CQ10</a></li>
       </ul>
     </li>
   </ul>
@@ -714,7 +720,7 @@ PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
 PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
 PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
 PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
-   
+    
 SELECT DISTINCT ?title ?work ?author
 WHERE {
   ?work rdf:type fabio:Work .
@@ -723,6 +729,8 @@ WHERE {
   ?work dcterms:title ?title .
         }
 </code></pre>
+</li>
+</ul>
 <p><ul class="cta-group">
   
   <li>
@@ -733,8 +741,6 @@ WHERE {
 </ul>
 
 <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq01.html" target="_blank">Download Results</a></p>
-</li>
-</ul>
 <hr>
 <h3 id="cq2">CQ2</h3>
 <ul>
@@ -747,7 +753,7 @@ PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
 PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
 PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
 PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
-   
+    
 SELECT DISTINCT ?ddbitem ?title ?work ?author
 WHERE {
   ?work rdf:type fabio:Work .
@@ -757,6 +763,8 @@ WHERE {
   ?work dcterms:title ?title FILTER regex(str(?title), &quot;R.*uber&quot;, &quot;i&quot;) .
         }
 </code></pre>
+</li>
+</ul>
 <p><ul class="cta-group">
   
   <li>
@@ -767,11 +775,9 @@ WHERE {
 </ul>
 
 <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq02.html" target="_blank">Download Results</a></p>
-</li>
-</ul>
 <hr>
 <h3 id="cq3">CQ3</h3>
-<ol start="3">
+<ul>
 <li>Look for digitized copies of &ldquo;Die Räuber&rdquo;
 <pre><code>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -781,7 +787,7 @@ PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
 PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
 PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
 PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
-   
+    
     SELECT DISTINCT ?title ?ddbitem ?type ?epub
     WHERE {
       ?work rdf:type fabio:Work ;
@@ -794,6 +800,8 @@ PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
       ?di fabio:isExemplarOf ?epub .        
 }
 </code></pre>
+</li>
+</ul>
 <p><ul class="cta-group">
   
   <li>
@@ -804,10 +812,106 @@ PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
 </ul>
 
 <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq03.html" target="_blank">Download Results</a></p>
-</li>
-</ol>
 <hr>
 <h3 id="cq4">CQ4</h3>
+<ul>
+<li></li>
+</ul>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq04.html" target="_blank">Download Results</a></p>
+<hr>
+<h3 id="cq5">CQ5</h3>
+<ul>
+<li></li>
+</ul>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq05.html" target="_blank">Download Results</a></p>
+<h3 id="cq6">CQ6</h3>
+<ul>
+<li></li>
+</ul>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq06.html" target="_blank">Download Results</a></p>
+<h3 id="cq7">CQ7</h3>
+<ul>
+<li></li>
+</ul>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq07.html" target="_blank">Download Results</a></p>
+<h3 id="cq8">CQ8</h3>
+<ul>
+<li></li>
+</ul>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq08.html" target="_blank">Download Results</a></p>
+<h3 id="cq9">CQ9</h3>
+<ul>
+<li></li>
+</ul>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq09.html" target="_blank">Download Results</a></p>
+<h3 id="cq10">CQ10</h3>
+<ul>
+<li></li>
+</ul>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq10.html" target="_blank">Download Results</a></p>
 
           </div>
 
