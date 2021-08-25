@@ -733,7 +733,6 @@ WHERE {
 </ul>
 
 <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq01.html" target="_blank">Download Results</a></p>
-<!--- #### View [Results](https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq01.html) --->   
 </li>
 </ul>
 <hr>
@@ -758,6 +757,16 @@ WHERE {
   ?work dcterms:title ?title FILTER regex(str(?title), &quot;R.*uber&quot;, &quot;i&quot;) .
         }
 </code></pre>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href="http://10.10.4.10:8890/sparql?default-graph-uri=&amp;query=PREFIX&#43;rdf%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;rdfs%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;gnd%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fgnd%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;gndo%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fstandards%2Felementset%2Fgnd%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;frbr%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Ffrbr%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;%3Fddbitem&#43;%3Ftitle&#43;%3Fwork&#43;%3Fauthor%0D%0A&#43;&#43;&#43;&#43;WHERE&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;rdf%3Atype&#43;fabio%3AWork&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;dcterms%3Acreator&#43;%3Fauthor&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;fabio%3AhasPortrayal&#43;%3Fddbitem&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fauthor&#43;foaf%3Aname&#43;%3Fauthor_name&#43;FILTER&#43;regex%28str%28%3Fauthor_name%29%2C&#43;%22Schiller%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;dcterms%3Atitle&#43;%3Ftitle&#43;FILTER&#43;regex%28str%28%3Ftitle%29%2C&#43;%22R.*uber%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq02.html" target="_blank">Download Results</a></p>
 </li>
 </ul>
 <hr>
@@ -779,7 +788,7 @@ PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
             fabio:hasRealization ?expression .
       ?expression fabio:hasRepresentation ?ddbitem ;
             dcterms:title ?title 
-            FILTER regex(str(?title), &quot;Die R.*uber&quot;, &quot;i&quot;) .
+            FILTER regex(str(?title), &quot;Die Räuber&quot;, &quot;i&quot;) .
       ?ddbitem dcterms:type ?type ;
             fabio:hasReproduction ?di .
       ?di fabio:isExemplarOf ?epub .        
