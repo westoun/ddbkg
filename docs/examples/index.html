@@ -560,7 +560,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          
+          Docs
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -599,7 +599,7 @@
 
     
       <ul class="nav docs-sidenav">
-        <li class=""><a href="/ddbkg/docs/"></a></li>
+        <li class=""><a href="/ddbkg/docs/">Docs</a></li>
     
       
 
@@ -652,11 +652,6 @@
         <li><a href="#cq3">CQ3</a></li>
         <li><a href="#cq4">CQ4</a></li>
         <li><a href="#cq5">CQ5</a></li>
-        <li><a href="#cq6">CQ6</a></li>
-        <li><a href="#cq7">CQ7</a></li>
-        <li><a href="#cq8">CQ8</a></li>
-        <li><a href="#cq9">CQ9</a></li>
-        <li><a href="#cq10">CQ10</a></li>
       </ul>
     </li>
   </ul>
@@ -691,7 +686,7 @@
   <li class="breadcrumb-item">
     <a href="/ddbkg/docs/">
       
-        
+        Docs
       
     </a>
   </li>
@@ -727,7 +722,7 @@ WHERE {
   ?work dcterms:creator ?author .
   ?author foaf:name ?author_name FILTER regex(str(?author_name), &quot;Schiller&quot;, &quot;i&quot;) .
   ?work dcterms:title ?title .
-        }
+}
 </code></pre>
 </li>
 </ul>
@@ -744,7 +739,7 @@ WHERE {
 <hr>
 <h3 id="cq2">CQ2</h3>
 <ul>
-<li>Look for all works of all DDB objects related to &ldquo;Schillers Räuber&rdquo;
+<li>Look for all DDB objects created by &ldquo;Schiller&rdquo; with title &ldquo;Räuber&rdquo;, exclude partial objects
 <pre><code>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 PREFIX gnd: &lt;http://d-nb.info/gnd/&gt;
@@ -753,22 +748,25 @@ PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
 PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
 PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
 PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
-    
-SELECT DISTINCT ?ddbitem ?title ?work ?author
+        
+SELECT DISTINCT ?ddbitem ?title ?author
 WHERE {
-  ?work rdf:type fabio:Work .
-  ?work dcterms:creator ?author .
-  ?work fabio:hasPortrayal ?ddbitem .
+  ?ddbitem rdf:type fabio:AnalogItem .
+  ?ddbitem dcterms:creator ?author FILTER (
+     !EXISTS {
+       ?ddbitem dcterms:isPartOf ?parent
+     }
+  )
   ?author foaf:name ?author_name FILTER regex(str(?author_name), &quot;Schiller&quot;, &quot;i&quot;) .
-  ?work dcterms:title ?title FILTER regex(str(?title), &quot;R.*uber&quot;, &quot;i&quot;) .
-        }
+  ?ddbitem dcterms:title ?title FILTER regex(str(?title), &quot;Räuber&quot;, &quot;i&quot;) .
+}
 </code></pre>
 </li>
 </ul>
 <p><ul class="cta-group">
   
   <li>
-    <a href="http://10.10.4.10:8890/sparql?default-graph-uri=&amp;query=PREFIX&#43;rdf%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;rdfs%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;gnd%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fgnd%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;gndo%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fstandards%2Felementset%2Fgnd%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;frbr%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Ffrbr%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;%3Fddbitem&#43;%3Ftitle&#43;%3Fwork&#43;%3Fauthor%0D%0A&#43;&#43;&#43;&#43;WHERE&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;rdf%3Atype&#43;fabio%3AWork&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;dcterms%3Acreator&#43;%3Fauthor&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;fabio%3AhasPortrayal&#43;%3Fddbitem&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fauthor&#43;foaf%3Aname&#43;%3Fauthor_name&#43;FILTER&#43;regex%28str%28%3Fauthor_name%29%2C&#43;%22Schiller%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;dcterms%3Atitle&#43;%3Ftitle&#43;FILTER&#43;regex%28str%28%3Ftitle%29%2C&#43;%22R.*uber%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="http://10.10.4.10:8890/sparql?default-graph-uri=&amp;query=PREFIX&#43;rdf%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX&#43;rdfs%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX&#43;gnd%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fgnd%2F%3E%0D%0APREFIX&#43;gndo%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fstandards%2Felementset%2Fgnd%23%3E%0D%0APREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0APREFIX&#43;frbr%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Ffrbr%2Fcore%23%3E%0D%0APREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;%0D%0ASELECT&#43;DISTINCT&#43;%3Fddbitem&#43;%3Ftitle&#43;%3Fauthor%0D%0AWHERE&#43;%7B%0D%0A&#43;&#43;%3Fddbitem&#43;rdf%3Atype&#43;fabio%3AAnalogItem&#43;.%0D%0A&#43;&#43;%3Fddbitem&#43;dcterms%3Acreator&#43;%3Fauthor&#43;FILTER&#43;%28%0D%0A&#43;&#43;&#43;&#43;&#43;%21EXISTS&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3AisPartOf&#43;%3Fparent%0D%0A&#43;&#43;&#43;&#43;&#43;%7D%0D%0A&#43;&#43;%29%0D%0A&#43;&#43;%3Fauthor&#43;foaf%3Aname&#43;%3Fauthor_name&#43;FILTER&#43;regex%28str%28%3Fauthor_name%29%2C&#43;%22Schiller%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;%3Fddbitem&#43;dcterms%3Atitle&#43;%3Ftitle&#43;FILTER&#43;regex%28str%28%3Ftitle%29%2C&#43;%22R.*uber%22%2C&#43;%22i%22%29&#43;.%0D%0A%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
@@ -788,16 +786,16 @@ PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
 PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
 PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
     
-    SELECT DISTINCT ?title ?ddbitem ?type ?epub
-    WHERE {
-      ?work rdf:type fabio:Work ;
-            fabio:hasRealization ?expression .
-      ?expression fabio:hasRepresentation ?ddbitem ;
-            dcterms:title ?title 
-            FILTER regex(str(?title), &quot;Die Räuber&quot;, &quot;i&quot;) .
-      ?ddbitem dcterms:type ?type ;
-            fabio:hasReproduction ?di .
-      ?di fabio:isExemplarOf ?epub .        
+SELECT DISTINCT ?title ?ddbitem ?type ?epub
+WHERE {
+  ?work rdf:type fabio:Work ;
+        fabio:hasRealization ?expression .
+  ?expression fabio:hasRepresentation ?ddbitem ;
+        dcterms:title ?title 
+        FILTER regex(str(?title), &quot;Die Räuber&quot;, &quot;i&quot;) .
+  ?ddbitem dcterms:type ?type ;
+        fabio:hasReproduction ?di .
+  ?di fabio:isExemplarOf ?epub .        
 }
 </code></pre>
 </li>
@@ -815,103 +813,205 @@ PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
 <hr>
 <h3 id="cq4">CQ4</h3>
 <ul>
-<li></li>
-</ul>
+<li>What are the works of Thomas Mann and the DDB primary objects associated with them?
+<pre><code>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX gnd: &lt;http://d-nb.info/gnd/&gt;
+PREFIX gndo: &lt;http://d-nb.info/standards/elementset/gnd#&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+    
+SELECT DISTINCT ?title ?ddbitem
+WHERE {
+  ?work rdf:type fabio:Work .
+  ?work fabio:hasPortrayal ?ddbitem FILTER (
+     !EXISTS {
+       ?ddbitem dcterms:isPartOf ?parent
+     }
+  ) .
+  ?work dcterms:creator ?author .
+  ?author foaf:name ?author_name FILTER (regex(str(?author_name), &quot;Thomas Mann&quot;, &quot;i&quot;) || regex(str(?author_name), &quot;Mann, Thomas&quot;, &quot;i&quot;)).
+  ?work dcterms:title ?title .
+}
+</code></pre>
 <p><ul class="cta-group">
   
   <li>
-    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;query=PREFIX&#43;rdf%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;rdfs%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;gnd%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fgnd%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;gndo%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fstandards%2Felementset%2Fgnd%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;frbr%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Ffrbr%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;%3Ftitle&#43;%3Fddbitem%0D%0A&#43;&#43;&#43;&#43;WHERE&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;rdf%3Atype&#43;fabio%3AWork&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;fabio%3AhasPortrayal&#43;%3Fddbitem&#43;FILTER&#43;%28%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%21EXISTS&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3AisPartOf&#43;%3Fparent%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%7D%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;dcterms%3Acreator&#43;%3Fauthor&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fauthor&#43;foaf%3Aname&#43;%3Fauthor_name&#43;FILTER&#43;%28regex%28str%28%3Fauthor_name%29%2C&#43;%22Thomas&#43;Mann%22%2C&#43;%22i%22%29&#43;%7C%7C&#43;regex%28str%28%3Fauthor_name%29%2C&#43;%22Mann%2C&#43;Thomas%22%2C&#43;%22i%22%29%29.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fwork&#43;dcterms%3Atitle&#43;%3Ftitle&#43;.%0D%0A&#43;&#43;&#43;&#43;%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
 </ul>
 
 <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq04.html" target="_blank">Download Results</a></p>
+</li>
+</ul>
 <hr>
 <h3 id="cq5">CQ5</h3>
 <ul>
-<li></li>
-</ul>
+<li>Which languages was Johann Wolfgang von Goethe&rsquo;s Faust was translated into and how many objects exist per translations?
+<pre><code>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX gnd: &lt;http://d-nb.info/gnd/&gt;
+PREFIX gndo: &lt;http://d-nb.info/standards/elementset/gnd#&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+    
+SELECT DISTINCT ?lang (COUNT (?lang) as ?items)
+WHERE {
+  ?expression dcterms:creator ?author .
+  ?author foaf:name ?author_name FILTER (regex(str(?author_name), &quot;Johann Wolfgang von Goethe&quot;, &quot;i&quot;) || regex(str(?author_name), &quot;Goethe, Johann Wolfgang von&quot;, &quot;i&quot;)) .
+  ?expression dcterms:title ?title FILTER regex(str(?title), &quot;Faust&quot;, &quot;i&quot;) .
+  ?expression dcterms:language ?lang .
+  ?expression fabio:hasRepresentation ?ddbitem FILTER (
+     !EXISTS {
+       ?ddbitem dcterms:isPartOf ?parent
+     }
+  ) .
+} GROUP BY ?lang
+</code></pre>
 <p><ul class="cta-group">
   
   <li>
-    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;query=PREFIX&#43;rdf%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX&#43;rdfs%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX&#43;gnd%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fgnd%2F%3E%0D%0APREFIX&#43;gndo%3A&#43;%3Chttp%3A%2F%2Fd-nb.info%2Fstandards%2Felementset%2Fgnd%23%3E%0D%0APREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0APREFIX&#43;frbr%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Ffrbr%2Fcore%23%3E%0D%0APREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;%0D%0ASELECT&#43;DISTINCT&#43;%3Flang&#43;%28COUNT&#43;%28%3Flang%29&#43;as&#43;%3Fitems%29%0D%0AWHERE&#43;%7B%0D%0A&#43;&#43;%3Fexpression&#43;dcterms%3Acreator&#43;%3Fauthor&#43;.%0D%0A&#43;&#43;%3Fauthor&#43;foaf%3Aname&#43;%3Fauthor_name&#43;FILTER&#43;%28regex%28str%28%3Fauthor_name%29%2C&#43;%22Johann&#43;Wolfgang&#43;von&#43;Goethe%22%2C&#43;%22i%22%29&#43;%7C%7C&#43;regex%28str%28%3Fauthor_name%29%2C&#43;%22Goethe%2C&#43;Johann&#43;Wolfgang&#43;von%22%2C&#43;%22i%22%29%29&#43;.%0D%0A&#43;&#43;%3Fexpression&#43;dcterms%3Atitle&#43;%3Ftitle&#43;FILTER&#43;regex%28str%28%3Ftitle%29%2C&#43;%22Faust%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;%3Fexpression&#43;dcterms%3Alanguage&#43;%3Flang&#43;.%0D%0A&#43;&#43;%3Fexpression&#43;fabio%3AhasRepresentation&#43;%3Fddbitem&#43;FILTER&#43;%28%0D%0A&#43;&#43;&#43;&#43;&#43;%21EXISTS&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3AisPartOf&#43;%3Fparent%0D%0A&#43;&#43;&#43;&#43;&#43;%7D%0D%0A&#43;&#43;%29&#43;.%0D%0A%7D&#43;GROUP&#43;BY&#43;%3Flang&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
 </ul>
 
 <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq05.html" target="_blank">Download Results</a></p>
-<h3 id="cq6">CQ6</h3>
-<ul>
-<li></li>
+</li>
 </ul>
-<p><ul class="cta-group">
+<!---
+### CQ6
+  - How many books were published by publishers located in Leipzig?
+    ```
+
+    ```
+    <ul class="cta-group">
   
   <li>
-    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
 </ul>
 
-<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq06.html" target="_blank">Download Results</a></p>
-<h3 id="cq7">CQ7</h3>
-<ul>
-<li></li>
-</ul>
-<p><ul class="cta-group">
+    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq06.html" target="_blank">Download Results</a>
+
+### CQ7
+  - 
+    ```
+
+    ```
+    <ul class="cta-group">
   
   <li>
-    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
 </ul>
 
-<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq07.html" target="_blank">Download Results</a></p>
-<h3 id="cq8">CQ8</h3>
-<ul>
-<li></li>
-</ul>
-<p><ul class="cta-group">
+    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq07.html" target="_blank">Download Results</a>
+
+### CQ8
+  - 
+    ```
+
+    ```
+    <ul class="cta-group">
   
   <li>
-    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
 </ul>
 
-<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq08.html" target="_blank">Download Results</a></p>
-<h3 id="cq9">CQ9</h3>
-<ul>
-<li></li>
-</ul>
-<p><ul class="cta-group">
+    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq08.html" target="_blank">Download Results</a>
+
+### CQ9
+  - 
+    ```
+
+    ```
+    <ul class="cta-group">
   
   <li>
-    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
 </ul>
 
-<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq09.html" target="_blank">Download Results</a></p>
-<h3 id="cq10">CQ10</h3>
-<ul>
-<li></li>
-</ul>
-<p><ul class="cta-group">
+    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq09.html" target="_blank">Download Results</a>
+
+### CQ10
+  - 
+    ```
+
+    ```
+    <ul class="cta-group">
   
   <li>
-    <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
 </ul>
 
-<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq10.html" target="_blank">Download Results</a></p>
+    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq10.html" target="_blank">Download Results</a>
+
+--->
+<!---
+Previous CQ2
+```
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX gnd: <http://d-nb.info/gnd/>
+    PREFIX gndo: <http://d-nb.info/standards/elementset/gnd#>
+    PREFIX fabio: <http://purl.org/spar/fabio/>
+    PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    
+    SELECT DISTINCT ?ddbitem ?title ?work ?author
+    WHERE {
+      ?work rdf:type fabio:Work .
+      ?work dcterms:creator ?author .
+      ?work fabio:hasPortrayal ?ddbitem .
+      ?author foaf:name ?author_name FILTER regex(str(?author_name), "Schiller", "i") .
+      ?work dcterms:title ?title FILTER regex(str(?title), "R.*uber", "i") .
+            }
+    ```
+    
+    CQ5
+    ```
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX gnd: <http://d-nb.info/gnd/>
+    PREFIX gndo: <http://d-nb.info/standards/elementset/gnd#>
+    PREFIX fabio: <http://purl.org/spar/fabio/>
+    PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    
+    SELECT ?langcode (COUNT (?langcode) as ?translations)
+    WHERE {
+      ?expression dcterms:creator ?author .
+      ?expression fabio:hasRepresentation ?ddbitem
+      ?author foaf:name ?author_name FILTER (regex(str(?author_name), "Johann Wolfgang von Goethe", "i") || regex(str(?author_name), "Goethe, Johann Wolfgang von", "i")) .
+      ?expression dcterms:title ?title FILTER regex(str(?title), "Faust", "i") .
+      ?expression dcterms:language ?lang .
+      ?lang rdfs:label ?langcode .
+    } GROUP BY ?langcode
+    ```
+--->
 
           </div>
 
