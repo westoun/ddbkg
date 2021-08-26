@@ -1,0 +1,774 @@
+18960300,,,,,,,
+:Schulbuch,Textbook,,https://d-nb.info/gnd/4053458-3,,fabio:Textbook,fabio:PrintObject,fabio:AnalogItem
+!010881441!Predigtsammlung,Sermon Collection,,https://d-nb.info/gnd/4123978-7,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+[Zeitungsartikel],Newspaper Article,,https://d-nb.info/gnd/4125430-2,,fabio:NewspaperArticle,fabio:PrintObject,fabio:AnalogItem
+16 S,,,,,,,
+319 S.,,,,,,,
+56 ungezählte Seiten,,,,,,,
+Abschlussarbeit (Master),Master's Thesis,,https://d-nb.info/gnd/1105859770,,fabio:MastersThesis,fabio:PrintObject,fabio:AnalogItem
+Abschlussbericht,Final Report,,,,fabio:ReportDocument,fabio:PrintObject,fabio:AnalogItem
+Abschnitt,Section,,,,,,doco:Section+fabio:AnalogItem
+Abwaschung,Washdown,,,,,,
+Adressbuch,Address Book,,https://d-nb.info/gnd/4141451-2,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Agende,Book of Liturgies,Y,https://d-nb.info/gnd/4000724-8,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Akademieschrift,Academic Publication,,https://d-nb.info/gnd/4141683-1,fabio:ScholarlyWork,,fabio:PrintObject,fabio:AnalogItem
+Akten,Records,,https://d-nb.info/gnd/4000925-7,fabio:ArchivalDocument,,fabio:AnalogManifestation,fabio:AnalogItem
+Akten Kriegsbriefe,"Archival Documents (War Letters)",,https://d-nb.info/gnd/4000925-7+https://d-nb.info/gnd/4033114-3,fabio:ArchivalRecord,fabio:Letter,fabio:AnalogManifestation,fabio:AnalogItem
+Akustik,Acoustics,Y,https://d-nb.info/gnd/4000988-9,,,,
+Alben,Albums,Y,https://d-nb.info/gnd/4543648-4,fabio:StillImage + fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Alchemie,Alchemy,Y,https://d-nb.info/gnd/4127921-9,,,,
+Almanach,Almanac,,https://d-nb.info/gnd/4141983-2,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Altertumskunde,Archeology,,https://d-nb.info/gnd/4134281-1,,,,
+Amtsdruckschrift,Government Publication,,https://d-nb.info/gnd/4142300-8+,,fabio:ArchivalDocument,fabio:AnalogManifestation,fabio:AnalogItem
+Amtsdruckschrift / Gesetzessammlung / Verordnung / Vertrag / Gesetz / Edikt,Office press release / Collection of rules / Ordinance / Contract / Law / Edict,,https://d-nb.info/gnd/4142300-8+https://d-nb.info/gnd/4013556-1+https://d-nb.info/gnd/4063270-2+https://d-nb.info/gnd/4134694-4+https://d-nb.info/gnd/4020660-9,,fabio:ArchivalDocument+fabio:ReferenceBook,fabio:AnalogManifestation,fabio:AnalogItem
+Anatomie,Anatomy,Y,https://d-nb.info/gnd/4001895-7,,,,
+Andenkenblatt,Death Notice,,https://d-nb.info/gnd/4185595-4,fabio:Obituary,,fabio:PrintObject,fabio:AnalogItem
+Anekdote,Anecdote,Y,https://d-nb.info/gnd/4142399-9,fabio:ShortStory,,fabio:PrintObject,fabio:AnalogItem
+Anleitung,Instructions,,https://d-nb.info/gnd/4142527-3,fabio:InstructionManual,,fabio:PrintObject,fabio:AnalogItem
+Anschlag,Poster,,https://d-nb.info/gnd/4046198-1,,,,
+Ansicht,View,Y,https://d-nb.info/gnd/4001393-5,,,,
+Anstandsliteratur,Conduct Books,,https://d-nb.info/gnd/4122801-7,fabio:InstructionalWork,,,
+Anthologie,Anthology,,https://d-nb.info/gnd/4002214-6,,fabio:Anthology,fabio:PrintObject,fabio:AnalogItem
+Antiquariatskatalog,Rare Book Catalog,,https://d-nb.info/gnd/4142738-5,fabio:Catalog,,,
+"Antrag, Vorstudie",Application / Proposal,,https://d-nb.info/gnd/4122813-3,,fabio:SpecificationDocument,fabio:PrintObject,fabio:AnalogItem
+ANzeige,Advertisement,,https://d-nb.info/gnd/4002377-1,,,fabio:PrintObject,fabio:AnalogItem
+Anzeige,Advertisement,,https://d-nb.info/gnd/4002377-1,,,fabio:PrintObject,fabio:AnalogItem
+Anzeige / Bücheranzeige / Subskriptionsanzeige,Advertisement,,https://d-nb.info/gnd/4002377-1 + https://d-nb.info/gnd/4153415-3,,,fabio:PrintObject,fabio:AnalogItem
+Aphorismus,Aphorisms,Y,https://d-nb.info/gnd/4002417-9,,,,
+Arbeitspapier,Working Paper,,,fabio:WorkingPaper,,fabio:PrintObject,fabio:AnalogItem
+Archäologie,Archeology,Y,https://d-nb.info/gnd/4002827-6,,,,
+Architektur,Architecture,Y,https://d-nb.info/gnd/4002851-3,,,,
+"Architektur, Lanschaftsarchitektur",Landscape Architecture,Y,http://d-nb.info/gnd/7700528-4,,,,
+"Architektur, Stadtplanung",City Planning,Y,https://d-nb.info/gnd/4002851-3+https://d-nb.info/gnd/4056754-0,,,,
+Ars,The Art of Dying,Y,https://d-nb.info/gnd/4143072-4,fabio:InstructionalBook,,fabio:PrintObject,fabio:AnalogItem
+Ars moriendi,The Art of Dying,Y,https://d-nb.info/gnd/4143072-4,fabio:InstructionalBook,,fabio:PrintObject,fabio:AnalogItem
+article,Article,,,fabio:Article,,fabio:PrintObject,fabio:AnalogItem
+Artikel,Article,,,fabio:Article,,fabio:PrintObject,fabio:AnalogItem
+Arzneibuch,Pharmacopoiea,,https://d-nb.info/gnd/4003114-7,fabio:InstructionManual,,fabio:PrintObject,fabio:AnalogItem
+Astrologie,1,Y,https://d-nb.info/gnd/4003305-3,,,,
+Astronomie,1,Y,https://d-nb.info/gnd/4003311-9,,,,
+Atlas,Atlas,,https://d-nb.info/gnd/4143303-8,fabio:ReferenceBook,,fabio:PrintObject,fabio:AnalogItem
+Audiovisuelles Material,Audio Visual Material,,https://d-nb.info/gnd/4522856-5,,fabio:AudioDocument +fabio:Movie,fabio:AnalogManifestation,fabio:AnalogItem
+Aufgabensammlung,Problem Set,,https://d-nb.info/gnd/4143389-0,,fabio:TextBook,fabio:PrintObject,fabio:AnalogItem
+Aufriss,Front View (Architecture),Y,https://d-nb.info/gnd/4704588-7,,,,
+Aufsatz,Essay,,https://d-nb.info/gnd/4129008-2,fabio:Essay,,fabio:PrintObject,fabio:AnalogItem
+Aufsatzsammlung,Auction Catalogue,,https://d-nb.info/gnd/4143413-4,fabio:Essay +fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Auktionskatalog,Auction Catalogue,,https://d-nb.info/gnd/4143482-1,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Außenreklame,Outdoor Advertising,Y+NF,https://d-nb.info/gnd/4065541-6,,,,
+Außenwerbung,Outdoor Advertising,Y+NF,https://d-nb.info/gnd/4140128-1,,,,
+Ausstellung,Exhibition,Y+NF,https://d-nb.info/gnd/4129601-1,,,,
+Ausstellungskatalog,Exhibition Catalog,,https://d-nb.info/gnd/4135467-9,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Autobiographie,Autobiography,,https://d-nb.info/gnd/7718823-8,fabio:Biography,,,
+Autobiographie 1871-1873,Autobiography,Y,https://d-nb.info/gnd/7718823-8,fabio:Biography,,,
+Ballade,Ballad,Y,https://d-nb.info/gnd/4004343-5,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Band,Volume,,,fabio:WorkCollection,fabio:ExpressionCollection,fabio:PrintObject,fabio:AnalogItem
+Bauschmuck,Architectural Decor,Y,https://d-nb.info/gnd/4043886-7,,,,
+"Bauschmuck, Grabmal","Architectural Decor, Tomb",Y,https://d-nb.info/gnd/4043886-7 + https://d-nb.info/gnd/4021732-2,,,,
+Bausschmuck,Architectural Decor,Y,https://d-nb.info/gnd/4043886-7,,,,
+Beichtspiegel,Confession Guide,Y,https://d-nb.info/gnd/4144358-5,fabio:InstructionalWork,,,
+Beigefügtes oder enthaltenes Werk,Supplement,,,,,fabio:PrintObject,fabio:AnalogItem
+Beilage,Inset,,https://d-nb.info/gnd/4203535-1,fabio:Addendum,,fabio:PrintObject,fabio:AnalogItem
+Beispielsammlung,Collection of Examples,Y,https://d-nb.info/gnd/4144384-6,fabio:WorkCollection,,,
+Beitrag zu einem Periodikum,Periodical Contribution,,,fabio:PeriodicalItem,,fabio:PrintObject,fabio:AnalogItem
+Bekleidung,Apparel,Y,https://d-nb.info/gnd/4031011-5,,,,
+Belletristische Darstellung,Belletristic Description,,https://d-nb.info/gnd/4144445-0,fabio:LiteraryWork,,fabio:PrintObject,fabio:AnalogItem
+Bergbau,Mining,Y,https://d-nb.info/gnd/4005614-4,,,,
+Bergbaukarte,Mining Map,,https://d-nb.info/gnd/4005614-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Bericht,Report,,https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+"Bericht über Institution, Organisation o.Ä.",Institutional / Organizational Report,,,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Besitzeintrag,Ownership Registration,Y,https://d-nb.info/gnd/4404569-4,fabio:ArchivalRecord,,fabio:AnalogManifestation,fabio:AnalogItem
+Bestandsanfrage,Inventory Inquiry,Y+NF,https://d-nb.info/gnd/4205291-9,,,,
+Besteck,Cutlery,Y,https://d-nb.info/gnd/4144935-6,,,,
+Bestimmungsbuch,Identification Guide,,https://d-nb.info/gnd/4144950-2,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Bibel,Bible,Y,https://d-nb.info/gnd/4194156-1,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Bibliographie,Bibliography,,,fabio:BibliographicMetadata,,fabio:PrintObject,fabio:AnalogItem
+Bibliographie 1818-1885,Bibliography,,,fabio:BibliographicMetadata,,fabio:PrintObject,fabio:AnalogItem
+bibliography,Bibliography,,,fabio:BibliographicMetadata,,fabio:PrintObject,fabio:AnalogItem
+Bibliothekskatalog,Library Catalog,,https://d-nb.info/gnd/4145270-7,fabio:LibraryCatalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Bild,Still Image,,https://d-nb.info/gnd/4006568-6,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Bildband,Picture Book,,https://d-nb.info/gnd/4145395-5,fabio:StillImage,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Bildliche Darstellung,Pictorial Representation,,https://d-nb.info/gnd/4145419-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Bildnis,Portait,,https://d-nb.info/gnd/4006627-7,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Biografie,Biography,,https://d-nb.info/gnd/4006804-3,fabio:Biography,,fabio:PrintObject,fabio:AnalogItem
+Biographie,Biography,,,fabio:Biography,,fabio:PrintObject,fabio:AnalogItem
+biography,Biography,,,fabio:Biography,,fabio:PrintObject,fabio:AnalogItem
+Bodenbeschaffenheit,Soil Composition,Y,https://d-nb.info/gnd/4007379-8,,,,
+Bodenkarte,Soil Map,,https://d-nb.info/gnd/7503057-3,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Bodenprofil,Soil Profile,Y,https://d-nb.info/gnd/4146163-0,,,,
+book,Book,,,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Botanik,Botany,Y,https://d-nb.info/gnd/4007842-5,,,,
+Braunkohle,Lignite,Y,https://d-nb.info/gnd/4008048-1,,,,
+Brevier,Breviary,Y,https://d-nb.info/gnd/4146599-4,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Brief,Letter,,https://d-nb.info/gnd/4008240-4,,fabio:Letter,fabio:AnalogManifestation,fabio:AnalogItem
+Briefkopf,Letter Head,,https://d-nb.info/gnd/4227542-8,,,,
+Briefmarke,Stamp,Y+NF,https://d-nb.info/gnd/4008242-8,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Briefsammlung,Letter Collection,,https://d-nb.info/gnd/4146609-3,fabio:WorkCollection,fabio:Letter,fabio:AnalogManifestation,fabio:AnalogItem
+Briefsammlung 1837,Letter Collection,,https://d-nb.info/gnd/4146609-3,fabio:WorkCollection,fabio:Letter,fabio:AnalogManifestation,fabio:AnalogItem
+Briefsteller,Letter Writing Guidelines,,https://d-nb.info/gnd/4146612-3,fabio:InstructionalWork,,fabio:PrintObject,fabio:AnalogItem
+Brouillon,Sketch Book,,,,fabio:Notebook,fabio:AnalogManifestation,fabio:AnalogItem
+Buch,Book,,https://d-nb.info/gnd/4008570-3,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Buchbeitrag,Book Review,,,fabio:BookReview,,fabio:PrintObject,fabio:AnalogItem
+Buchbinderanweisung,Bookbinding Instruction,Y,https://d-nb.info/gnd/4122967-8,fabio:InstructionalWork,,fabio:PrintObject,fabio:AnalogItem
+Buchdruck,Book Printing,Y,https://d-nb.info/gnd/4008598-3,,,,
+Bucheinband,Book Cover,,https://d-nb.info/gnd/4008602-1,fabio:Cover,,fabio:PrintObject,fabio:AnalogItem
+Bücheranzeige,Book Advertisement,Y+NF,https://d-nb.info/gnd/7508712-1,,,,
+Buchgestaltung,Book Design,Y,https://d-nb.info/gnd/4146814-4,,,,
+Buchhandelskatalog,Bookfair Catalog,,https://d-nb.info/gnd/4008626-4,fabio:Catalog,,fabio:PrintObject,fabio:AnalogItem
+Buchillustration,Book Illustration,Y,https://d-nb.info/gnd/4123412-1,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Buchkunst,Book Art,Y,https://d-nb.info/gnd/4008648-3,,,,
+Buchmalerei,Book Painting,Y,https://d-nb.info/gnd/4008650-1,,,,
+Buchseite,Book Page,,,,,,
+Büste,Bust,Y,https://d-nb.info/gnd/4008836-4,,,,
+catalog,Catalog,,,fabio:Catalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Chemie,Chemistry,Y,https://d-nb.info/gnd/4009816-3,,,,
+Chiromantie,Palmistry,Y,https://d-nb.info/gnd/4072291-0,,,,
+Chirurgie,Surgery,Y,https://d-nb.info/gnd/4009987-8,,,,
+Chronik,Chronicle,,https://d-nb.info/gnd/4127914-1,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Danksagung,Acknowledgement,Y,https://d-nb.info/gnd/4210238-8,,,,
+Des Herrn von Rosnay Naturlehre für das schöne Geschlechte,,,,,,,
+Diplomarbeit,Undergraduate Thesis,,https://d-nb.info/gnd/4012400-9 ,,fabio:Thesis,fabio:PrintObject,fabio:AnalogItem
+directory,Directory,,,fabio:ReferenceWork,,,
+Diskussionsprotokoll,Discussion Protocol,,https://d-nb.info/gnd/4012478-2,fabio:MeetingReport,,fabio:PrintObject,fabio:AnalogItem
+Dissertation,Dissertation,,https://d-nb.info/gnd/4012494-0 ,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation o. Habilitation,Advanced Doctoral Thesis,,,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation: jur.,Legal Doctoral Thesis,Y,https://d-nb.info/gnd/4076570-2+https://d-nb.info/gnd/4029067-0,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation: jur.Kommentar: jur.,Legal Doctoral Thesis,Y,https://d-nb.info/gnd/4076570-2+https://d-nb.info/gnd/4029067-0,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation: med.,Medical Doctoral Thesis,Y,https://d-nb.info/gnd/4038243-6+https://d-nb.info/gnd/4038291-6,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation: theol.,Theological Doctoral Thesis,Y,https://d-nb.info/gnd/4059758-1+https://d-nb.info/gnd/4185080-4,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation:jur,Legal Doctoral Thesis,Y,https://d-nb.info/gnd/4076570-2+https://d-nb.info/gnd/4029067-0,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation:jur.,Legal Doctoral Thesis,Y,https://d-nb.info/gnd/4076570-2+https://d-nb.info/gnd/4029067-0,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation:med.,Medical Doctoral Thesis,Y,https://d-nb.info/gnd/4038243-6+https://d-nb.info/gnd/4038291-6,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation:phil.,Dissertation,Y,https://d-nb.info/gnd/4045791-6+https://d-nb.info/gnd/4185080-4,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertation:theol.,Theological Doctoral Thesis,Y,https://d-nb.info/gnd/4059758-1+https://d-nb.info/gnd/4174284-9,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dissertationensammlung,Thesis Collection,,,fabio:WorkCollection,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Dokument,Document,,https://d-nb.info/gnd/4139988-2,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Drama,Play,,https://d-nb.info/gnd/4012899-4,fabio:Play,,fabio:PrintObject,fabio:AnalogItem
+drama,Drama,,https://d-nb.info/gnd/4012899-4,fabio:Play,,fabio:PrintObject,fabio:AnalogItem
+Drama / Schwank / Fastnachtsspiel / Jesuitendrama / Komödie / Tragödie,Drama,Y,https://d-nb.info/gnd/4053736-5+https://d-nb.info/gnd/4016518-8+https://d-nb.info/gnd/4162744-1+https://d-nb.info/gnd/4031952-0+https://d-nb.info/gnd/4060591-7 ,fabio:Play,,fabio:PrintObject,fabio:AnalogItem
+Druck,Print,Y,https://d-nb.info/gnd/4013083-6,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Druckermarke,Printer's Mark,Y,https://d-nb.info/gnd/4150724-1,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Druckgrafik,Print,Y,https://d-nb.info/gnd/4113357-2,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Druckgraphik,Print,Y,https://d-nb.info/gnd/4113357-2,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Druckgraphik & Zeichenkunst,Print & Drawing,Y,https://d-nb.info/gnd/4113357-2,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Druckgraphik?,Print,Y,https://d-nb.info/gnd/4113357-2,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Durchschnitt,Cutaway drawing,Y,https://d-nb.info/gnd/4230496-9,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+E.B.,,,,,,,
+Edikt,Edict,,https://d-nb.info/gnd/4013556-1,,fabio:PolicyDocument,fabio:PrintObject,fabio:AnalogItem
+Einblattdruck,Broadsheet,,https://d-nb.info/gnd/4151236-4,,,fabio:Page,fabio:AnalogItem
+Einblattdrucke,Broadsheets,,https://d-nb.info/gnd/4151236-4,,,fabio:Page,fabio:AnalogItem
+Einfache Handschrift,Simple Manuscript,,,,fabio:Manuscript,fabio:AnalogManifestation,fabio:AnalogItem
+Einführung,Introduction,Y,https://d-nb.info/gnd/4151278-9,,,fabio:PrintObject,deo:Introduction +fabio:AnalogItem
+Eingang,Incoming Note,,https://d-nb.info/gnd/4206777-7+https://d-nb.info/gnd/4151283-2 ,,fabio:Addendum,fabio:PrintObject,fabio:AnalogItem
+Eingangsvermerk,Incoming Note,,https://d-nb.info/gnd/4206777-7,,fabio:Addendum,fabio:PrintObject,fabio:AnalogItem
+Einladung,Invitation,Y+NF,https://d-nb.info/gnd/4460492-0,,,fabio:Page,fabio:AnalogItem
+Einlegeblatt,Inset,,,,fabio:Addendum,fabio:Page,fabio:AnalogItem
+Einzelblatt (aus Druck),Single Page,,,,,fabio:Page,fabio:AnalogItem
+Elegie,Elegy,Y,https://d-nb.info/gnd/4151713-1,,,,
+Elektronische Publikation,Electronic Publication,,https://d-nb.info/gnd/4514269-5,,,fabio:DigitalManifestation,fabio:AnalogItem
+Elfenbein,Ivory,Y,https://d-nb.info/gnd/4014424-0,,,,
+Emblembuch,Emblem Book,,https://d-nb.info/gnd/4014553-0,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Enthaltenes Werk,Contained Work,,,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Entscheidungssammlung,Law Report,Y,https://d-nb.info/gnd/4152408-1,fabio:LegalOpinion + fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Enzyklopädie,Encyclopedia,Y,https://d-nb.info/gnd/4014986-9,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Epigramm,Epigram,Y,https://d-nb.info/gnd/4152507-3,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Epik,Epic Poetry,Y,https://d-nb.info/gnd/4015025-2,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Epik / Epos / Verserzählung / Roman / Erzählung,Epic Poety / Epic Poem / Narrative Poem / Novel / Short Story,Y,https://d-nb.info/gnd/4015025-2+https://d-nb.info/gnd/4015065-3+https://d-nb.info/gnd/4187991-0+https://d-nb.info/gnd/4050479-7+https://d-nb.info/gnd/4015464-6,,,,
+Epikedeion,Epicedion,Y,https://d-nb.info/gnd/4359648-4,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Epos,Epic Poem,Y,https://d-nb.info/gnd/4015065-3,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Erbauungsliteratur,Edifying Literature,Y,https://d-nb.info/gnd/4129866-4,,,,
+Erinnerungsblatt,Memorial Card,,https://d-nb.info/gnd/4795933-2,fabio:StillImage,,fabio:Page,fabio:AnalogItem
+Erlebnisbericht,Eyewitness Report,Y,https://d-nb.info/gnd/4133254-4,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Erotik,Erotica,Y,https://d-nb.info/gnd/4015369-1,,,,
+Erotische,Erotica,Y,https://d-nb.info/gnd/4015369-1,,,,
+Erotische Literatur,Erotica,Y,https://d-nb.info/gnd/4139435-5,,,,
+Erzählung,Story,,https://d-nb.info/gnd/4015464-6,fabio:ShortStory,,fabio:PrintObject,fabio:AnalogItem
+Etikett,Sticker / Label,Y,https://d-nb.info/gnd/4131166-8,,,,
+Euroregion,,Y,https://d-nb.info/gnd/4100306-8,,,,
+Exlibris,Book Plate,,https://d-nb.info/gnd/4015985-1,,,,
+Fabel,Fable,Y,https://d-nb.info/gnd/4016112-2,,,,
+Fallsammlung,Case Digest,,https://d-nb.info/gnd/4153616-2,fabio:LegalOpinion,,fabio:PrintObject,fabio:AnalogItem
+Fastnachtsspiel,Shrovetide Play,Y,https://d-nb.info/gnd/4016518-8,fabio:Play,,fabio:PrintObject,fabio:AnalogItem
+Faszikel,Unbound Manuscripts,,,,,,
+Faszikel Handschrift,Unbound Manuscripts,,,,,fabio:AnalogManifestation,fabio:AnalogItem
+Feldpost,Military Postal Service,,https://d-nb.info/gnd/4129680-1,,fabio:Letter,fabio:AnalogManifestation,fabio:AnalogItem
+Feldpost - 1866,Military Postal Service,,https://d-nb.info/gnd/4129680-1,,fabio:Letter,fabio:AnalogManifestation,fabio:AnalogItem
+Felsformation,Rock Formation,Y,https://d-nb.info/gnd/4436005-8,,,,
+Festbeschreibung,Ceremonial Description,,https://d-nb.info/gnd/4121260-5,,fabio:ReportDocument,fabio:PrintObject,fabio:AnalogItem
+festschrift,Festschrift,,https://d-nb.info/gnd/4016928-5,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Festschrift,Festschrift,,https://d-nb.info/gnd/4016928-5,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Festungsbau,Fortress Construction,Y,https://d-nb.info/gnd/4016934-0,,,,
+Fibel,Primer,,https://d-nb.info/gnd/4017033-0,fabio:InstructionalWork,,fabio:PrintObject,fabio:AnalogItem
+Figurengedicht,Calligram,,https://d-nb.info/gnd/4130241-2,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Firmenschrift,Corporate publication,,https://d-nb.info/gnd/4772181-9,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Firmenzeichen,Corporate logo,,https://d-nb.info/gnd/4124979-3,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Flachriss,Geological Seam Map,,https://d-nb.info/gnd/4230496-9,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Flöz,Coal Seam,Y,https://d-nb.info/gnd/4154649-0,,,,
+Flözkarte,Coal Seam Map,,https://d-nb.info/gnd/4029783-4 + https://d-nb.info/gnd/4154649-0,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Flugblatt,Flyer,,https://d-nb.info/gnd/4071280-1,fabio:Work,,fabio:Page,fabio:AnalogItem
+Flugschrift,Pamphlet,,https://d-nb.info/gnd/4154770-6,fabio:Work,,fabio:PrintObject,fabio:AnalogItem
+Flussverlauf,River Course,Y,https://d-nb.info/gnd/4133254-4,,,,
+Formularsammlung,Book of Forms,,https://d-nb.info/gnd/4155034-1,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Forschungsbericht,Research Report,Y,https://d-nb.info/gnd/4155043-2,fabio:TechnicalReport,,fabio:PrintObject,fabio:AnalogItem
+fortlaufendes Sammelwerk,Serial Publication,,https://d-nb.info/gnd/4155074-2,,fabio:Series,fabio:PrintObject,fabio:AnalogItem
+Fortlaufendes Sammelwerk,Serial Publication,,https://d-nb.info/gnd/4155074-2,,fabio:Series,fabio:PrintObject,fabio:AnalogItem
+Foto,Photo,,https://d-nb.info/gnd/4045895-7,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Fotografie,Photo,,https://d-nb.info/gnd/4045895-7,,,,
+Fragment,Part of a Document,,https://d-nb.info/gnd/4155137-0,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Frauenliteratur,Women's Literature,Y,https://d-nb.info/gnd/4113622-6,,,,
+Freimaurerliteratur,Freemason Literature,Y,https://d-nb.info/gnd/4123227-6,,,,
+Freundschaftsbild,Friendship Photo,,https://d-nb.info/gnd/7532598-6,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Frontispiz,Frontispiece,,https://d-nb.info/gnd/4155493-0,fabio:StillImage,,fabio:PrintObject,doco:FrontMatter + fabio:AnalogItem
+Führer,Travel Guide,,https://d-nb.info/gnd/4155569-7,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Führer / Reiseführer,Travel Guide,,https://d-nb.info/gnd/4155569-7+https://d-nb.info/gnd/4049291-6,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Führer 1837,Travel Guide,,https://d-nb.info/gnd/4155569-7,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Fürstenspiegel,Mirrors for Princes,,https://d-nb.info/gnd/4018818-8,,fabio:InstructionalBook,fabio:PrintObject,fabio:AnalogItem
+Gartenbau,Horticulture,Y,https://d-nb.info/gnd/4019294-5,,,,
+Gebet,Prayer,Y,https://d-nb.info/gnd/4019514-4,,,,
+Gebetbuch,Prayer Book,Y,https://d-nb.info/gnd/4019515-6+https://d-nb.info/gnd/4019514-4,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Gebietskarte,Area Map,Y,https://d-nb.info/gnd/4029783-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Gebrauchsgrafik,Commercial Art,,https://d-nb.info/gnd/4019558-2,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Gebrauchsgrafik/Reklame,"Advertisement",,https://d-nb.info/gnd/4019558-2+https://d-nb.info/gnd/4065541-6,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Gebrauchsgraphik,Commercial Art,,https://d-nb.info/gnd/4019558-2,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Gedicht,Poem,,https://d-nb.info/gnd/4036774-5,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Gedichtband,Book of Poems,,https://d-nb.info/gnd/4036774-5,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Gedichtsammlung,Poetry Collection,,https://d-nb.info/gnd/4036774-5,,,,
+Gegentrum,"In geology, a gegentrum is the continuation of a passage on the opposite side of an incised river valley.",Y,https://d-nb.info/gnd/4005614-4,,,,
+Geldwesen,Monetary System,Y,https://d-nb.info/gnd/4019889-3,,,,
+Gelegenheitsschrift,Occasional Writing,Y,https://d-nb.info/gnd/4156438-8,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift: Einladung,Invitation,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4460492-0,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift: Einweihung,Inauguration,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4338947-8,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift: Geburtstag,Birthday,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4019608-2,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift: Gedenken,Commemoration,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4369798-7,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift: Promotion,Doctorate,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4175921-7,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift: Tod,Death,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4060294-1,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Abschied,Farewell,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4215139-9,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Amtsantritt,Accession to Office,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4323767-8,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Begrüßung,Official Welcome,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4284568-3,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Einladung,Invitation,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4460492-0,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Einweihung,Inauguration,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4338947-8,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Fest,Celebration,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4121260-5,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Friedensschluß,Peace Treaty,Y,https://d-nb.info/gnd/4156438-8,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Geburt,Birth,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4019589-2,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Geburtstag,Birthday,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4019608-2,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Gedenken,Commemoration,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4369798-7,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Hochzeit,Wedding,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4025292-9,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Jubiläum,Jubilee,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4129003-3,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Konversion,Conversion,Y,https://d-nb.info/gnd/4156438-8,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Krönung,Coronation,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4165795-0,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Namenstag,Name Day,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4171140-3,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Neujahr,New Year,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4358755-0,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Promotion,Doctorate,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4175921-7,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Sieg,Victory,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4291373-1,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Taufe,Baptism,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4059150-5,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Tod,Death,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4060294-1,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift:Visitation,Visitation,Y,https://d-nb.info/gnd/4156438-8+https://d-nb.info/gnd/4132571-0,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gelegenheitsschrift.Fest,Celebration,Y,https://d-nb.info/gnd/4156438-8,,fabio:Expression,fabio:PrintObject,fabio:AnalogItem
+Gemälde,Painting,,https://d-nb.info/gnd/4122164-3,fabio:StillImage,,fabio:AnalogManifestation,fabio:AnalogItem
+Genealogie,Genealogy,Y,https://d-nb.info/gnd/4020097-8,,,,
+Genealogische Tafel,Genealogical Board,,https://d-nb.info/gnd/4156582-4,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Geognostische Karte,Genealogical Map,,,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Geographie,Geography,Y,https://d-nb.info/gnd/4020216-1,,,,
+Geologie,Geology,Y,https://d-nb.info/gnd/4020227-6,,,,
+Geometrie,Geometry,Y,https://d-nb.info/gnd/4020236-7,,,,
+Gesangbuch,Hymnal,,https://d-nb.info/gnd/4137651-1,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Geschäftskarte,Business Card,Y+NF,https://d-nb.info/gnd/4393831-0,,,,
+Geschirr,Crockery,Y,https://d-nb.info/gnd/4020216-1,,,,
+Gesellschaftsschrift,Proceedings of Scientific Societies,Y+NF,https://d-nb.info/gnd/4497087-0,,,,
+Gesetz,Law,,https://d-nb.info/gnd/4020660-9,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Gesetzessammlung,Statute Book,,,"fabio:ReferenceWork +
+fabio:WorkCollection",,fabio:PrintObject,fabio:AnalogItem
+Glas,Cup,Y,https://d-nb.info/gnd/4021142-3,,,,
+Glaswaren,Glassware,Y,https://d-nb.info/gnd/4021142-3,,,,
+Grafik,Graphics,Y,https://d-nb.info/gnd/4021845-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+grafik,Graphics,Y,https://d-nb.info/gnd/4021845-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Grammatik,Grammar,Y,https://d-nb.info/gnd/4021806-5,,,,
+Graphik,Graphics,Y,https://d-nb.info/gnd/4021142-3,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Grenzen,Borders,Y,,,,,
+Grubenfeld,Mining Claim,Y,https://d-nb.info/gnd/7518666-4,,,,
+Grubenriss,Mining Shaft Layout,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Grundriss,Layout,,https://d-nb.info/gnd/4022346-2,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Grußkarte,Greetings Card,,https://d-nb.info/gnd/4197426-8,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Gutachten,Assessment,,https://d-nb.info/gnd/4022596-3,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Gynäkologie,Gynecology,Y,https://d-nb.info/gnd/4018225-3,,,,
+Habilitationsschrift,Professorial Dissertation,Y,https://d-nb.info/gnd/4158654-2,,fabio:DoctoralThesis,fabio:PrintObject,fabio:AnalogItem
+Handbuch,Handbook,Y,https://d-nb.info/gnd/4158977-4,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Handschrift,Manuscript,,https://d-nb.info/gnd/4023287-6,,fabio:Manuscript,fabio:AnalogManifestation,fabio:AnalogItem
+Hausväterliteratur,Household Management,Y,https://d-nb.info/gnd/4254481-6,,,,
+Heft,Notebook (Issue),,https://d-nb.info/gnd/4704591-7,,fabio:Notebook,fabio:AnalogManifestation,fabio:AnalogItem
+Heiligenvita,Hagiography,Y,https://d-nb.info/gnd/4127195-6,fabio:Biography,,fabio:PrintObject,fabio:AnalogItem
+Heraldik,Heraldry,Y,https://d-nb.info/gnd/4072428-1,,,,
+Herzogtum,Duchy,Y,https://d-nb.info/gnd/4159687-0,,,,
+hist.,History,Y,https://d-nb.info/gnd/4020517-4,,,,
+Hochschulschrift,Thesis,,https://d-nb.info/gnd/4113937-9,fabio:ScholarlyWork,,fabio:PrintObject,fabio:AnalogItem
+Hochschulschrift / Dissertation / Matrikel / Vorlesung / Vorlesungsverzeichnis / Dissertationensammlung,Thesis,,https://d-nb.info/gnd/4113937-9+https://d-nb.info/gnd/4012494-0+https://d-nb.info/gnd/4131979-5+https://d-nb.info/gnd/4117405-7+https://d-nb.info/gnd/4188684-7,fabio:ScholarlyWork,fabio:Thesis,fabio:PrintObject,fabio:AnalogItem
+HochschulschriftGelegenheitsschrift: Einladung,Thesis,,https://d-nb.info/gnd/4460492-0,fabio:ScholarlyWork,,fabio:PrintObject,fabio:AnalogItem
+Höhenlinie,Contour (Road Work),Y,https://d-nb.info/gnd/4160355-2,,,,
+Höhenschichtenkarte,Heightlayermap,Y,,,,,
+Holzschnitt,Woodcarving,Y,https://d-nb.info/gnd/4025736-8,,,,
+"humor, satire",Humor,Y,https://d-nb.info/gnd/4026170-0+https://d-nb.info/gnd/4051752-4,,,,
+Illustration,Illustration,,https://d-nb.info/gnd/4123412-1,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+illustration,Illustration,,https://d-nb.info/gnd/4123412-1,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+IMAGE,Image,,https://d-nb.info/gnd/4026574-2,fabio:Image,,fabio:PrintObject,fabio:AnalogItem
+Index,Index,,https://d-nb.info/gnd/4161483-5,,fabio:Index,fabio:PrintObject,fabio:AnalogItem
+index,Index,,https://d-nb.info/gnd/4161483-5,,fabio:Index,fabio:PrintObject,fabio:AnalogItem
+Inhaltsverzeichnis,Table of Contents,,https://d-nb.info/gnd/4616899-0,,fabio:TableOfContents,fabio:PrintObject,fabio:AnalogItem
+Inkunabel,Incunabulum,,https://d-nb.info/gnd/4027041-5,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Inselkarte,Island Map,Y,https://d-nb.info/gnd/4128227-9+https://d-nb.info/gnd/4029783-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Inserat,Advertisement (Insert),,,,fabio:Addendum,fabio:PrintObject,fabio:AnalogItem
+Inventar,Inventory,,https://d-nb.info/gnd/4027540-1,fabio:Catalog,,fabio:PrintObject,fabio:AnalogItem
+issue,Issue,,,,fabio:PeriodicalIssue,fabio:PrintObject,fabio:AnalogItem
+Itinerar,Itinerary,,https://d-nb.info/gnd/4162627-8,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Jagdliteratur,Hunting Literature,,https://d-nb.info/gnd/4236086-9,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Jahrgang,Year,,https://d-nb.info/gnd/4200408-1,,fabio:PeriodicalIssue,fabio:PrintObject,fabio:AnalogItem
+Jesuitendrama,Jesuit Drama,Y,https://d-nb.info/gnd/4162744-1,,,,
+journal,Journal,,,,fabio:Journal,fabio:PrintObject,fabio:AnalogItem
+Judaicum,Jewish Literature,Y,https://d-nb.info/gnd/4332690-0,,,,
+Jugendbuch,Young Adult Book,Y,https://d-nb.info/gnd/4306252-0,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Jugendsachbuch,Young Adult Non-Fiction Book,Y,https://d-nb.info/gnd/4028933-3,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+jur.,Law,Y,,,,,
+Kalender,Calendar,,https://d-nb.info/gnd/4029290-3,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Kalenderblatt,Calendar Page,,,fabio:ReferenceWork,,fabio:Page,fabio:AnalogItem
+Kanal,Channel,Y,https://d-nb.info/gnd/4029459-6,,,,
+Kapitel,Chapter,,https://d-nb.info/gnd/4290552-7,,fabio:BookChapter,fabio:PrintObject,fabio:AnalogItem
+Kapitulation,,Y,https://d-nb.info/gnd/4163287-4,,,,
+Karikatur,Caricature,Y,https://d-nb.info/gnd/4029670-2,,,,
+Karmeliter,Carmelites,Y,,,,,
+Karte,Map,,https://d-nb.info/gnd/4029783-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Katalog,Catalog,Y,https://d-nb.info/gnd/4163417-2,fabio:Catalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Katalog / Bibliothekskatalog,Library Catalog,,https://d-nb.info/gnd/4163417-2+https://d-nb.info/gnd/4145270-7,fabio:LibraryCatalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Katalog 1851,Catalog,Y,https://d-nb.info/gnd/4163417-2,fabio:Catalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Katalog 1870,Catalog,Y,https://d-nb.info/gnd/4163417-2,fabio:Catalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Katalog 1881,Catalog,Y,https://d-nb.info/gnd/4163417-2,fabio:Catalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Katalogumschlag,Catalog Envelope,Y,https://d-nb.info/gnd/4349719-6+https://d-nb.info/gnd/4163417-2,fabio:LibraryCatalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Katechismus,Catechism,,https://d-nb.info/gnd/4131748-8,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+KEINSACHBEGRIFF,,,,,,,
+Kinderbuch,Children's Book,,https://d-nb.info/gnd/4303251-5,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Kirchenlied,Church Songs,Y,https://d-nb.info/gnd/4120567-4,,,,
+Kleidung,Clothes,Y,https://d-nb.info/gnd/4031011-5,,,,
+Kleingerät,Small Appliances,Y,https://d-nb.info/gnd/4735621-2,,,,
+Kleinplastik,Small Sculpture,Y,https://d-nb.info/gnd/4031095-4,,,,
+Kochbuch,Recipe Book,Y,https://d-nb.info/gnd/4114240-8,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Kolportageliteratur,Colportage,Y,https://d-nb.info/gnd/4164740-3,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Kommentar,Commentary,,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Kommentar:,Commentary,,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Kommentar: hist.,Commentary,Y,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Kommentar: jur.,Commentary,Y,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Kommentar: lit.,Commentary,Y,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Kommentar: polit.,Commentary,Y,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Kommentar: theol.,Commentary,Y,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Kommentar:jur.,Commentary,Y,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Kommentar:lit.,Commentary,Y,https://d-nb.info/gnd/4136710-8,,fabio:Comment,fabio:PrintObject,fabio:AnalogItem
+Komödie,Comedy,Y,https://d-nb.info/gnd/4031952-0,,,,
+Konferenzband,Conference Proceedings,,,,fabio:ConferenceProceedings,fabio:PrintObject,fabio:AnalogItem
+Konferenzbeitrag,Proceedings Paper,,,,fabio:ConferencePaper,fabio:PrintObject,fabio:AnalogItem
+Kongress,Conference,,https://d-nb.info/gnd/4130470-6,fabio:MeetingReport,,fabio:PrintObject,fabio:AnalogItem
+Konkordanz,Concordance,,https://d-nb.info/gnd/4165001-3,fabio:ReferenceWork,,,
+Konsiliensammlung,Collection of Legal Opinion,,,fabio:LegalOpinion,,fabio:PrintObject,fabio:AnalogItem
+Konsilium,Collection of Legal Opinion,,,fabio:LegalOpinion,,fabio:PrintObject,fabio:AnalogItem
+Konvolut,Bundle of documents,,,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Kravatte,Cravats,Y,https://d-nb.info/gnd/4165544-8,,,,
+Kriegsbericht,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegsbericht - 1806,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegsbericht - 1813,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegsbericht - 1864,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegsbericht - 1866,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegsbericht - 1870,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegsbericht - 1870-1871,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegsbericht - 1871,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegsbericht - 1889,War Report,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4128022-2,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Kriegschronik,War Chronicle,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4127914-1,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Kriegschronik - 1870-1871,War Chronicle,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4127914-1,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Kriegsdepesche,War Dispatch,Y,https://d-nb.info/gnd/4033114-3 ++http://d-nb.info/gnd/7671938-8,fabio:Report,,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegsdokument,War Document,Y,https://d-nb.info/gnd/4033114-3,,fabio:ArchivalDocument,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegsdokument - 1870-1871,War Document,Y,https://d-nb.info/gnd/4033114-3,,fabio:ArchivalDocument,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegserinnerungsstück,War Remembranch,Y,https://d-nb.info/gnd/4033114-3,fabio:Work,,fabio:PrintObject,fabio:AnalogItem
+Kriegsfoto,War Photo,Y,https://d-nb.info/gnd/4033114-3,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Kriegsgebet,War Prayer,Y,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4019514-4,,,,
+Kriegsgedicht,War Poetry,,https://d-nb.info/gnd/4165697-0,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Kriegsgedicht - 1806-1816,War Poetry,,https://d-nb.info/gnd/4165697-0,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Kriegsgedicht - 1864,War Poetry,,https://d-nb.info/gnd/4165697-0,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Kriegsgedicht - 1866,War Poetry,,https://d-nb.info/gnd/4165697-0,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Kriegsgedicht - 1871,War Poetry,,https://d-nb.info/gnd/4165697-0,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Kriegsillustration - 1848,War Illustration,,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4123412-1,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Kriegskarte,War Map,Y,https://d-nb.info/gnd/4033114-3+https://d-nb.info/gnd/4029783-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Kriegskunde,Military Science,Y,https://d-nb.info/gnd/4169977-4,,,,
+Kriegslied,War Song,Y,https://d-nb.info/gnd/4340923-4,fabio:Song,,,
+Kriegslied - 1806-1816,War Song,Y,https://d-nb.info/gnd/4340923-4,fabio:Song,,,
+Kriegslied - 1864,War Song,Y,https://d-nb.info/gnd/4340923-4,fabio:Song,,,
+Kriegslied - 1866,War Song,Y,https://d-nb.info/gnd/4340923-4,fabio:Song,,,
+Kriegstagebuch,War Diary,,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4058900-6,,fabio:Diary,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegstagebuch - 1813,War Diary,,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4058900-6,,fabio:Diary,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegstagebuch - 1864,War Diary,,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4058900-6,,fabio:Diary,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegstagebuch - 1866,War Diary,,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4058900-6,,fabio:Diary,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegstagebuch - 1870,War Diary,,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4058900-6,,fabio:Diary,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegstagebuch - 1870-1871,War Diary,,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4058900-6,,fabio:Diary,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegszeugnis,"Personal writings concerning war (letters, cards, interviews) concerning 1 person",,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4067707-2,,fabio:ArchivalDocument,fabio:AnalogManifestation,fabio:AnalogItem
+Kriegszeugnis - 1866,War Certificate,,https://d-nb.info/gnd/4033114-3 ++https://d-nb.info/gnd/4067707-2,,fabio:ArchivalDocument,fabio:AnalogManifestation,fabio:AnalogItem
+Kunstführer,Art Guide,,https://d-nb.info/gnd/4166029-8,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Kurzbericht,Short Report,Y,https://d-nb.info/gnd/4128022-2,,fabio:BriefReport,fabio:PrintObject,fabio:AnalogItem
+Ladenbau,Shopfitting,Y,https://d-nb.info/gnd/4126246-3,,,,
+Lageplan,Layout,,https://d-nb.info/gnd/4479659-6,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Lampen,Lamps,Y,https://d-nb.info/gnd/4723086-1,,,,
+Landkarte,Map,Y,https://d-nb.info/gnd/4029783-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Landwirtschaft,Agriculture,Y,https://d-nb.info/gnd/4034402-2,,,,
+Legende,Legend,,https://d-nb.info/gnd/4035028-9,,,fabio:PrintObject,deo:Legend + fabio:AnalogItem
+Lehrbuch,Text Book,,https://d-nb.info/gnd/4123623-3,,fabio:TextBook,fabio:PrintObject,fabio:AnalogItem
+Leichenpredigt,Funeral Sermon,Y,https://d-nb.info/gnd/4074117-5,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Leichenpredigtsammlung,Funeral Sermon Collection,,,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Lesebuch,Basal reader,,https://d-nb.info/gnd/4035435-0,,fabio:InstructionalBook,fabio:PrintObject,fabio:AnalogItem
+letter,Letter,,https://d-nb.info/gnd/4167453-4,,fabio:Letter,fabio:AnalogManifestation,fabio:AnalogItem
+Leuchten,Lamp,Y,https://d-nb.info/gnd/4479662-6,,,,
+Leuchter,Lampstand,Y,https://d-nb.info/gnd/4035479-9,,,,
+Leuchtreklame,Neon Signs,Y,https://d-nb.info/gnd/4066724-8,,,,
+Lexikon,Dictionary,,https://d-nb.info/gnd/4035549-4,fabio:Vocabulary,,fabio:PrintObject,fabio:AnalogItem
+Libretto,Text of an Opera,,https://d-nb.info/gnd/4035588-3,"fabio:MusicalComposition +
+fabio:LiteraryWork",,fabio:PrintObject,fabio:AnalogItem
+Lichtbild,Slide,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Lied,Song,,https://d-nb.info/gnd/4035669-3,fabio:Song,,fabio:PrintObject,fabio:AnalogItem
+Lied / Kirchenlied,Church Song,,https://d-nb.info/gnd/4035669-3+https://d-nb.info/gnd/4120567-4,fabio:Song,,fabio:PrintObject,fabio:AnalogItem
+Liedersammlung,Song Collection,,,fabio:Song,,fabio:PrintObject,fabio:AnalogItem
+Lieferschein,Delivery Slip,,,,fabio:ArchivalDocument,fabio:AnalogManifestation,fabio:AnalogItem
+lit.,Literature,,,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Literatur,Literature,,https://d-nb.info/gnd/4035964-5,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Literaturbericht,Literature Review,,https://d-nb.info/gnd/4167870-9,fabio:SystematicReview,,fabio:PrintObject,fabio:AnalogItem
+Liturgisches Gerät,Liturgical Items,Y,https://d-nb.info/gnd/4030718-9,,,fabio:AnalogManifestation,fabio:AnalogItem
+Luftwerbung,Aerial Advertising,Y+NF,https://d-nb.info/gnd/4212829-8,,,,
+Lyrik,Poetry,,,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Lyrik / Lied / Elegie / Ballade / Epigramm,Poetry,,https://d-nb.info/gnd/4035669-3+https://d-nb.info/gnd/4151713-1+https://d-nb.info/gnd/4004343-5+https://d-nb.info/gnd/4152507-3,,,,
+Magisterarbeit,Master's Thesis,,https://d-nb.info/gnd/4168514-3,,fabio:Thesis,fabio:PrintObject,fabio:AnalogItem
+Magnetismus,Magnetism,Y,https://d-nb.info/gnd/4037021-5,,,,
+Makulatur,Wastepaper,Y+NF,https://d-nb.info/gnd/4566133-9,,,,
+Malerei,Painting,,https://d-nb.info/gnd/4037220-0,fabio:StillImage,,fabio:AnalogManifestation,fabio:AnalogItem
+Mandat,Mandate,,https://d-nb.info/gnd/4074523-5,,fabio:Book,fabio:AnalogManifestation,fabio:AnalogItem
+manuscript,Manuscript,,,,fabio:Manuscript,fabio:AnalogManifestation,fabio:AnalogItem
+map,Map,,https://d-nb.info/gnd/4128254-1,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Mappe,Portfolio,,https://d-nb.info/gnd/4555676-3,fabio:WorkCollection,,fabio:AnalogManifestation,fabio:AnalogItem
+Märchen,Fairy Tales,Y,https://d-nb.info/gnd/4036910-9,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Märtyrerdrama,Martyr play,Y,https://d-nb.info/gnd/4168485-0,fabio:Play,,fabio:PrintObject,fabio:AnalogItem
+Mathematik,Maths,Y,https://d-nb.info/gnd/4037944-9,,,,
+Matrikel,Register,Y,https://d-nb.info/gnd/4131979-5,,,,
+Mechanik,Mechanics,Y,https://d-nb.info/gnd/4038168-7,,,,
+Medaille,Medal,Y,https://d-nb.info/gnd/4038206-0,,,,
+Medaillen und Münzen,Medals and Coins,Y,https://d-nb.info/gnd/4038206-0+https://d-nb.info/gnd/4040629-5,,,,
+Medizin,Medicine,Y,https://d-nb.info/gnd/4038243-6,,,,
+MedizinTopographie,Topography,Y+NF,,,,,
+mehrbändiges Werk,Multivolume Work,,,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Mehrbändiges Werk,Multivolume Work,,,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Meßkatalog,Term Catalog,,,fabio:LibraryCatalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Meßrelation,Measurement,,,,fabio:Periodical,fabio:PrintObject,fabio:AnalogItem
+Metallarbeit,Metal Work,Y,https://d-nb.info/gnd/4038867-0,,,,
+Metallwaren,Metal Ware,Y,https://d-nb.info/gnd/4331523-9,,,,
+Mikroform,Microfilm,,https://d-nb.info/gnd/4039216-8,,,,
+Mineralogie,Mineralogy,Y,https://d-nb.info/gnd/4039457-8,,,,
+Missale,Missal,,https://d-nb.info/gnd/4170131-8,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Mitgliederverzeichnis,Member Register,,https://d-nb.info/gnd/4170173-2,fabio:ReferenceWork,fabio:ArchivalDocument,fabio:AnalogManifestation,fabio:AnalogItem
+Möbel,Furniture,Y,https://d-nb.info/gnd/4039860-2,,,,
+Monografie,Monography,,,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Monogramm,Monogram,Y,https://d-nb.info/gnd/4040088-8,,,,
+Monograph,Monography,,,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Monographie,Monography,,https://d-nb.info/gnd/4454906-4,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+moriendi,The Art of Dying,,,,fabio:InstructionalBook,fabio:PrintObject,fabio:AnalogItem
+multivolume monograph,Multivolume Monograph,,,fabio:WorkCollection,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Multivolume work,Multivolume Work,,,fabio:WorkCollection,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Mundloch,Surface Entrace of a Mining Gallery,Y,https://d-nb.info/gnd/4005614-4,,,,
+Münze,Coins,Y,https://d-nb.info/gnd/4040629-5,,,,
+Münze / Notgeld,Coins / Emergency currency,Y,https://d-nb.info/gnd/4040629-5+https://d-nb.info/gnd/4042678-6,,,,
+Münzen und Medaillen,Coins and Medals,Y,,,,,
+Musik,Music,Y,https://d-nb.info/gnd/4040802-4,fabio:MusicalComposition,,fabio:PrintObject,fabio:AnalogItem
+Musikbuch,Music Book,,,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Musikinstrument,Musical Instrument,Y,https://d-nb.info/gnd/4040851-6,,,,
+Musiknoten,Musical Notes,Y,https://d-nb.info/gnd/4528562-7,,,,
+Musterbuch,Pattern Book,,https://d-nb.info/gnd/4040935-1,fabio:ReferenceWork,fabio:InstructionalBook,fabio:PrintObject,fabio:AnalogItem
+Nachruf,Obituary,Y,https://d-nb.info/gnd/4128540-2,fabio:Obituary,,fabio:PrintObject,fabio:AnalogItem
+Nekrolog,Obituary,Y,,fabio:Obituary,,fabio:PrintObject,fabio:AnalogItem
+Neuerwerbungsliste,List of New Acquisitions,,https://d-nb.info/gnd/4171549-4,fabio:LibraryCatalog,,fabio:AnalogManifestation,fabio:AnalogItem
+newspaper,Newspaper,,,,fabio:Newspaper,fabio:PrintObject,fabio:AnalogItem
+Notiz,Note,,https://d-nb.info/gnd/4206777-7,,fabio:Notebook,fabio:AnalogManifestation,fabio:AnalogItem
+novel,Novel,Y,https://d-nb.info/gnd/4050479-7,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Novelle,Novella,Y,https://d-nb.info/gnd/4042706-7,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Online-Publikation,Online Publication,,,,,fabio:WebManifestation,
+Online-Ressource,Online Publication,,,,,fabio:WebManifestation,
+Optik,Optics,Y,https://d-nb.info/gnd/4043650-0,,,,
+Ordensliteratur,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0,,,,
+Ordensliteratur:Augustiner,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/1031362452,,,,
+Ordensliteratur:Augustiner-Barfüßer,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/7551334-1,,,,
+Ordensliteratur:Augustiner-Chorherren,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4147902-6,,,,
+Ordensliteratur:Augustiner-Eremiten,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4139688-1,,,,
+Ordensliteratur:Barnabiten,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0,,,,
+Ordensliteratur:Benediktiner,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/7792537-3,,,,
+Ordensliteratur:Dominikaner,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4536115-0,,,,
+Ordensliteratur:Franziskaner,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4713734-4,,,,
+Ordensliteratur:Jesuiten,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+http://d-nb.info/gnd/4295944-5,,,,
+Ordensliteratur:Kapuziner,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4469626-7,,,,
+Ordensliteratur:Karmeliter,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/1153165503,,,,
+Ordensliteratur:Kartäuser,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4495421-9,,,,
+Ordensliteratur:Minimen,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4830809-2,,,,
+Ordensliteratur:Minoriten,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4482830-5,,,,
+Ordensliteratur:Oratorianer,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4699104-9,,,,
+Ordensliteratur:Prämonstratenser,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4201362-8,,,,
+Ordensliteratur:Theatiner,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/1189104636,,,,
+Ordensliteratur:Unbeschuhte,"Literature on Catholic Orders Discalced",Y,https://d-nb.info/gnd/4496585-0,,,,
+Ordensliteratur:Unbeschuhte Karmeliter,"Literature on Catholic Orders Discalced Carmelites",Y,https://d-nb.info/gnd/4496585-0,,,,
+Ordensliteratur:Zisterzienser,Literature on Catholic Orders,Y,https://d-nb.info/gnd/4496585-0+https://d-nb.info/gnd/4558399-7,,,,
+Ornamenblätter,Ornamental Leaf,Y,https://d-nb.info/gnd/4172844-0,,,,
+Ornamentblätter,Ornamental Leaf,Y,https://d-nb.info/gnd/4172844-0,,,,
+Ornamentik,Ornamentation,Y,https://d-nb.info/gnd/4043886-7,,,,
+Ortsplan,Location Map,Y,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Ortsverzeichnis,Location Directory,,https://d-nb.info/gnd/4067870-2,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Pädagogik,Pedagogy,Y,https://d-nb.info/gnd/4044302-4,,,,
+Panegyrikos,Speech,,,,fabio:Oration,fabio:PrintObject,fabio:AnalogItem
+Pass,Passport,,https://d-nb.info/gnd/4049302-7,,fabio:ArchivalDocument,fabio:AnalogManifestation,fabio:AnalogItem
+Perioche,Synopsis,,https://d-nb.info/gnd/4457880-5,,,,doco:Abstract
+Pflanzenbuch,Plant Book,Y,https://d-nb.info/gnd/4174054-3,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Pharmakopöe,pharmacopoeia,,,fabio:InstructionalWork,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Philosophie / Psychologie,"Philosophy / Psychology",Y,https://d-nb.info/gnd/4045791-6+https://d-nb.info/gnd/4047704-6,,,,
+Photographie,Photografie,Y,https://d-nb.info/gnd/4045895-7,,,,
+Physik,Physics,Y,https://d-nb.info/gnd/4045956-1,,,,
+Physik / Optik / Mechanik / Magnetismus / Akustik,"Physics, Magnetism",Y,https://d-nb.info/gnd/4045956-1+https://d-nb.info/gnd/4043650-0+https://d-nb.info/gnd/4038168-7+https://d-nb.info/gnd/4037021-5+https://d-nb.info/gnd/4000988-9,,,,
+Physiognomie,Physiognomy,Y,https://d-nb.info/gnd/4128352-1,,,,
+picture,Picture,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Plakat,Poster,,https://d-nb.info/gnd/4046198-1,fabio:Work,,fabio:AnalogManifestation,fabio:AnalogItem
+Plakate,Posters,,,fabio:Work,,fabio:AnalogManifestation,fabio:AnalogItem
+Plakatentwurf,Poster Design,,,fabio:Work,,fabio:AnalogManifestation,fabio:AnalogItem
+Plan,Plan,,https://d-nb.info/gnd/4188555-7,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Poetik,Poetics,Y,https://d-nb.info/gnd/4046449-0,,,,
+poetry,Poetry,,,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Porträt,Portrait,,,fabio:StillImage,,fabio:AnalogManifestation,fabio:AnalogItem
+Porträtwerk,Potraiture,,https://d-nb.info/gnd/7575852-0,fabio:StillImage,,fabio:AnalogManifestation,fabio:AnalogItem
+Porzellan und Keramik,Porcelain and Ceramics,Y,https://d-nb.info/gnd/4046851-3+https://d-nb.info/gnd/4030270-2,,,,
+Postkarte,Post card,,https://d-nb.info/gnd/4046902-5,fabio:StillImage,fabio:Letter,fabio:AnalogManifestation,fabio:AnalogItem
+Praktik,"Practice, Method",Y,https://d-nb.info/gnd/4457887-8,,,,
+Predigt,Sermon,Y,https://d-nb.info/gnd/4047089-1,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Predigtsammlung,sermon collection,Y,https://d-nb.info/gnd/4123978-7,fabio:WorkCollection,,,
+Preisschrift,Prize Essay,,,,fabio:Essay,fabio:PrintObject,fabio:AnalogItem
+Preprint,Preprint,,,,fabio:Preprint,fabio:PrintObject,fabio:AnalogItem
+Privileg,Privilege,Y,https://d-nb.info/gnd/4132797-4,,,,
+Probedruck,Proof,,https://d-nb.info/gnd/4367555-4,,fabio:Proof,fabio:PrintObject,fabio:AnalogItem
+Profil,Elevation,Y,https://d-nb.info/gnd/4533611-8,,,,
+Programmheft,"Playbill, Programme",Y,https://d-nb.info/gnd/4373950-7,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Programmzettel,Playbill,Y+NF,,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Propekt,Brochure,,,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Prosa,Prose,Y,https://d-nb.info/gnd/4047497-5,fabio:LiteraryWork,,fabio:PrintObject,fabio:AnalogItem
+Prospekt,Brochure,Y,https://d-nb.info/gnd/4136390-5,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Psalter,Psalter,,https://d-nb.info/gnd/4176114-5,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Quelle,Source,,https://d-nb.info/gnd/4135952-5,,,,doco:BibliographicReferenceList
+Ratgeber,Self Help,,https://d-nb.info/gnd/4048476-2,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Rechenbuch,Arithmetic Book,Y,https://d-nb.info/gnd/4633636-9,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+Rede,Speech,Y,https://d-nb.info/gnd/4048882-2,,fabio:Oration,fabio:PrintObject,fabio:AnalogItem
+Rede / Panegyrikos,Speech,,https://d-nb.info/gnd/4048882-2,,fabio:Oration,fabio:PrintObject,fabio:AnalogItem
+Regelsammlung,Law Collection,,,"fabio:WorkCollection
+fabio:ReferenceWork",,fabio:PrintObject,fabio:AnalogItem
+Regest,Register of Decrees,Y,https://d-nb.info/gnd/4049007-5,,,,
+Regesten,Register of Decrees,Y,https://d-nb.info/gnd/4049007-5,,,,
+Reisebericht,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1396-1427,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1486,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1599-1600,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1608,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1672-1681,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1675-1676,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1689,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1707,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1714,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1743,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1753-1756,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1771,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1772,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1775,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1777,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1778,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1779,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1788,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1791,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1798-1801,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1799,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1800-1801,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1801,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1801-1802,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1801-1806,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1802-1811,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1806-1807,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1809,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1811-1812,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1814,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1816,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1817-1818,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1819,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1825,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1826,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1827,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1831-1834,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1835,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1835-1845,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1837,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1839,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1840,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1841-1842,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1842,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1842-1845,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1843,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1844-1846,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1848-1849,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1852,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1853-1854,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1858,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1862,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1868,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1896,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reisebericht 1900,Travelog,,https://d-nb.info/gnd/4076645-7,,fabio:Entry,fabio:PrintObject,fabio:AnalogItem
+Reiseführer,Travel Guide,,https://d-nb.info/gnd/4049291-6,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Replik,Replica,Y,https://d-nb.info/gnd/4217975-0,,,,
+reporting,Reporting,,,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Reproduktionsgraphik,Reproduction Print,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Revier,Coal District,,,,,,
+Rezension,Review,,https://d-nb.info/gnd/4049712-4,fabio:Review,,fabio:PrintObject,fabio:AnalogItem
+Rhetorik,Rhetoric,Y,https://d-nb.info/gnd/4076704-8,,,,
+Richtlinie,Guidelines,,https://d-nb.info/gnd/4137814-3,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Riss,Fissure,Y,https://d-nb.info/gnd/4050134-6,,,,
+Rituale,Rituals,Y,https://d-nb.info/gnd/4226660-9,,,,
+Roman,Novel,Y,https://d-nb.info/gnd/4050479-7,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Sage,Mythology,Y,https://d-nb.info/gnd/4051288-5,,,,
+Saigerriss,Vertical Section (of drawing),,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Sammelwerk,Collection,,https://d-nb.info/gnd/4202533-3,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Sammelwerksbeitrag,Collection Entry,,,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Satire,Satire,Y,https://d-nb.info/gnd/4051752-4,,,,
+Satzung,Constitution,Y,https://d-nb.info/gnd/4051778-0,,,,
+Schacht,Well,Y,https://d-nb.info/gnd/4179280-4,,,,
+Schäferdichtung,Pastoral Poetry,,,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Schauspiel,Play,,,fabio:Play,,fabio:PrintObject,fabio:AnalogItem
+Schmuck,Jewelry,Y,https://d-nb.info/gnd/4052945-9,,,,
+Schnitt,Section,,,,,fabio:PrintObject,"doco:Section + fabio:AnalogItem"
+Schraffen,Hatcher,Y,https://d-nb.info/gnd/4266674-0,,,,
+Schreibmeisterbuch,Lettering Book,Y,https://d-nb.info/gnd/4179984-7,fabio:Book,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Schriftbild,Type Face,Y,https://d-nb.info/gnd/4179996-3,,,,
+Schulbuch,Textbook,,https://d-nb.info/gnd/4053458-3,,fabio:InstructionalBook,fabio:PrintObject,fabio:AnalogItem
+Schulbuch / Fibel / Lesebuch,Textbook,,https://d-nb.info/gnd/4053458-3+https://d-nb.info/gnd/4017033-0+https://d-nb.info/gnd/4035435-0,,fabio:InstructionalBook,fabio:PrintObject,fabio:AnalogItem
+Schulprogramm,Curriculum,,https://d-nb.info/gnd/4077211-1,fabio:InstructionalWork,,fabio:PrintObject,fabio:AnalogItem
+Schwank,Anecdote,Y,https://d-nb.info/gnd/4053736-5,fabio:ShortStory,,fabio:PrintObject,fabio:AnalogItem
+script,Script,,,fabio:Screenplay,,fabio:PrintObject,fabio:AnalogItem
+Seigeriss,Vertical Section (of drawing),,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Seigerriss,Vertical Section (of drawing),,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Sepulkralarchitektur,Funerary Architecture,Y,https://d-nb.info/gnd/4002851-3+https://d-nb.info/gnd/4255061-0,,,,
+series,Series,,,,fabio:Series,fabio:PrintObject,fabio:AnalogItem
+Seuchenschrift,Plague Pamphlet,,,,,,
+Signet,Signet,Y,https://d-nb.info/gnd/4021855-7,,,,
+Signete,Signet,Y,https://d-nb.info/gnd/4021855-7,,,,
+Silhouettenbild,Silhouette Image,Y,https://d-nb.info/gnd/4130087-7,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Silhouettenkunst,Silhouette Art,Y,https://d-nb.info/gnd/4130087-7,,,,
+Situationskarte,Location Map,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Situationsriss,Sketch,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Skulptur,Sculpture,Y,https://d-nb.info/gnd/4046277-8,,,,
+Solfeggien,Solfeggio,,,fabio:InstructionalWork,,fabio:PrintObject,fabio:AnalogItem
+Sonstiges,Miscellaneous,NF,,,,,
+Speisekarte,Menu,Y,https://d-nb.info/gnd/4056112-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Spiegel,Mirror,Y,https://d-nb.info/gnd/4056203-7,,,,
+Spiel,Game,Y,https://d-nb.info/gnd/4056218-9,,,,
+Spielzeug,Toys,Y,https://d-nb.info/gnd/4056248-7,,,,
+Spitzen und Stoffe,Lace and Cloth,Y,https://d-nb.info/gnd/4125118-0,,,,
+Sportplakat,Sports Poster,Y,https://d-nb.info/gnd/4182469-6,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Sprachführer,Language Guide,Y,https://d-nb.info/gnd/4130010-5,fabio:ReferenceBook,,fabio:PrintObject,fabio:AnalogItem
+Sprichwortsammlung,Proverbs Collection,,,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Stadtplan,City Map,Y,https://d-nb.info/gnd/4129845-7,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Stadtplanung,City Planning,Y,https://d-nb.info/gnd/4056754-0,,,,
+Stammbuch,Family Register,Y,https://d-nb.info/gnd/4056896-9,,fabio:ArchivalDocumentSet + fabio:ReferenceBook,fabio:AnalogManifestation,fabio:AnalogItem
+Stammbuchblatt,Family Register Page,Y,https://d-nb.info/gnd/4508344-7,,fabio:ArchivalDocument + fabio:ReferenceBook,fabio:Page,fabio:AnalogItem
+statistics,Statistics,Y,https://d-nb.info/gnd/4056995-0,,,,
+Statistik,Statistics,Y,https://d-nb.info/gnd/4056995-0,,,,
+Steinkohle,Coal,Y,https://d-nb.info/gnd/4057194-4,,,,
+Stellungnahme,Opinion Piece,,https://d-nb.info/gnd/7768955-0,fabio:Opinion,,fabio:PrintObject,fabio:AnalogItem
+Streitschrift,Polemic Pamphlet,Y+NF,https://d-nb.info/gnd/4129058-6,fabio:Opinion,,fabio:PrintObject,fabio:AnalogItem
+Streitschrift: jur.,Polemic Pamphlet (Law),Y+NF,https://d-nb.info/gnd/4129058-6,fabio:Opinion,,fabio:PrintObject,fabio:AnalogItem
+Streitschrift: theol.,Polemic Pamphlet (Theology),Y+NF,https://d-nb.info/gnd/4129058-6,fabio:Opinion,,fabio:PrintObject,fabio:AnalogItem
+Streitschrift:jur.,Polemic Pamphlet (Law),Y+NF,https://d-nb.info/gnd/4129058-6,fabio:Opinion,,fabio:PrintObject,fabio:AnalogItem
+Streitschrift:polit.,Polemic Pamphlet (Politics),Y+NF,https://d-nb.info/gnd/4129058-6,fabio:Opinion,,fabio:PrintObject,fabio:AnalogItem
+Streitschrift:theol.,Polemic Pamphlet (Theology),Y+NF,https://d-nb.info/gnd/4129058-6,fabio:Opinion,,fabio:PrintObject,fabio:AnalogItem
+Subskribentenliste,Subscribers List,,https://d-nb.info/gnd/4183921-3,,,fabio:PrintObject,doco:List + fabio:AnalogItem
+Subskriptionsanzeige,Book subscription plan,,,,fabio:Article,fabio:PrintObject,fabio:AnalogItem
+Tabelle,Table,,https://d-nb.info/gnd/4184303-4,,fabio:Table,fabio:PrintObject,fabio:AnalogItem
+Tagebuch,Diary,,https://d-nb.info/gnd/4058900-6,,fabio:Diary,fabio:AnalogManifestation,fabio:AnalogItem
+Tapeten,Wallpaper,Y,https://d-nb.info/gnd/4184454-3,,,,
+Tätigkeitsbericht Jahresbericht,annual report,,,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+technical report,Technical Report,,,fabio:TechnicalReport,,fabio:PrintObject,fabio:AnalogItem
+Teil eines Periodikums,Part of a Periodical,,,,fabio:PeriodicalItem,fabio:PrintObject,fabio:AnalogItem
+Teppich,Carpet,Y,https://d-nb.info/gnd/4059482-8,,,,
+Terzinen,Terza rima,,,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Text,Text,,https://d-nb.info/gnd/4059596-1,,fabio:Manuscript,fabio:PrintObject,fabio:AnalogItem
+Theaterzettel,Theater Poster,,https://d-nb.info/gnd/4185060-9,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Themenheft,Special Issue,,,,fabio:MagazineIssue,fabio:PrintObject,fabio:AnalogItem
+theol.,Theology,Y,https://d-nb.info/gnd/4059758-1,,,,
+thesis,Thesis,,,,fabio:Thesis,fabio:PrintObject,fabio:AnalogItem
+Tierbuch,Animal Book,Y,https://d-nb.info/gnd/4135642-1,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Tiermedizin,Veterinary Medicine,Y,https://d-nb.info/gnd/4078315-7,,,,
+Titelblatt,Title Page,,https://d-nb.info/gnd/4185576-0,,,fabio:Page,doco:FrontMatter + fabio:AnalogItem
+Titelkupfer,Title Engravings,,https://d-nb.info/gnd/4185578-4,,,fabio:AnalogManifestation,doco:FrontMatter + fabio:AnalogItem
+Titelvignette,Title Vignette,,,,,fabio:PrintObject,doco:FrontMatter + fabio:AnalogItem
+Tonaufnahme,sound recording,,,fabio:SoundRecording,,fabio:PrintObject,fabio:AnalogItem
+Topographie,Topographical Map,Y,https://d-nb.info/gnd/4133697-5,,,,
+Topographische Karte,topographical map,,https://d-nb.info/gnd/4133697-5,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Totentanz,Danse Macabre,Y,https://d-nb.info/gnd/4322897-5,,,,
+Totenzettel,In Memoriam Card,Y,https://d-nb.info/gnd/4314078-6,,,,
+Tragödie,Tragedy,Y,https://d-nb.info/gnd/4060591-7,fabio:Play,,fabio:PrintObject,fabio:AnalogItem
+Traktat,Treatise,Y,https://d-nb.info/gnd/4203481-4,fabio:Essay,,fabio:PrintObject,fabio:AnalogItem
+Treibeschacht,Mining Schaft,Y,https://d-nb.info/gnd/4005614-4,,,,
+Trivialliteratur,Light Fiction,Y,https://d-nb.info/gnd/4060946-7,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Trivialliteratur / Kolportageliteratur,Formula Fiction,Y,https://d-nb.info/gnd/4060946-7+https://d-nb.info/gnd/4164740-3,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Typografie,Typography,Y,https://d-nb.info/gnd/4136341-3,,,,
+Typographie,Typography,Y,https://d-nb.info/gnd/4136341-3,,,,
+Uhr,Clock,Y,https://d-nb.info/gnd/4061474-8,,,,
+Uhren,Clocks,Y,https://d-nb.info/gnd/4061474-8,,,,
+Umgebungskarte,Area Map,Y,https://d-nb.info/gnd/4029783-4,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Umschlag,Cover,,,,fabio:Cover,fabio:AnalogManifestation,fabio:AnalogItem
+Universitätsprogramm,Course Catalog,,,fabio:ReferenceWork,,,
+Urkunde,Certificate,,https://d-nb.info/gnd/4062132-7,,fabio:ArchivalDocument,fabio:PrintObject,fabio:AnalogItem
+Urkundenbuch,Registry Book,,,,fabio:ArchivalDocumentSet,fabio:PrintObject,fabio:AnalogItem
+Verkaufskatalog,Sales Catalog,,https://d-nb.info/gnd/4187788-3,fabio:Catalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Verkaufskatalog / Antiquariatskatalog / Auktionskatalog / Buchhandelskatalog / Messkatalog,Sale Catalog / Rare Books Catalog,,https://d-nb.info/gnd/4187788-3+https://d-nb.info/gnd/4142738-5+https://d-nb.info/gnd/4143482-1+https://d-nb.info/gnd/4169523-9,fabio:Catalog,,fabio:AnalogManifestation,fabio:AnalogItem
+Verkehr,Transportation/Traffic,Y,https://d-nb.info/gnd/4062901-6,,,,
+Vermischte Nachrichten,Mixed News,,https://d-nb.info/gnd/4825495-2,fabio:NewsReport,,fabio:PrintObject,fabio:AnalogItem
+Verordnung,Ordinance,,https://d-nb.info/gnd/4134694-4,fabio:ArchivalDocument,,fabio:AnalogManifestation,fabio:AnalogItem
+Verpackung,Packaging,Y,https://d-nb.info/gnd/4063118-7,,,,
+Vers,Verse,,https://d-nb.info/gnd/4187944-2,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Verserzählung,Verse Narrative,Y,https://d-nb.info/gnd/4187991-0,fabio:Poem,,fabio:PrintObject,fabio:AnalogItem
+Vertrag,Contract,,https://d-nb.info/gnd/4063270-2,,,,
+Verwaltungskarte,Administrative Map,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Verzeichnis,Directory / Index,,https://d-nb.info/gnd/4188171-0,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+"Verzeichnis, Liste, Dokumentation",Index,,https://d-nb.info/gnd/4188171-0+https://d-nb.info/gnd/4167829-1+https://d-nb.info/gnd/4012656-0,fabio:ReferenceWork,,fabio:PrintObject,fabio:AnalogItem
+Vogelschauansicht,Bird's Eye View,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Volksbuch,Folk Tales,Y,https://d-nb.info/gnd/4063815-7,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Volksschrifttum,Folk Tales,,https://d-nb.info/gnd/4188547-8,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Volksschrifttum / Volksbuch,Folk Tales,,https://d-nb.info/gnd/4188547-8+https://d-nb.info/gnd/4063815-7,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Volume,Volume,,,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Vorlesung,Lecture,,https://d-nb.info/gnd/4117405-7,,,,
+Vorlesungsnachschrift,Lecture Transcript,,,,fabio:LectureNotes,fabio:PrintObject,fabio:AnalogItem
+Vorlesungsverzeichnis,Course Catalog,,https://d-nb.info/gnd/4188684-7,,,,
+Vortrag,Presentation,,https://d-nb.info/gnd/4064035-8,,fabio:Presentation,fabio:PrintObject,fabio:AnalogItem
+Vorwort,Preface,,https://d-nb.info/gnd/4135881-8,,,fabio:PrintObject,doco:Preface + fabio:AnalogItem
+Waffen,Weapons,Y,https://d-nb.info/gnd/4064228-8,,,,
+Wappenbuch,Armorial,Y,https://d-nb.info/gnd/4194655-8,,fabio:Book,fabio:PrintObject,fabio:AnalogItem
+Wasserleitung,Waterpipe,Y,https://d-nb.info/gnd/4064751-1,,,,
+Werbedrucksache,Advertising Print,Y,https://d-nb.info/gnd/4189633-6,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Werbemarke,Poster Stamp,Y,https://d-nb.info/gnd/4480173-7,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Werke,Works,,,fabio:WorkCollection,,fabio:PrintObject,fabio:AnalogItem
+Werkverzeichnis,Catalog of Works,,https://d-nb.info/gnd/4189680-4,fabio:Catalog,,fabio:PrintObject,fabio:AnalogItem
+Widmung,Dedication,,https://d-nb.info/gnd/4133737-2,,,fabio:PrintObject,deo:Dedication + fabio:AnalogItem
+Widmungsbild,Dedication Photo,,,,,fabio:PrintObject,deo:Dedication + fabio:AnalogItem
+Widmungsblatt,Dedication Page,,https://d-nb.info/gnd/4416834-2,,,fabio:Page,deo:Dedication + fabio:AnalogItem
+Wissenschaftliche Instrumente,Scientific Instruments,Y,https://d-nb.info/gnd/4143252-6,,,,
+Wohntextilien,Household Textiles,Y,https://d-nb.info/gnd/4059615-1,,,,
+Wörterbuch,Dictionary,,https://d-nb.info/gnd/4066724-8,,fabio:ReferenceBook,fabio:PrintObject,fabio:AnalogItem
+yearbook,Year Book,,,,,,
+Zeichenkunst,Draftsmanship,Y,https://d-nb.info/gnd/4127900-1,,,,
+Zeichenkunst & Druckgraphik,"Draftsmanship / Printmaking",Y,https://d-nb.info/gnd/4127900-1+https://d-nb.info/gnd/4113357-2,,,,
+Zeichnung,Drawing,,https://d-nb.info/gnd/4127900-1,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Zeichnung in Sammelband,Drawings in Collected Volume,,,fabio:StillImage,,fabio:PrintObject,fabio:AnalogItem
+Zeitschrift,Magazine,,https://d-nb.info/gnd/4067488-5,,fabio:Magazine,fabio:PrintObject,fabio:AnalogItem
+Zeitschrift / Moralische Wochenschrift / Rezensionszeitschrift,Magazine,,https://d-nb.info/gnd/4067488-5+https://d-nb.info/gnd/4040225-3+https://d-nb.info/gnd/7575693-6,,fabio:Magazine,fabio:PrintObject,fabio:AnalogItem
+Zeitschriftenartikel,Magazine Article,,,,fabio:MagazineArticle,fabio:PrintObject,fabio:AnalogItem
+Zeitung,Newspaper,,https://d-nb.info/gnd/4067510-5,,fabio:Newspaper,fabio:PrintObject,fabio:AnalogItem
+Zitat,Quote,Y,https://d-nb.info/gnd/4067889-1,,fabio:Quotation,fabio:PrintObject,fabio:AnalogItem
+Zitatensammlung,Collection of Quotes,,https://d-nb.info/gnd/4117724-1,,,,
+Zoologie,Zoology,Y,https://d-nb.info/gnd/4067960-3,,,,
+Ztg.-Art.,Newspaper Article,,,,fabio:NewspaperArticle,fabio:PrintObject,fabio:AnalogItem
+Zustandsdruck,State Proof,Y,,,fabio:Proof,fabio:PrintObject,fabio:AnalogItem
+Zwischenbericht,Interim Report,,https://d-nb.info/gnd/4231562-1,fabio:Report,,fabio:PrintObject,fabio:AnalogItem
+Zwitterstockwerk,Pewter Stone Deposit,Y,https://d-nb.info/gnd/4025104-4,,,,

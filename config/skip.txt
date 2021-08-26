@@ -1,0 +1,23 @@
+SKIP = ['72543TXA3WTCQI5F3FQ3BC4SXXUUTNY6', #invalid dc:contributor
+        'SMMWQBAE6MQUBQF7CVKZNOP6NERLBSE6', #no event
+        'CBMMRG6OLTLZ3PBQB5TZAMUJBH35PE3S', #invalid dc:contributor
+        'Q4FRW65W6YSSKNXELONH5AL2UTCDP2X6', #invalid dc:contributor
+        'C6AH5YORCI4LWJLNAVJTG67BVURWXMYX', #invalid dc:contributor
+        'CSRMMUQAUS5SF7GEWDHRSBFQSJF37OYE', #invalid dc:creator
+        'L67TW2WHFCXZ73ZV57KHI3V5GRGI765S', #invalid dc:contributor
+        'UW7PBOD7HPVSNMENXS5MBRF5464TQ7NW', #invalid dc:creator
+        '2A5DMNVPDSXVZWD4PBVBLF7QRTWCQHDR', #something wrong with extracted json
+        #Friedrich Schiller
+        'X46K5CXICHZ2LBF3EC74AEYNVPHF6LXT', #invalid title
+        'KQHV2LRO63CP3QYKRGF6QESYT6T73DHD', #invalid dcterms:issued
+        'ZNEYZO3YY5V727AKW3JYRIBNDY7LB3CX', #invalid dcterms:issued
+        'GXZPKSWMKPSWUNN4GLZJ3HG2G2GW6A3L', #invalid dc:creator
+        '2TOFJKKC7CNP6TP3FFXIHCWMXVGP6OW6', #invalid title
+        '43RTP6SL5SZS4ZLG2Z6ECQQIPGTN7BC5', #invalid title
+        'YGSBK2UEPHSW36GN5C4IX5QUB46BOIU3', #invalid title
+        'E5P242CNCLTLZY6F3RLZ372NF4P75BUI', #invalid title
+        #Thomas Mann
+        'PYAOQ6XCXRTKASDPLXBOEXT4Z26U7WMA' #invalid dc:creator
+        #Random Primary
+        'CA4CO4BG5SOEEO26WHE7MJ36XT3NTK4H' #invalid title
+        ]
