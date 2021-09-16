@@ -13,8 +13,73 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/ddbkg/authors/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/tag/cultural-heritage/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/author/danilo-dessi/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/publication/histoinformatics2021/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/ddbkg/</loc>
-    <lastmod>2021-08-25T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/tag/digital-library/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/author/harald-sack/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/author/jonas-oppenlaender/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/author/mary-ann-tan/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/tag/ontology/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/publication/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/author/sasha-bruns/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/author/tabea-tietz/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/tags/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,67 +88,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/ddbkg/authors/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/tag/cultural-heritage/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/author/danilo-dessi/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/ddbkg/publication/preprint/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/tag/digital-library/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/author/harald-sack/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/author/jonas-oppenlaender/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/author/mary-ann-tan/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/tag/ontology/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/publication/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/author/sasha-bruns/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/author/tabea-tietz/</loc>
-    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/tags/</loc>
     <lastmod>2021-08-24T00:00:00+00:00</lastmod>
   </url>
   
