@@ -673,6 +673,10 @@
         <li><a href="#cq4">CQ4</a></li>
         <li><a href="#cq5">CQ5</a></li>
         <li><a href="#cq6">CQ6</a></li>
+        <li><a href="#cq7">CQ7</a></li>
+        <li><a href="#cq8">CQ8</a></li>
+        <li><a href="#cq9">CQ9</a></li>
+        <li><a href="#cq10">CQ10</a></li>
       </ul>
     </li>
   </ul>
@@ -953,132 +957,175 @@ SELECT DISTINCT ?workLabel ?ddbitem ?digitized ?owner ?ownerName ?thumbnail WHER
 
 </li>
 </ul>
-<!---
-### CQ6
-  - How many books were published by publishers located in Leipzig?
-    ```
-
-    ```
-    <ul class="cta-group">
+<hr>
+<h3 id="cq7">CQ7</h3>
+<ul>
+<li>What are the notable works (<a href="https://www.wikidata.org/wiki/Property:P800" target="_blank" rel="noopener">wdt:p800</a>) according to Wikidata?
+<pre><code>PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX dbc: &lt;http://dbpedia.org/resource/Category:&gt;
+PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+PREFIX schema: &lt;http://www.schema.org/&gt;
+PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
+        
+SELECT DISTINCT ?workLabel ?ownerName ?ddbitem ?digitized ?thumbnail WHERE {  
+    SERVICE &lt;https://query.wikidata.org/sparql&gt; {
+      wd:Q22670 wdt:P800 ?notableWork . #Friedrich Schiller
+      ?notableWork rdfs:label ?workLabel FILTER (LANG(?workLabel)=&quot;de&quot;) .      
+   }
+   ?ddbitem rdf:type fabio:AnalogItem FILTER (
+     !EXISTS {
+       ?ddbitem dcterms:isPartOf ?parent
+     }
+  )
+   ?ddbitem dcterms:title ?title FILTER regex(?title, ?workLabel, &quot;i&quot;) .
+   ?ddbitem fabio:hasReproduction ?digitizedItem .
+   ?digitizedItem fabio:isExemplarOf ?digitized .
+   ?digitized frbr:owner ?owner .
+   optional { ?owner foaf:name ?ownerName }
+   optional { ?digitizedItem schema:thumbnail ?thumbnail }
+}
+</code></pre>
+<p><ul class="cta-group">
   
   <li>
-    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=PREFIX&#43;dct%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX&#43;skos%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0APREFIX&#43;dbc%3A&#43;%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A%3E%0D%0APREFIX&#43;dbo%3A&#43;%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0APREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX&#43;wdt%3A&#43;%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0D%0APREFIX&#43;wd%3A&#43;%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0D%0APREFIX&#43;schema%3A&#43;%3Chttp%3A%2F%2Fwww.schema.org%2F%3E%0D%0APREFIX&#43;frbr%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Ffrbr%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;%0D%0ASELECT&#43;DISTINCT&#43;%3FworkLabel&#43;%3FownerName&#43;%3Fddbitem&#43;%3Fdigitized&#43;%3Fthumbnail&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SERVICE&#43;%3Chttps%3A%2F%2Fquery.wikidata.org%2Fsparql%3E&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;wd%3AQ22670&#43;wdt%3AP800&#43;%3FnotableWork&#43;.&#43;%23Friedrich&#43;Schiller%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3FnotableWork&#43;rdfs%3Alabel&#43;%3FworkLabel&#43;FILTER&#43;%28LANG%28%3FworkLabel%29%3D%22de%22%29&#43;.&#43;&#43;&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;%7D%0D%0A&#43;&#43;&#43;%3Fddbitem&#43;rdf%3Atype&#43;fabio%3AAnalogItem&#43;FILTER&#43;%28%0D%0A&#43;&#43;&#43;&#43;&#43;%21EXISTS&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3AisPartOf&#43;%3Fparent%0D%0A&#43;&#43;&#43;&#43;&#43;%7D%0D%0A&#43;&#43;%29%0D%0A&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3Atitle&#43;%3Ftitle&#43;FILTER&#43;regex%28%3Ftitle%2C&#43;%3FworkLabel%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;%3Fddbitem&#43;fabio%3AhasReproduction&#43;%3FdigitizedItem&#43;.%0D%0A&#43;&#43;&#43;%3FdigitizedItem&#43;fabio%3AisExemplarOf&#43;%3Fdigitized&#43;.%0D%0A&#43;&#43;&#43;%3Fdigitized&#43;frbr%3Aowner&#43;%3Fowner&#43;.%0D%0A&#43;&#43;&#43;optional&#43;%7B&#43;%3Fowner&#43;foaf%3Aname&#43;%3FownerName&#43;%7D%0D%0A&#43;&#43;&#43;optional&#43;%7B&#43;%3FdigitizedItem&#43;schema%3Athumbnail&#43;%3Fthumbnail&#43;%7D%0D%0A%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
   </li>
   
   
 </ul>
 
-    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq06.html" target="_blank">Download Results</a>
-
-### CQ7
-  - 
-    ```
-
-    ```
-    <ul class="cta-group">
-  
-  <li>
-    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
-  </li>
-  
-  
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/sunburst.html" target="_blank">Download Results</a></p>
+</li>
 </ul>
-
-    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq07.html" target="_blank">Download Results</a>
-
-### CQ8
-  - 
-    ```
-
-    ```
-    <ul class="cta-group">
-  
-  <li>
-    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
-  </li>
-  
-  
-</ul>
-
-    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq08.html" target="_blank">Download Results</a>
-
-### CQ9
-  - 
-    ```
-
-    ```
-    <ul class="cta-group">
-  
-  <li>
-    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
-  </li>
-  
-  
-</ul>
-
-    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq09.html" target="_blank">Download Results</a>
-
-### CQ10
-  - 
-    ```
-
-    ```
-    <ul class="cta-group">
-  
-  <li>
-    <a href="https://ddbkg.fiz-karlsruhe.de/"  class="btn btn-primary px-3 py-3">Run 👉</a>
-  </li>
-  
-  
-</ul>
-
-    <a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/cq10.html" target="_blank">Download Results</a>
-
---->
-<!---
-Previous CQ2
-```
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX gnd: <http://d-nb.info/gnd/>
-    PREFIX gndo: <http://d-nb.info/standards/elementset/gnd#>
-    PREFIX fabio: <http://purl.org/spar/fabio/>
-    PREFIX frbr: <http://purl.org/vocab/frbr/core#>
-    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-    PREFIX dcterms: <http://purl.org/dc/terms/>
+<hr>
+<h3 id="cq8">CQ8</h3>
+<ul>
+<li>Have there been stage performances of Friedrich Schiller&rsquo;s works plays? (with <a href="https://codingdavinci.de/de/projekte/linked-stage-graph" target="_blank" rel="noopener">Linked Stage Graph</a> lookup)
+<pre><code>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
     
-    SELECT DISTINCT ?ddbitem ?title ?work ?author
-    WHERE {
-      ?work rdf:type fabio:Work .
-      ?work dcterms:creator ?author .
-      ?work fabio:hasPortrayal ?ddbitem .
-      ?author foaf:name ?author_name FILTER regex(str(?author_name), "Schiller", "i") .
-      ?work dcterms:title ?title FILTER regex(str(?title), "R.*uber", "i") .
-            }
-    ```
+SELECT DISTINCT ?title ?lsgUri ?date ?desc (COUNT(?image) AS ?images)
+WHERE {
+   ?ddbitem a fabio:Work ;
+     dcterms:title ?title ;
+     dcterms:creator ?author .
+   ?author foaf:name ?author_name 
+   FILTER regex(?author_name, &quot;Schiller, Friedrich&quot;, &quot;i&quot;) .
     
-    CQ5
-    ```
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX gnd: <http://d-nb.info/gnd/>
-    PREFIX gndo: <http://d-nb.info/standards/elementset/gnd#>
-    PREFIX fabio: <http://purl.org/spar/fabio/>
-    PREFIX frbr: <http://purl.org/vocab/frbr/core#>
-    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-    PREFIX dcterms: <http://purl.org/dc/terms/>
+   SERVICE &lt;https://slod.fiz-karlsruhe.de/sparql&gt; {
+      ?lsgUri dcterms:title ?lsgTitle ;
+         foaf:depiction ?image ;  
+         dcterms:date ?date ;
+         dcterms:description ?desc .
+   }
+       
+  FILTER regex(?lsgTitle, ?title, &quot;i&quot;) .
     
-    SELECT ?langcode (COUNT (?langcode) as ?translations)
-    WHERE {
-      ?expression dcterms:creator ?author .
-      ?expression fabio:hasRepresentation ?ddbitem
-      ?author foaf:name ?author_name FILTER (regex(str(?author_name), "Johann Wolfgang von Goethe", "i") || regex(str(?author_name), "Goethe, Johann Wolfgang von", "i")) .
-      ?expression dcterms:title ?title FILTER regex(str(?title), "Faust", "i") .
-      ?expression dcterms:language ?lang .
-      ?lang rdfs:label ?langcode .
-    } GROUP BY ?langcode
-    ```
---->
+}
+</code></pre>
+<p><ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=PREFIX&#43;rdf%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX&#43;rdfs%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0APREFIX&#43;frbr%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Ffrbr%2Fcore%23%3E%0D%0APREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A%0D%0ASELECT&#43;DISTINCT&#43;%3Ftitle&#43;%3FlsgUri&#43;%3Fdate&#43;%3Fdesc&#43;%28COUNT%28%3Fimage%29&#43;AS&#43;%3Fimages%29%0D%0AWHERE&#43;%7B%0D%0A&#43;&#43;&#43;%3Fddbitem&#43;a&#43;fabio%3AWork&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;dcterms%3Atitle&#43;%3Ftitle&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;dcterms%3Acreator&#43;%3Fauthor&#43;.%0D%0A&#43;&#43;&#43;%3Fauthor&#43;foaf%3Aname&#43;%3Fauthor_name&#43;%0D%0A&#43;&#43;&#43;FILTER&#43;regex%28%3Fauthor_name%2C&#43;%22Schiller%2C&#43;Friedrich%22%2C&#43;%22i%22%29&#43;.%0D%0A%0D%0A&#43;&#43;&#43;SERVICE&#43;%3Chttps%3A%2F%2Fslod.fiz-karlsruhe.de%2Fsparql%3E&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3FlsgUri&#43;dcterms%3Atitle&#43;%3FlsgTitle&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;foaf%3Adepiction&#43;%3Fimage&#43;%3B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;dcterms%3Adate&#43;%3Fdate&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;dcterms%3Adescription&#43;%3Fdesc&#43;.%0D%0A&#43;&#43;&#43;%7D%0D%0A&#43;&#43;&#43;%0D%0A&#43;&#43;FILTER&#43;regex%28%3FlsgTitle%2C&#43;%3Ftitle%2C&#43;%22i%22%29&#43;.%0D%0A%0D%0A%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+<a href="https://ise-fizkarlsruhe.github.io/ddbkg/cq/lsg.html" target="_blank">Download Results</a></p>
+</li>
+</ul>
+<hr>
+<h3 id="cq9">CQ9</h3>
+<ul>
+<li>Look for Schiller&rsquo;s Jeanne D&rsquo;Arc (with <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" target="_blank" rel="noopener">Wikidata</a> lookup)
+<pre><code>PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+        
+SELECT DISTINCT ?altName  ?author_name ?title ?ddbitem WHERE {  
+    SERVICE &lt;https://query.wikidata.org/sparql&gt; {
+      wd:Q7226 skos:altLabel ?altName FILTER(lang(?altName)=&quot;de&quot;).
+   }
+   ?ddbitem dcterms:title ?title FILTER regex(?title, SUBSTR(?altName,1,12), &quot;i&quot;) .
+   ?ddbitem dcterms:creator ?author .
+   ?author foaf:name ?author_name FILTER regex(?author_name, &quot;Friedrich Schiller&quot;, &quot;i&quot;) .
+}
+</code></pre>
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=PREFIX&#43;dct%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;skos%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;wdt%3A&#43;%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;wd%3A&#43;%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;%3FaltName&#43;&#43;%3Fauthor_name&#43;%3Ftitle&#43;%3Fddbitem&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;SERVICE&#43;%3Chttps%3A%2F%2Fquery.wikidata.org%2Fsparql%3E&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;wd%3AQ7226&#43;skos%3AaltLabel&#43;%3FaltName&#43;FILTER%28lang%28%3FaltName%29%3D%22de%22%29.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%7D%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3Atitle&#43;%3Ftitle&#43;FILTER&#43;regex%28%3Ftitle%2C&#43;SUBSTR%28%3FaltName%2C1%2C12%29%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3Acreator&#43;%3Fauthor&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fauthor&#43;foaf%3Aname&#43;%3Fauthor_name&#43;FILTER&#43;regex%28%3Fauthor_name%2C&#43;%22Friedrich&#43;Schiller%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+</li>
+</ul>
+<hr>
+<h3 id="cq10">CQ10</h3>
+<ul>
+<li>Look for items by other authors belonging to the same literary movement as Friedrich Schiller (with <a href="https://www.dbpedia.org" target="_blank" rel="noopener">DBPedia</a> lookup)
+<pre><code>PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX dbc: &lt;http://dbpedia.org/resource/Category:&gt;
+PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+PREFIX schema: &lt;http://www.schema.org/&gt;
+PREFIX frbr: &lt;http://purl.org/vocab/frbr/core#&gt;
+        
+SELECT DISTINCT ?otherAuthors ?title ?ddbitem WHERE {  
+    SERVICE &lt;http://dbpedia.org/sparql&gt; {
+      ?s rdfs:label &quot;Friedrich Schiller&quot;@de .
+      ?s dbo:movement ?movement .
+      ?other dbo:movement ?othermovement .
+      ?other rdfs:label ?otherAuthors FILTER (LANG(?otherAuthors)=&quot;de&quot;) .
+      FILTER ((?movement = ?othermovement) AND (?other != ?s))
+   }
+    
+   ?ddbitem rdf:type fabio:AnalogItem FILTER (
+     !EXISTS {
+       ?ddbitem dcterms:isPartOf ?parent
+     }
+  )
+   ?ddbitem dcterms:title ?title ;
+      dcterms:creator ?creator .
+   ?creator a foaf:Person ;
+      foaf:lastName ?lastName ;
+      foaf:givenName ?firstName .
+   BIND (CONCAT(?firstName, &quot; &quot;, ?lastName) AS ?ddbName ).
+   FILTER regex(?ddbName, ?otherAuthors, &quot;i&quot;)
+}
+</code></pre>
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=PREFIX&#43;dct%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX&#43;skos%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0APREFIX&#43;dbc%3A&#43;%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A%3E%0D%0APREFIX&#43;dbo%3A&#43;%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0APREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX&#43;wdt%3A&#43;%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0D%0APREFIX&#43;schema%3A&#43;%3Chttp%3A%2F%2Fwww.schema.org%2F%3E%0D%0APREFIX&#43;frbr%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Ffrbr%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;%0D%0ASELECT&#43;DISTINCT&#43;%3FotherAuthors&#43;%3Ftitle&#43;%3Fddbitem&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SERVICE&#43;%3Chttp%3A%2F%2Fdbpedia.org%2Fsparql%3E&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fs&#43;rdfs%3Alabel&#43;%22Friedrich&#43;Schiller%22%40de&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fs&#43;dbo%3Amovement&#43;%3Fmovement&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fother&#43;dbo%3Amovement&#43;%3Fothermovement&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;%3Fother&#43;rdfs%3Alabel&#43;%3FotherAuthors&#43;FILTER&#43;%28LANG%28%3FotherAuthors%29%3D%22de%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;FILTER&#43;%28%28%3Fmovement&#43;%3D&#43;%3Fothermovement%29&#43;AND&#43;%28%3Fother&#43;%21%3D&#43;%3Fs%29%29%0D%0A&#43;&#43;&#43;%7D%0D%0A%0D%0A&#43;&#43;&#43;%3Fddbitem&#43;rdf%3Atype&#43;fabio%3AAnalogItem&#43;FILTER&#43;%28%0D%0A&#43;&#43;&#43;&#43;&#43;%21EXISTS&#43;%7B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3AisPartOf&#43;%3Fparent%0D%0A&#43;&#43;&#43;&#43;&#43;%7D%0D%0A&#43;&#43;%29%0D%0A&#43;&#43;&#43;%3Fddbitem&#43;dcterms%3Atitle&#43;%3Ftitle&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;dcterms%3Acreator&#43;%3Fcreator&#43;.%0D%0A&#43;&#43;&#43;%3Fcreator&#43;a&#43;foaf%3APerson&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;foaf%3AlastName&#43;%3FlastName&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;foaf%3AgivenName&#43;%3FfirstName&#43;.%0D%0A&#43;&#43;&#43;BIND&#43;%28CONCAT%28%3FfirstName%2C&#43;%22&#43;%22%2C&#43;%3FlastName%29&#43;AS&#43;%3FddbName&#43;%29.%0D%0A&#43;&#43;&#43;FILTER&#43;regex%28%3FddbName%2C&#43;%3FotherAuthors%2C&#43;%22i%22%29%0D%0A%7D&amp;format=text%2Fx-html%2Btr&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+</li>
+</ul>
 
           </div>
 
