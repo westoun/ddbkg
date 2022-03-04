@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="Alignment of DDB-EDM to FaBiO" />
+  <meta name="description" content="Alignment of DDB-EDM to MO and ACO" />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/ddbkg/docs/alignment/" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/ddbkg/docs/alignment/audio/" />
 
   
 
@@ -255,7 +255,7 @@
   
 
   
-    <link rel="alternate" href="/ddbkg/docs/alignment/index.xml" type="application/rss+xml" title="DDB-KG" />
+    <link rel="alternate" href="/ddbkg/docs/alignment/audio/index.xml" type="application/rss+xml" title="DDB-KG" />
   
 
   
@@ -265,7 +265,7 @@
   <link rel="icon" type="image/png" href="/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_32x32_fill_lanczos_center_2.png" />
   <link rel="apple-touch-icon" type="image/png" href="/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_180x180_fill_lanczos_center_2.png" />
 
-  <link rel="canonical" href="http://localhost:1313/ddbkg/docs/alignment/" />
+  <link rel="canonical" href="http://localhost:1313/ddbkg/docs/alignment/audio/" />
 
   
   
@@ -282,13 +282,13 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="DDB-KG" />
-  <meta property="og:url" content="http://localhost:1313/ddbkg/docs/alignment/" />
-  <meta property="og:title" content="Alignment of DDB-EDM to FaBiO | DDB-KG" />
-  <meta property="og:description" content="Alignment of DDB-EDM to FaBiO" /><meta property="og:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:url" content="http://localhost:1313/ddbkg/docs/alignment/audio/" />
+  <meta property="og:title" content="Audio Ontologies in the DDB | DDB-KG" />
+  <meta property="og:description" content="Alignment of DDB-EDM to MO and ACO" /><meta property="og:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-08-25T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2022-03-04T00:00:00&#43;00:00" />
     
   
 
@@ -304,11 +304,11 @@
 
 
 
-  <title>Alignment of DDB-EDM to FaBiO | DDB-KG</title>
+  <title>Audio Ontologies in the DDB | DDB-KG</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ee6f7595e996b7cf80bee1d5d023ef20" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="caca610c099331df566f0d9a4b48f0ca" >
 
   
   
@@ -635,47 +635,27 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/ddbkg/docs/examples/"><i class="fas fa-book pr-1"></i>Examples</a>
-    
-
-    
-      </div>
-    
-
-
-
-  
-    
-    
-    
-    
-      
-    
-    
-
-    
-      <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/ddbkg/docs/alignment/"><i class="fas fa-book pr-1"></i>Libraries (FaBiO)</a>
-    
-
-    
-      </div>
-    
-
-
-
-  
-    
-    
-    
-    
-      
-    
-    
-
-    
-      <div class="docs-toc-item">
         <a class="docs-toc-link " href="/ddbkg/docs/library/"><i class="fas fa-book pr-1"></i>Libraries (FaBiO)</a>
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/ddbkg/docs/examples/"><i class="fas fa-book pr-1"></i>Examples</a>
     
 
     
@@ -741,7 +721,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        Libraries (FaBiO)
+        Audio Ontologies in the DDB
       </li>
     </ol>
   </nav>
@@ -749,24 +729,10 @@
 
           
 
-          <h1>Alignment of DDB-EDM to FaBiO</h1>
+          <h1>Audio Ontologies in the DDB</h1>
 
           <div class="article-style">
-            <p>All terms in the library dataset are assigned to FaBiO endeavor sub-classes manually when applicable. There is no 1-to-1 correspondence between a term and a FaBiO class; this is because a term has several conceptual equivalences: document type, document structure, production process, purpose, manifestation, and subject headings.</p>
-<p>The class/sub-class mapping is specified in the &lsquo;<em>Terms-FaBiO Classes</em>&rsquo; sheet below, while the data and object properties alignment is specified in the &lsquo;<em>WEMI Fields</em>&rsquo; sheet. This mapping is also available as JSON files: <a href="https://github.com/ISE-FIZKarlsruhe/ddbkg/blob/main/config/type2class.json" target="_blank" rel="noopener">type2class.json</a> and <a href="https://github.com/ISE-FIZKarlsruhe/ddbkg/blob/main/config/wemi_fields.json" target="_blank" rel="noopener">wemi_fields.json</a>.</p>
-<ul class="cta-group">
-  
-  <li>
-    <a href="https://docs.google.com/spreadsheets/d/1z-ixNa_rv-PumIhumgDSlMXGqRaamMSdcYn0LfPWq74/edit?usp=sharing"  class="btn btn-primary px-3 py-3">Google Sheets 👉</a>
-  </li>
-  
-  
-</ul>
-
-<div class="responsive-wrap">
-  <iframe src="https://docs.google.com/spreadsheets/d/1z-ixNa_rv-PumIhumgDSlMXGqRaamMSdcYn0LfPWq74/edit?usp=sharing" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</div>
-
+            
           </div>
 
           
@@ -787,7 +753,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Aug 25, 2021</p>
+          <p>Last updated on Mar 4, 2022</p>
 
           
 
