@@ -288,7 +288,7 @@
     <meta property="twitter:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2022-03-04T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2022-03-07T00:00:00&#43;00:00" />
     
   
 
@@ -635,7 +635,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/ddbkg/docs/examples/"><i class="fas fa-book pr-1"></i>Examples</a>
+        <a class="docs-toc-link " href="/ddbkg/docs/examples/"><i class="fas fa-book pr-1"></i>Competency Questions</a>
     
 
     
@@ -705,13 +705,22 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#ontologies">Ontologies</a>
       <ul>
-        <li><a href="#simplified-music">Simplified (Music)</a></li>
+        <li><a href="#fabio">FaBiO</a></li>
+        <li><a href="#music-ontology-mo">Music Ontology (MO)</a></li>
+        <li><a href="#audio-commons-ontology-aco">Audio Commons Ontology (ACO)</a></li>
+      </ul>
+    </li>
+    <li><a href="#alignment">Alignment</a>
+      <ul>
+        <li></li>
         <li><a href="#detailed-music">Detailed (Music)</a></li>
         <li><a href="#detailed-non-musical">Detailed (Non-Musical)</a></li>
       </ul>
     </li>
+    <li><a href="#references">References:</a></li>
   </ul>
 </nav>
 
@@ -762,7 +771,78 @@
           <h1>Audio Ontologies in the DDB</h1>
 
           <div class="article-style">
-            <h3 id="simplified-music">Simplified (Music)</h3>
+            <h2 id="introduction">Introduction</h2>
+<p>The vast collection of the German Digital Company (DDB) includes objects that the UNESCO cultural heritage (CH) hierarchy (Ronchi, 2011) classified as intangible. Examples of intangible objects include musical works, natural heritage, oral traditions, to name a few. These are often digitized as audio or video.</p>
+<p>Audio content in the DDB can be found across several sectors: audio books from libraries, interviews of significant German personalities from research institutions, commercial jingles from archives, recordings of animal sounds from natural museums and music from gramophone records often found in multimedia libraries. The audio files can be classified into two broad  (2) categories:</p>
+<ol>
+<li>
+<p><strong>Work</strong> - audio files containing intellectual or artistic content, such as Music, and Ebooks.</p>
+</li>
+<li>
+<p><strong>Non-Work</strong> - audio files without intellectual or artistic content, such as as bird songs, and machinery sounds.</p>
+</li>
+</ol>
+<p>The types of audio files are encoded in the <a href="http://purl.org/dc/elements/1.1/type" target="_blank" rel="noopener">dc:type</a> or <a href="http://www.europeana.eu/schemas/edm/hasType" target="_blank" rel="noopener">edm:hasType</a> data properties.  Below is the list of these terms and the number of objects associated with them:</p>
+<div class="responsive-wrap">
+  <iframe src="https://docs.google.com/spreadsheets/d/1_iN1W2Xo5WyYIQ3sgfDOcOeBvgZ_MkaBsL-7JTCKiUU/edit?usp=sharing" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+<p>To determine whether the audio file is a <em>Work</em> or <em>Non-Work</em>, the values encoded by the data property <a href="http://purl.org/dc/elements/1.1/subject" target="_blank" rel="noopener">dc:subject</a> are inspected. There are approximately 3,700 unique terms relating to the object&rsquo;s subject or topic, however, only terms with frequency counts in the thousands were used. These terms are as follows:</p>
+<ol>
+<li>Work - <em>Lied</em> (Song), <em>Duett</em> (Duet), <em>Arie</em> (Arias), <em>Oper</em> (Opera), <em>Erzählende Literatur</em> (Audio Books), <em>Werbesendung</em> (Ads)</li>
+<li>Non-Work - <em>Tierstimme</em> (Animal Sounds), <em>Tonaufname</em> (Sound Recording)</li>
+</ol>
+<h2 id="ontologies">Ontologies</h2>
+<p>To be able to represent the semantics of these diverse objects, the selection of the target ontologies is based on the following considerations: interoperability, suitability to the domain, and the application profile.</p>
+<p>In the case of audio books, adapting a FRBR-aligned ontology facilitates interoperability, by considering them as  expressions of their respective literary works. The same holds true for any musical composition and its text; for instance, a recording of Carl Orff&rsquo;s Carmina Burana is considered an expression of the 13<em>th</em> century manuscript containing a collection of poems it was based on.</p>
+<h3 id="fabio">FaBiO</h3>
+<p>Although, <a href="https://sparontologies.github.io/fabio/current/fabio.html" target="_blank" rel="noopener">FaBiO</a> (Peroni et al., 2012), as a FRBR-aligned bibliographic ontology, provides subclasses relating to musical works <a href="https://sparontologies.github.io/fabio/current/fabio.html#d4e5392" target="_blank" rel="noopener">fabio:Song</a>, <a href="https://sparontologies.github.io/fabio/current/fabio.html#d4e4227" target="_blank" rel="noopener">fabio:MusicalComposition</a> and their expression <a href="https://sparontologies.github.io/fabio/current/fabio.html#d4e2145" target="_blank" rel="noopener">fabio:AudioDocument</a>, these subclasses cannot represent the full range of audio content described above.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-docs-audio-fig2">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://ise-fizkarlsruhe.github.io/ddbkg/images/audio-in-fabio.jpg" alt="FaBiO Classes for Audio Files" loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      FaBiO Classes for Audio Files
+    </figcaption></figure>.</p>
+<h3 id="music-ontology-mo">Music Ontology (MO)</h3>
+<p><a href="http://musicontology.com/specification/" target="_blank" rel="noopener">MO</a> (Raimond et al., 2007) aims to model the semantics of music production workflows and their editorial metadata. FRBR plays a central role in the definition of its classes. Parallels can be drawn between the super-classes of MO (<a href="http://musicontology.com/specification/#term-MusicalWork" target="_blank" rel="noopener">mo:MusicalWork</a>, <a href="http://musicontology.com/specification/#term-MusicalExpression" target="_blank" rel="noopener">mo:MusicalExpression</a>, <a href="http://musicontology.com/specification/#term-MusicalManifestation" target="_blank" rel="noopener">mo:MusicalManifestation</a>, and <a href="http://musicontology.com/specification/#term-MusicalItem" target="_blank" rel="noopener">mo:MusicalItem</a> and the 4 conceptual layers of FRBR. Since the original intention of the authors is to model the different workflows, events are central to this ontology. Entities that are usually found as attributes of a <a href="https://vocab.org/frbr/core#term-Endeavour" target="_blank" rel="noopener">frbr:Endeavor</a> sub-class require intermediate events to link them to that endeavor: the attribution of an <em>mo:MusicalArtist</em> (Agent) to its <a href="http://musicontology.com/specification/#term-MusicalWork" target="_blank" rel="noopener">mo:MusicalWork</a>) requires an instance of the <a href="http://musicontology.com/specification/#term-Composition" target="_blank" rel="noopener">mo:Composition</a> event, in contrast to the widely-adopted convention of linking agents directly to the <a href="https://vocab.org/frbr/core#term-Work" target="_blank" rel="noopener">frbr:Work</a>.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-docs-audio-fig2">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://ise-fizkarlsruhe.github.io/ddbkg/images/audio-in-mo.jpg" alt="MO Classes for Audio Files" loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      MO Classes for Audio Files
+    </figcaption></figure>.</p>
+<h3 id="audio-commons-ontology-aco">Audio Commons Ontology (ACO)</h3>
+<p>As mentioned, not all audio content in the DDB possess intellectual or artistic content. Examples of these are natural sounds and field recordings. An ontology that  provides classes and properties to allow representations of non-musical audio content exists in <a href="https://w3id.org/ac-ontology/aco#AudioExpression" target="_blank" rel="noopener">ACO</a> (Ceriani et al., 2018). Being an upper-level ontology for audio content, the authors' initial intention is to provide interoperability across repositories on the Web. The FRBR-aligned classes of ACO are generalizations of MO classes. However, a FRBR Work sub-class specific to ACO was not defined, since it does not generalize to all types of sounds. Similarly to MO, events also play an central role in ACO.</p>
+<h2 id="alignment">Alignment</h2>
+<p>The decision to forego the usage of <a href="http://motools.sourceforge.net/event/event.html#term_Event" target="_blank" rel="noopener">owl:Event</a> sub-classes, namely, <a href="http://musicontology.com/specification/#term-Composition" target="_blank" rel="noopener">mo:Composition</a>, <a href="http://musicontology.com/specification/#term-Performance" target="_blank" rel="noopener">mo:Performance</a>, and <a href="http://musicontology.com/specification/#term-Recording" target="_blank" rel="noopener">mo:Recording</a>, can be explained by the application profile and dataset of the DDB. The intention to publish metadata describing the CHOs for the purpose of retrieval and exploration means that details of events that are relevant for music or sound production are rarely included in the data provided by participating institutions. For instance, the description of a gramophone record includes the names of the composer, performer/s and publisher. However, details of the performance of this specific record which is crucial when modeling a music production workflow is not available. If event-centric modeling is followed, the additional entities representing events such as <a href="http://musicontology.com/specification/#term-Composition" target="_blank" rel="noopener">mo:Composition</a> or <a href="http://musicontology.com/specification/#term-Performance" target="_blank" rel="noopener">mo:Performance</a> will serve no purpose, since the relationship between entities of the endeavor and the event will always be 1:1. Thus, the attributes that may be attached to the event can be defined as object or data properties of the involved endeavor entities. As a result, the generic property <a href="">dcterms:contributor</a> is used in lieu of <a href="http://musicontology.com/specification/#term-performer" target="_blank" rel="noopener">mo:performer</a>, since the latter strictly defines the domain to be of class <a href="http://musicontology.com/specification/#term-Performance" target="_blank" rel="noopener">mo:Performance</a>, an event which is not utilized in the alignment.</p>
+<h5 id="simplified-music">Simplified (Music)</h5>
 <p>
 
 
@@ -825,6 +905,11 @@
   </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
       Alignment to Target Ontologies of Non-Musical Audio Content (detailed)
     </figcaption></figure>.</p>
+<h2 id="references">References:</h2>
+<p>[1] Ceriani, M., Fazekas, G.: Audio Commons Ontology: A Data Model for an AudioContent Ecosystem. In: SEMWEB (2018)</p>
+<p>[2] Peroni, S., Shotton, D.: FaBiO and CiTO: Ontologies for describing bibliographicresources and citations. Journal of Web Semantics17, 33–43 (12 2012)</p>
+<p>[3] Raimond, Y., Abdallah, S., Sandler, M., Giasson, F.: The Music Ontology. In: ISMR.vol. 422 (09 2007)</p>
+<p>[4] Ronchi, A.M.: eCulture: Cultural Content in the Digital Age. Springer, Berlin, Hei-delberg (2009)</p>
 
           </div>
 
@@ -846,7 +931,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Mar 4, 2022</p>
+          <p>Last updated on Mar 7, 2022</p>
 
           
 
