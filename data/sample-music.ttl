@@ -1,0 +1,162 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ddb-item: <http://www.deutsche-digitale-bibliothek.de/item/> .
+@prefix ddb-org: <http://www.deutsche-digitale-bibliothek.de/organization/> .
+@prefix ddbkg-resource: <http://ddbkg.fiz-karlsruhe.de/resource/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix gnd: <https://d-nb.info/gnd/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://www.schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://ddbkg.fiz-karlsruhe.de/resource//prov/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> a dcat:Dataset,
+        prov:Entity ;
+    dcterms:identifier "8214877930552945wTgL" ;
+    dcterms:type <http://www.lido-schema.org/> ;
+    prov:wasAttributedTo ddb-org:JJUO42747XGNHECFH7ZFVLVQYPXS4ZBK .
+
+ddbkg-resource:AAAT3H3ZDUY6JRZAEO4PJRTVNTLG6ZF8 a prov:SoftwareAgent ;
+    rdfs:label "XSLT" ;
+    prov:actedOnBehalfOf <http://www.deutsche-digitale-bibliothek.de> .
+
+<http://mediathek.slub-dresden.de/ton70912517.html> a mo:AudioFile,
+        edm:WebResource ;
+    dcterms:rights <http://www.deutsche-digitale-bibliothek.de/lizenzen/rv-fz/> ;
+    schema:thumbnail <http://media.slub-dresden.de/fon/snp/a/009117/fon_snp_a_009117_01.jpg> .
+
+<http://www.deutsche-digitale-bibliothek.de> a prov:Agent,
+        foaf:Organization ;
+    rdfs:label "Deutsche Digitale Bibliothek"@de,
+        "German Digital Library"@en .
+
+ddb-org:JJUO42747XGNHECFH7ZFVLVQYPXS4ZBK a prov:Agent,
+        foaf:Organization ;
+    dbpedia-owl:isil <http://ld.zdb-services.de/resource/organisations/DE-14> ;
+    dcterms:identifier "oid1470131600302" ;
+    schema:url "https://www.slub-dresden.de/sammlungen/av-medien-mediathek/" ;
+    foaf:name "SLUB Dresden. Musikabteilung" .
+
+<http://d-nb.info/gnd/5008770-8> a edm:Agent,
+        foaf:Organization ;
+    foaf:name "Columbia Graphophone Company (London)"@en .
+
+gnd:4042011-5 a edm:Place ;
+    rdfs:label "New York"@de .
+
+gnd:4134364-5 a skos:Concept ;
+    rdfs:label "Tonträger"@de .
+
+gnd:4135113-7 a skos:Concept ;
+    rdfs:label "Schellackplate"@de .
+
+gnd:7844609-0 a edm:Place ;
+    rdfs:label "London"@de .
+
+<https://en.wikipedia.org/wiki/Oscar_Seagle> a edm:Agent,
+        foaf:Person ;
+    foaf:givenName "Oskar"@de ;
+    foaf:lastName "Seagle"@en ;
+    foaf:name "Oskar Seagle"@de,
+        "Oscar Seagle"@en .
+
+<https://www.wikidata.org/wiki/Q183387> a edm:Agent,
+        foaf:Organization ;
+    foaf:name "Columbia Records"@en .
+
+<http://ddbkg.fiz-karlsruhe.de/resource/expression/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> a mo:MusicalExpression ;
+    dcterms:alternative "Old folks at home (Einheitssachtitel)"@de ;
+    dcterms:created "1906"@en ;
+    dcterms:creator <http://d-nb.info/gnd/118684280> ;
+    dcterms:subject <http://d-nb.info/gnd/4035669-3> ;
+    dcterms:title "Old folks at home / (Stephen C. Foster)"@en ;
+    fabio:hasRepresentation <http://ddbkg.fiz-karlsruhe.de/resource/item/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    frbr:embodiment <http://ddbkg.fiz-karlsruhe.de/resource/manifestation/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    frbr:realization <http://ddbkg.fiz-karlsruhe.de/resource/work/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> .
+
+<http://ddbkg.fiz-karlsruhe.de/resource/item/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> a mo:MusicalItem,
+        edm:ProvidedCHO,
+        prov:Entity ;
+    dcterms:alternative "Old folks at home (Einheitssachtitel)"@de ;
+    dcterms:contributor <https://en.wikipedia.org/wiki/Oscar_Seagle> ;
+    dcterms:created "1906"@en ;
+    dcterms:creator <http://d-nb.info/gnd/118684280> ;
+    dcterms:currentLocation <http://vocab.getty.edu/tgn/7003721> ;
+    dcterms:description "Interpretation: Baritone solo and male quartette. Sung by Oscar Seagle and Columbia Stellar Quartette. With orchestra accompaniment, [Aufnahme: New York, 25. September 1918]"@en ;
+    dcterms:extent "Durchmesser: 30 cm"@de ;
+    dcterms:format "1 Schellackplatte : 78 UpM (Material/Technik)"@de,
+        "SOUND"@en ;
+    dcterms:identifier "49508 (Matrizennummer)"@de,
+        "Fon-SNP-A 9117 (Inventarnummer)"@de ;
+    dcterms:publisher <http://d-nb.info/gnd/5008770-8>,
+        <https://www.wikidata.org/wiki/Q183387> ;
+    dcterms:rights "Sächsische Landesbibliothek – Staats- und Universitätsbibliothek Dresden"@de ;
+    dcterms:subject <http://d-nb.info/gnd/4035669-3> ;
+    dcterms:title "Old folks at home / (Stephen C. Foster)"@en ;
+    dcterms:type gnd:4134364-5,
+        gnd:4135113-7 ;
+    mo:publication_location gnd:4042011-5,
+        gnd:7844609-0 ;
+    fabio:hasReproduction <http://mediathek.slub-dresden.de/ton70912517.html> ;
+    fabio:portrayalOf <http://ddbkg.fiz-karlsruhe.de/resource/work/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    fabio:representationOf <http://ddbkg.fiz-karlsruhe.de/resource/expression/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    frbr:exemplarOf <http://ddbkg.fiz-karlsruhe.de/resource/manifestation/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    edm:currentLocation <http://vocab.getty.edu/tgn/7003721> ;
+    owl:sameAs ddb-item:ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV ;
+    prov:generatedAtTime "2020-09-17T08:50:06+0200" ;
+    prov:wasAttributedTo ddbkg-resource:AAAT3H3ZDUY6JRZAEO4PJRTVNTLG6ZF8 ;
+    prov:wasDerivedFrom <http://ddbkg.fiz-karlsruhe.de/resource//prov/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> .
+
+<http://ddbkg.fiz-karlsruhe.de/resource/manifestation/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> a mo:MusicalManifestation ;
+    dcterms:alternative "Old folks at home (Einheitssachtitel)"@de ;
+    dcterms:contributor <https://en.wikipedia.org/wiki/Oscar_Seagle> ;
+    dcterms:created "1906"@en ;
+    dcterms:creator <http://d-nb.info/gnd/118684280> ;
+    dcterms:currentLocation <http://vocab.getty.edu/tgn/7003721> ;
+    dcterms:extent "Durchmesser: 30 cm"@de ;
+    dcterms:format "1 Schellackplatte : 78 UpM (Material/Technik)"@de ;
+    dcterms:publisher <http://d-nb.info/gnd/5008770-8>,
+        <https://www.wikidata.org/wiki/Q183387> ;
+    dcterms:rights "Sächsische Landesbibliothek – Staats- und Universitätsbibliothek Dresden"@de ;
+    dcterms:subject <http://d-nb.info/gnd/4035669-3> ;
+    dcterms:title "Old folks at home / (Stephen C. Foster)"@en ;
+    dcterms:type gnd:4134364-5,
+        gnd:4135113-7 ;
+    mo:publication_location gnd:4042011-5,
+        gnd:7844609-0 ;
+    fabio:manifestationOf <http://ddbkg.fiz-karlsruhe.de/resource/work/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    frbr:embodimentOf <http://ddbkg.fiz-karlsruhe.de/resource/expression/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    frbr:exemplar <http://ddbkg.fiz-karlsruhe.de/resource/item/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> .
+
+<http://ddbkg.fiz-karlsruhe.de/resource/work/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> a mo:MusicalWork ;
+    dcterms:alternative "Old folks at home (Einheitssachtitel)"@de ;
+    dcterms:created "1906"@en ;
+    dcterms:creator <http://d-nb.info/gnd/118684280> ;
+    dcterms:subject <http://d-nb.info/gnd/4035669-3> ;
+    dcterms:title "Old folks at home / (Stephen C. Foster)"@en ;
+    fabio:hasManifestation <http://ddbkg.fiz-karlsruhe.de/resource/manifestation/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    fabio:hasPortrayal <http://ddbkg.fiz-karlsruhe.de/resource/item/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    frbr:realization <http://ddbkg.fiz-karlsruhe.de/resource/expression/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
+    owl:sameAs gnd:300365624,
+        <https://musicbrainz.org/work/f2f30ea4-b285-41c7-ac4e-f3be93a50d6f>,
+        <https://www.wikidata.org/wiki/Q834609> .
+
+<http://vocab.getty.edu/tgn/7003721> a edm:Place ;
+    rdfs:label "Dresden"@de .
+
+<http://d-nb.info/gnd/118684280> a edm:Agent,
+        foaf:Person ;
+    foaf:givenName "Oscar"@en,
+        "Robert"@en ;
+    foaf:lastName "Foster"@en ;
+    foaf:name "Robert Foster"@en .
+
+<http://d-nb.info/gnd/4035669-3> a skos:Concept ;
+    rdfs:label "Lied"@de .
+
