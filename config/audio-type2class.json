@@ -1,0 +1,59 @@
+{
+    "Muster": {
+        "en": "Template",
+        "subj": false,
+        "dnb": "",
+        "class": [
+            "frbr:Work",
+            "frbr:Expression",
+            "frbr:Manifestation",
+            "frbr:Item",
+            "fabio:DigitalItem"
+        ]
+    },
+    "Band": {
+        "en": "Volume",
+        "subj": false,
+        "dnb": "",
+        "class": [
+            "fabio:Work",
+            "fabio:AudioDocument",
+            [
+                "mo:Record",
+                "aco:Audio Clip"
+            ],
+            "aco:AudioItem",
+            "aco:AudioFile"
+        ]
+    },
+    "Monografie": {
+        "en": "Monography",
+        "subj": false,
+        "dnb": "",
+        "class": [
+            "fabio:Work",
+            "fabio:AudioDocument",
+            [
+                "mo:Record",
+                "aco:Audio Clip"
+            ],
+            "aco:AudioItem",
+            "aco:AudioFile"
+        ]
+    },
+    "Tonaufnahme": {
+        "en": "Audio Recording",
+        "subj": false,
+        "dnb": "",
+        "class": [
+            "",
+            "",
+            [
+                "mo:Record",
+                "aco:Audio Clip"
+            ],
+            "aco:AudioItem",
+            "aco:AudioFile"
+        ]
+    }
+}
