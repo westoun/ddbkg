@@ -43,21 +43,21 @@ ddb-org:JJUO42747XGNHECFH7ZFVLVQYPXS4ZBK a prov:Agent,
     schema:url "https://www.slub-dresden.de/sammlungen/av-medien-mediathek/" ;
     foaf:name "SLUB Dresden. Musikabteilung" .
 
-gnd:4042011-5 a edm:Place ;
-    rdfs:label "New York"@de .
-
-gnd:7844609-0 a edm:Place ;
-    rdfs:label "London"@de .
-
 <http://d-nb.info/gnd/5008770-8> a edm:Agent,
         foaf:Organization ;
     foaf:name "Columbia Graphophone Company (London)"@en .
+
+gnd:4042011-5 a edm:Place ;
+    rdfs:label "New York"@de .
 
 gnd:4134364-5 a skos:Concept ;
     rdfs:label "Tonträger"@de .
 
 gnd:4135113-7 a skos:Concept ;
     rdfs:label "Schellackplate"@de .
+
+gnd:7844609-0 a edm:Place ;
+    rdfs:label "London"@de .
 
 <https://en.wikipedia.org/wiki/Oscar_Seagle> a edm:Agent,
         foaf:Person ;
@@ -101,6 +101,8 @@ gnd:4135113-7 a skos:Concept ;
     dcterms:title "Old folks at home / (Stephen C. Foster)"@en ;
     dcterms:type gnd:4134364-5,
         gnd:4135113-7 ;
+    mo:publication_location gnd:4042011-5,
+        gnd:7844609-0 ;
     fabio:hasReproduction <http://mediathek.slub-dresden.de/ton70912517.html> ;
     fabio:portrayalOf <http://ddbkg.fiz-karlsruhe.de/resource/work/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
     fabio:representationOf <http://ddbkg.fiz-karlsruhe.de/resource/expression/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
@@ -126,7 +128,7 @@ gnd:4135113-7 a skos:Concept ;
     dcterms:title "Old folks at home / (Stephen C. Foster)"@en ;
     dcterms:type gnd:4134364-5,
         gnd:4135113-7 ;
-    mo:publishing_location gnd:4042011-5,
+    mo:publication_location gnd:4042011-5,
         gnd:7844609-0 ;
     fabio:manifestationOf <http://ddbkg.fiz-karlsruhe.de/resource/work/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
     frbr:embodimentOf <http://ddbkg.fiz-karlsruhe.de/resource/expression/ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV> ;
