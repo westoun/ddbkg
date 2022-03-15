@@ -18,18 +18,18 @@
 <http://d-nb.info/gnd/4052020-1> a skos:Concept ;
     skos:prefLabel "Tonaufnahme" .
 
-ddbkg-resource:AA2IGSLMOKQLKIKPBZGGMQG3FCCRCSXF a prov:SoftwareAgent ;
+ddbkg-resource:AARKM9HRYWGYCHVN6DV9OINSMVQTQRTX a prov:SoftwareAgent ;
     rdfs:label "XSLT-2.24" ;
     dcterms:hasVersion "2.24" ;
     prov:actedOnBehalfOf <http://www.deutsche-digitale-bibliothek.de> .
 
-ddbkg-resource:DDKTMAA0XNMNBWIDONCIBPVLCQZR9MWB a dcat:Dataset,
+ddbkg-resource:DDSOFZTOCRMQVSYNTL77M7O1AMFH4AP9 a dcat:Dataset,
         prov:Entity ;
     dcterms:identifier "33445323582674520qaHS" ;
     dcterms:type <http://www.lido-schema.org/> ;
     prov:wasAttributedTo ddb-org:6GWXTQXD535KAX63RWUKGWHAQ6GTKJF3 .
 
-ddbkg-resource:MMALOL1PA5GBGOHLVA89V8DHQX5FICPF a mo:Record,
+ddbkg-resource:MMND2LYVIHGI0YIO6RJBFDSHB58GN0SI a mo:Record,
         aco:AudioClip ;
     dc:description "Alter: Jungtier(e)"@de,
         "Art(en) im Hintergrund: Phylloscopus trochilus"@de,
@@ -98,10 +98,10 @@ ddbkg-resource:JI53FTTP6AQMEJEYJE3OMX3NROJPGQAP a edm:ProvidedCHO,
         <LU4RDGDJWBGP4EPURXZMZMLKUTROGKON>,
         <MHT3JNT6QJ2SG7ZRGQG24E5UN4CPN4OG>,
         <PI3IHVKFZV4WZOAOZIRC5GCX3HXQWEOR> ;
-    fabio:isExemplarOf ddbkg-resource:MMALOL1PA5GBGOHLVA89V8DHQX5FICPF ;
+    fabio:isExemplarOf ddbkg-resource:MMND2LYVIHGI0YIO6RJBFDSHB58GN0SI ;
     edm:currentLocation <http://vocab.getty.edu/tgn/7003712> ;
     owl:sameAs ddb-item:JI53FTTP6AQMEJEYJE3OMX3NROJPGQAP ;
     prov:generatedAtTime "2021-11-05T13:26:25+0100" ;
-    prov:wasAttributedTo ddbkg-resource:AA2IGSLMOKQLKIKPBZGGMQG3FCCRCSXF ;
-    prov:wasDerivedFrom ddbkg-resource:DDKTMAA0XNMNBWIDONCIBPVLCQZR9MWB .
+    prov:wasAttributedTo ddbkg-resource:AARKM9HRYWGYCHVN6DV9OINSMVQTQRTX ;
+    prov:wasDerivedFrom ddbkg-resource:DDSOFZTOCRMQVSYNTL77M7O1AMFH4AP9 .
 

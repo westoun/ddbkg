@@ -35,12 +35,12 @@
 <http://d-nb.info/gnd/5058957-X> a foaf:Organization ;
     foaf:name "Aufbau-Verlag" .
 
-ddbkg-resource:AAVMKSSI5QADSHBGOJ9HVVZMTVJKDHTU a prov:SoftwareAgent ;
+ddbkg-resource:AAJGWI5XVKPOXRQJ9TWVOLNNYMSMZEJJ a prov:SoftwareAgent ;
     rdfs:label "XSLT-2.50" ;
     dcterms:hasVersion "2.50" ;
     prov:actedOnBehalfOf <http://www.deutsche-digitale-bibliothek.de> .
 
-ddbkg-resource:DDA6B7AJGWJPDC92FRH6IOOZSVQHLAZH a dcat:Dataset,
+ddbkg-resource:DDOTWQBMHFVPMC8PN6V4OIEJAT64PIMK a dcat:Dataset,
         prov:Entity ;
     dcterms:identifier "8759509967988451nsnl" ;
     dcterms:type <http://www.loc.gov/MARC21/slim/> ;
@@ -59,7 +59,7 @@ ddb-org:2Q37XY5KXJNJE5MV6SWP3UKKZ6RSBLK5 a prov:Agent,
     schema:url "http://www.dnb.de" ;
     foaf:name "Deutsche Nationalbibliothek" .
 
-ddbkg-resource:EEJQ7YQNFUDAAOBB65YRXLBE5MSCMZBR a fabio:AudioDocument ;
+ddbkg-resource:EERQ72ABCCERE2R4SON8G1FCHQI6OBC3 a fabio:AudioDocument ;
     dcterms:contributor "Aufbau-Verlag"@de,
         "Wette, Wolfram"@de ;
     dcterms:creator <http://d-nb.info/gnd/11856319X>,
@@ -67,7 +67,7 @@ ddbkg-resource:EEJQ7YQNFUDAAOBB65YRXLBE5MSCMZBR a fabio:AudioDocument ;
     dcterms:extent "263, [16] S." ;
     dcterms:language <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     dcterms:title "Man möchte immer weinen und lachen in einem :Revolutionstagebuch 1919"@de ;
-    fabio:hasEmbodiment ddbkg-resource:MMKMZZZXKKVRC6SGBQTNNE3HFEKDWKOT ;
+    fabio:hasEmbodiment ddbkg-resource:MMGJFUQ7UE9CSBHVSHZ4MURJ0X1WXCO4 ;
     fabio:hasRepresentation ddbkg-resource:5BDZJCHYHRIGUR2HGCEJHKJVJ67DKXAU ;
     fabio:hasSubjectTerm <244ACEEGU2O3MQGOZFGOYH243MF2ODO3>,
         <2ZEDHXZ7WK3QIKIWGOQCHDLXINOHAV7K>,
@@ -82,7 +82,7 @@ ddbkg-resource:EEJQ7YQNFUDAAOBB65YRXLBE5MSCMZBR a fabio:AudioDocument ;
         <http://d-nb.info/gnd/4065109-5>,
         <http://d-nb.info/gnd/4075073-5> .
 
-ddbkg-resource:MMKMZZZXKKVRC6SGBQTNNE3HFEKDWKOT a mo:Record,
+ddbkg-resource:MMGJFUQ7UE9CSBHVSHZ4MURJ0X1WXCO4 a mo:Record,
         aco:AudioClip ;
     dc:description "1. Aufl."@de ;
     dcterms:contributor "Aufbau-Verlag"@de,
@@ -110,7 +110,7 @@ ddbkg-resource:MMKMZZZXKKVRC6SGBQTNNE3HFEKDWKOT a mo:Record,
         <http://d-nb.info/gnd/11856319X>,
         <http://d-nb.info/gnd/4065109-5>,
         <http://d-nb.info/gnd/4075073-5> ;
-    fabio:isEmbodimentOf ddbkg-resource:EEJQ7YQNFUDAAOBB65YRXLBE5MSCMZBR .
+    fabio:isEmbodimentOf ddbkg-resource:EERQ72ABCCERE2R4SON8G1FCHQI6OBC3 .
 
 <http://id.loc.gov/vocabulary/iso639-2/ger> a dcterms:LinguisticSystem ;
     rdfs:label "ger" .
@@ -190,13 +190,13 @@ ddbkg-resource:5BDZJCHYHRIGUR2HGCEJHKJVJ67DKXAU a edm:ProvidedCHO,
         <http://d-nb.info/gnd/11856319X>,
         <http://d-nb.info/gnd/4065109-5>,
         <http://d-nb.info/gnd/4075073-5> ;
-    fabio:isExemplarOf ddbkg-resource:MMKMZZZXKKVRC6SGBQTNNE3HFEKDWKOT ;
-    fabio:isRepresentationOf ddbkg-resource:EEJQ7YQNFUDAAOBB65YRXLBE5MSCMZBR ;
+    fabio:isExemplarOf ddbkg-resource:MMGJFUQ7UE9CSBHVSHZ4MURJ0X1WXCO4 ;
+    fabio:isRepresentationOf ddbkg-resource:EERQ72ABCCERE2R4SON8G1FCHQI6OBC3 ;
     edm:currentLocation <V3GUD6CDMBTPBVAMQFRJCKBXZ5VAJ7NG> ;
     owl:sameAs ddb-item:5BDZJCHYHRIGUR2HGCEJHKJVJ67DKXAU ;
     prov:generatedAtTime "2022-02-04T10:02:45+0100" ;
-    prov:wasAttributedTo ddbkg-resource:AAVMKSSI5QADSHBGOJ9HVVZMTVJKDHTU ;
-    prov:wasDerivedFrom ddbkg-resource:DDA6B7AJGWJPDC92FRH6IOOZSVQHLAZH .
+    prov:wasAttributedTo ddbkg-resource:AAJGWI5XVKPOXRQJ9TWVOLNNYMSMZEJJ ;
+    prov:wasDerivedFrom ddbkg-resource:DDOTWQBMHFVPMC8PN6V4OIEJAT64PIMK .
 
 <http://d-nb.info/gnd/11856319X> a fabio:SubjectTerm,
         frbr:Subject,
