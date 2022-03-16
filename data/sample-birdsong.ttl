@@ -18,23 +18,24 @@
 <http://d-nb.info/gnd/4052020-1> a skos:Concept ;
     skos:prefLabel "Tonaufnahme" .
 
-ddbkg-resource:AARKM9HRYWGYCHVN6DV9OINSMVQTQRTX a prov:SoftwareAgent ;
+ddbkg-resource:AABHLUHFH3RT0RD8JVURZUZJ7KFXMBK6 a prov:SoftwareAgent ;
     rdfs:label "XSLT-2.24" ;
     dcterms:hasVersion "2.24" ;
     prov:actedOnBehalfOf <http://www.deutsche-digitale-bibliothek.de> .
 
-ddbkg-resource:DDSOFZTOCRMQVSYNTL77M7O1AMFH4AP9 a dcat:Dataset,
+ddbkg-resource:DDCY3AMQFISKSGIRGRWBNYWXOWUVUQYZ a dcat:Dataset,
         prov:Entity ;
     dcterms:identifier "33445323582674520qaHS" ;
     dcterms:type <http://www.lido-schema.org/> ;
     prov:wasAttributedTo ddb-org:6GWXTQXD535KAX63RWUKGWHAQ6GTKJF3 .
 
-ddbkg-resource:MMND2LYVIHGI0YIO6RJBFDSHB58GN0SI a mo:Record,
+ddbkg-resource:MM98ELHIPWSYITQLVFIC5ETNTD95G4QO a mo:Record,
         aco:AudioClip ;
     dc:description "Alter: Jungtier(e)"@de,
         "Art(en) im Hintergrund: Phylloscopus trochilus"@de,
         "Geschlecht: männlich"@de,
         "Lauttyp: Ruf"@de ;
+    dcterms:creator <4GRKTI5P5TJFMWROZ5GIGVY7Y2VVUFCJ> ;
     dcterms:format "Uher 4000 Report-S, Bändchenmikro Beyer M 260, Parabolspiegel Polyester (470 mm) (Material/Technik)"@de ;
     dcterms:identifier "TSA:Picoides_minor_Co_25_9_1 (Inventarnummer)" ;
     dcterms:language <http://id.loc.gov/vocabulary/iso639-2/ger> ;
@@ -68,6 +69,11 @@ ddb-org:6GWXTQXD535KAX63RWUKGWHAQ6GTKJF3 a prov:Agent,
     dcterms:rights <http://creativecommons.org/licenses/by-nc-sa/4.0/> ;
     fabio:isReproductionOf ddbkg-resource:JI53FTTP6AQMEJEYJE3OMX3NROJPGQAP .
 
+<4GRKTI5P5TJFMWROZ5GIGVY7Y2VVUFCJ> a foaf:Person ;
+    foaf:givenName "Klaus" ;
+    foaf:lastName "Conrads" ;
+    foaf:name "Conrads, Klaus" .
+
 <7IPQQKLPZOHH6GDUCIPK6BVHZF5KHRJX> a fabio:SubjectTerm ;
     skos:prefLabel "Spechtvögel | Piciformes"@de .
 
@@ -87,6 +93,7 @@ ddbkg-resource:JI53FTTP6AQMEJEYJE3OMX3NROJPGQAP a edm:ProvidedCHO,
         "Art(en) im Hintergrund: Phylloscopus trochilus"@de,
         "Geschlecht: männlich"@de,
         "Lauttyp: Ruf"@de ;
+    dcterms:creator <4GRKTI5P5TJFMWROZ5GIGVY7Y2VVUFCJ> ;
     dcterms:format "SOUND",
         "Uher 4000 Report-S, Bändchenmikro Beyer M 260, Parabolspiegel Polyester (470 mm) (Material/Technik)"@de ;
     dcterms:hasVersion "10" ;
@@ -98,10 +105,10 @@ ddbkg-resource:JI53FTTP6AQMEJEYJE3OMX3NROJPGQAP a edm:ProvidedCHO,
         <LU4RDGDJWBGP4EPURXZMZMLKUTROGKON>,
         <MHT3JNT6QJ2SG7ZRGQG24E5UN4CPN4OG>,
         <PI3IHVKFZV4WZOAOZIRC5GCX3HXQWEOR> ;
-    fabio:isExemplarOf ddbkg-resource:MMND2LYVIHGI0YIO6RJBFDSHB58GN0SI ;
+    fabio:isExemplarOf ddbkg-resource:MM98ELHIPWSYITQLVFIC5ETNTD95G4QO ;
     edm:currentLocation <http://vocab.getty.edu/tgn/7003712> ;
     owl:sameAs ddb-item:JI53FTTP6AQMEJEYJE3OMX3NROJPGQAP ;
     prov:generatedAtTime "2021-11-05T13:26:25+0100" ;
-    prov:wasAttributedTo ddbkg-resource:AARKM9HRYWGYCHVN6DV9OINSMVQTQRTX ;
-    prov:wasDerivedFrom ddbkg-resource:DDSOFZTOCRMQVSYNTL77M7O1AMFH4AP9 .
+    prov:wasAttributedTo ddbkg-resource:AABHLUHFH3RT0RD8JVURZUZJ7KFXMBK6 ;
+    prov:wasDerivedFrom ddbkg-resource:DDCY3AMQFISKSGIRGRWBNYWXOWUVUQYZ .
 

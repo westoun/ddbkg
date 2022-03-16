@@ -32,15 +32,12 @@
     dcterms:rights <http://www.deutsche-digitale-bibliothek.de/lizenzen/rv-fz/> ;
     fabio:isReproductionOf ddbkg-resource:5BDZJCHYHRIGUR2HGCEJHKJVJ67DKXAU .
 
-<http://d-nb.info/gnd/5058957-X> a foaf:Organization ;
-    foaf:name "Aufbau-Verlag" .
-
-ddbkg-resource:AAJGWI5XVKPOXRQJ9TWVOLNNYMSMZEJJ a prov:SoftwareAgent ;
+ddbkg-resource:AAWXRFHI0GZQFJRCS5XSXBPB4GJZGDEK a prov:SoftwareAgent ;
     rdfs:label "XSLT-2.50" ;
     dcterms:hasVersion "2.50" ;
     prov:actedOnBehalfOf <http://www.deutsche-digitale-bibliothek.de> .
 
-ddbkg-resource:DDOTWQBMHFVPMC8PN6V4OIEJAT64PIMK a dcat:Dataset,
+ddbkg-resource:DDIGSNGPD0AK4JYM6NKFSKRVHTVV9V4Y a dcat:Dataset,
         prov:Entity ;
     dcterms:identifier "8759509967988451nsnl" ;
     dcterms:type <http://www.loc.gov/MARC21/slim/> ;
@@ -59,15 +56,16 @@ ddb-org:2Q37XY5KXJNJE5MV6SWP3UKKZ6RSBLK5 a prov:Agent,
     schema:url "http://www.dnb.de" ;
     foaf:name "Deutsche Nationalbibliothek" .
 
-ddbkg-resource:EERQ72ABCCERE2R4SON8G1FCHQI6OBC3 a fabio:AudioDocument ;
+ddbkg-resource:EELLJINJTXNZ2DQTM22E0PRQ0MHRICWJ a fabio:AudioDocument ;
     dcterms:contributor "Aufbau-Verlag"@de,
         "Wette, Wolfram"@de ;
     dcterms:creator <http://d-nb.info/gnd/11856319X>,
-        <http://d-nb.info/gnd/123176743> ;
+        <http://d-nb.info/gnd/123176743>,
+        <http://d-nb.info/gnd/5058957-X> ;
     dcterms:extent "263, [16] S." ;
     dcterms:language <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     dcterms:title "Man möchte immer weinen und lachen in einem :Revolutionstagebuch 1919"@de ;
-    fabio:hasEmbodiment ddbkg-resource:MMGJFUQ7UE9CSBHVSHZ4MURJ0X1WXCO4 ;
+    fabio:hasEmbodiment ddbkg-resource:MME46KPELP0XDLIISD96MXFT1IOS5YYD ;
     fabio:hasRepresentation ddbkg-resource:5BDZJCHYHRIGUR2HGCEJHKJVJ67DKXAU ;
     fabio:hasSubjectTerm <244ACEEGU2O3MQGOZFGOYH243MF2ODO3>,
         <2ZEDHXZ7WK3QIKIWGOQCHDLXINOHAV7K>,
@@ -82,13 +80,14 @@ ddbkg-resource:EERQ72ABCCERE2R4SON8G1FCHQI6OBC3 a fabio:AudioDocument ;
         <http://d-nb.info/gnd/4065109-5>,
         <http://d-nb.info/gnd/4075073-5> .
 
-ddbkg-resource:MMGJFUQ7UE9CSBHVSHZ4MURJ0X1WXCO4 a mo:Record,
+ddbkg-resource:MME46KPELP0XDLIISD96MXFT1IOS5YYD a mo:Record,
         aco:AudioClip ;
     dc:description "1. Aufl."@de ;
     dcterms:contributor "Aufbau-Verlag"@de,
         "Wette, Wolfram"@de ;
     dcterms:creator <http://d-nb.info/gnd/11856319X>,
-        <http://d-nb.info/gnd/123176743> ;
+        <http://d-nb.info/gnd/123176743>,
+        <http://d-nb.info/gnd/5058957-X> ;
     dcterms:extent "263, [16] S." ;
     dcterms:identifier "(DE-599)DNB1070325295",
         "(OCoLC)908644600",
@@ -110,7 +109,7 @@ ddbkg-resource:MMGJFUQ7UE9CSBHVSHZ4MURJ0X1WXCO4 a mo:Record,
         <http://d-nb.info/gnd/11856319X>,
         <http://d-nb.info/gnd/4065109-5>,
         <http://d-nb.info/gnd/4075073-5> ;
-    fabio:isEmbodimentOf ddbkg-resource:EERQ72ABCCERE2R4SON8G1FCHQI6OBC3 .
+    fabio:isEmbodimentOf ddbkg-resource:EELLJINJTXNZ2DQTM22E0PRQ0MHRICWJ .
 
 <http://id.loc.gov/vocabulary/iso639-2/ger> a dcterms:LinguisticSystem ;
     rdfs:label "ger" .
@@ -163,7 +162,8 @@ ddbkg-resource:5BDZJCHYHRIGUR2HGCEJHKJVJ67DKXAU a edm:ProvidedCHO,
         "Aufbau-Verlag"@de,
         "Wette, Wolfram"@de ;
     dcterms:creator <http://d-nb.info/gnd/11856319X>,
-        <http://d-nb.info/gnd/123176743> ;
+        <http://d-nb.info/gnd/123176743>,
+        <http://d-nb.info/gnd/5058957-X> ;
     dcterms:extent "263, [16] S." ;
     dcterms:format "SOUND" ;
     dcterms:hasVersion "36" ;
@@ -190,13 +190,16 @@ ddbkg-resource:5BDZJCHYHRIGUR2HGCEJHKJVJ67DKXAU a edm:ProvidedCHO,
         <http://d-nb.info/gnd/11856319X>,
         <http://d-nb.info/gnd/4065109-5>,
         <http://d-nb.info/gnd/4075073-5> ;
-    fabio:isExemplarOf ddbkg-resource:MMGJFUQ7UE9CSBHVSHZ4MURJ0X1WXCO4 ;
-    fabio:isRepresentationOf ddbkg-resource:EERQ72ABCCERE2R4SON8G1FCHQI6OBC3 ;
+    fabio:isExemplarOf ddbkg-resource:MME46KPELP0XDLIISD96MXFT1IOS5YYD ;
+    fabio:isRepresentationOf ddbkg-resource:EELLJINJTXNZ2DQTM22E0PRQ0MHRICWJ ;
     edm:currentLocation <V3GUD6CDMBTPBVAMQFRJCKBXZ5VAJ7NG> ;
     owl:sameAs ddb-item:5BDZJCHYHRIGUR2HGCEJHKJVJ67DKXAU ;
     prov:generatedAtTime "2022-02-04T10:02:45+0100" ;
-    prov:wasAttributedTo ddbkg-resource:AAJGWI5XVKPOXRQJ9TWVOLNNYMSMZEJJ ;
-    prov:wasDerivedFrom ddbkg-resource:DDOTWQBMHFVPMC8PN6V4OIEJAT64PIMK .
+    prov:wasAttributedTo ddbkg-resource:AAWXRFHI0GZQFJRCS5XSXBPB4GJZGDEK ;
+    prov:wasDerivedFrom ddbkg-resource:DDIGSNGPD0AK4JYM6NKFSKRVHTVV9V4Y .
+
+<http://d-nb.info/gnd/5058957-X> a foaf:Organization ;
+    foaf:name "Aufbau-Verlag" .
 
 <http://d-nb.info/gnd/11856319X> a fabio:SubjectTerm,
         frbr:Subject,

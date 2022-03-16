@@ -20,11 +20,11 @@
 <XKHT32A6NGEESQ34YNWWH23Q2INRHVXR> a skos:Concept ;
     skos:prefLabel "Schellackplatte" .
 
-ddbkg-resource:AA0GRBSHQEKEDS4AJZQVGYV7IEQHXE99 a prov:SoftwareAgent ;
+ddbkg-resource:AA4XOSGWVZ5SWAWFPN6MDPSQ9KA8KR9M a prov:SoftwareAgent ;
     rdfs:label "XSLT-0.0" ;
     prov:actedOnBehalfOf <http://www.deutsche-digitale-bibliothek.de> .
 
-ddbkg-resource:DD1RB4BWH5Z6UTKAGZ9C2SEUD1KL4PRM a dcat:Dataset,
+ddbkg-resource:DD1TNRJQQ4B47HXFLRMHN1OZOZJI3AZD a dcat:Dataset,
         prov:Entity ;
     dcterms:identifier "8214877930552945wTgL" ;
     dcterms:type <http://www.lido-schema.org/> ;
@@ -51,17 +51,25 @@ ddb-org:JJUO42747XGNHECFH7ZFVLVQYPXS4ZBK a prov:Agent,
     schema:url "https://www.slub-dresden.de/sammlungen/av-medien-mediathek/" ;
     foaf:name "SLUB Dresden. Musikabteilung" .
 
-ddbkg-resource:EET2DJIDCPLZBRBJZ8HNPSTKZFWC3XWI a mo:MuscialExpression ;
+ddbkg-resource:EELQYELZPNN94T47OTHPSHPAHH0UPCOG a mo:MuscialExpression ;
+    dcterms:creator <UTQJCKNBPM5W3UXFAW4BEWCIMXRQANII>,
+        <UZTHVLKB6MURT3ECY4GLEE6PHV6IUB7K>,
+        <http://d-nb.info/gnd/118684280>,
+        <http://d-nb.info/gnd/5008770-8> ;
     dcterms:extent "Durchmesser: 30 cm"@de ;
     dcterms:language <http://id.loc.gov/vocabulary/iso639-2/ger> ;
     dcterms:title "Old folks at home / (Stephen C. Foster)"@en ;
-    fabio:hasEmbodiment ddbkg-resource:MMN9JNSOZ2SI2RDROU0MIKOWO6RQ8K0V ;
+    fabio:hasEmbodiment ddbkg-resource:MMO3RRBOQR4FFMULFX8W2XEG4K8FYSXR ;
     fabio:hasRepresentation ddbkg-resource:ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV ;
     fabio:hasSubjectTerm <UPIAUV3EEULHBUR6OA6XUEGFBV3TFPUG>,
         <http://d-nb.info/gnd/4035669-3> .
 
-ddbkg-resource:MMN9JNSOZ2SI2RDROU0MIKOWO6RQ8K0V a mo:MusicalManifestation ;
+ddbkg-resource:MMO3RRBOQR4FFMULFX8W2XEG4K8FYSXR a mo:MusicalManifestation ;
     dc:description "Interpretation: Baritone solo and male quartette. Sung by Oscar Seagle and Columbia Stellar Quartette. With orchestra accompaniment, [Aufnahme: New York, 25. September 1918]"@de ;
+    dcterms:creator <UTQJCKNBPM5W3UXFAW4BEWCIMXRQANII>,
+        <UZTHVLKB6MURT3ECY4GLEE6PHV6IUB7K>,
+        <http://d-nb.info/gnd/118684280>,
+        <http://d-nb.info/gnd/5008770-8> ;
     dcterms:extent "Durchmesser: 30 cm"@de ;
     dcterms:format "1 Schellackplatte : 78 UpM (Material/Technik)"@de ;
     dcterms:identifier "49508 (Matrizennummer)",
@@ -72,7 +80,7 @@ ddbkg-resource:MMN9JNSOZ2SI2RDROU0MIKOWO6RQ8K0V a mo:MusicalManifestation ;
     fabio:hasExemplar ddbkg-resource:ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV ;
     fabio:hasSubjectTerm <UPIAUV3EEULHBUR6OA6XUEGFBV3TFPUG>,
         <http://d-nb.info/gnd/4035669-3> ;
-    fabio:isEmbodimentOf ddbkg-resource:EET2DJIDCPLZBRBJZ8HNPSTKZFWC3XWI .
+    fabio:isEmbodimentOf ddbkg-resource:EELQYELZPNN94T47OTHPSHPAHH0UPCOG .
 
 <http://id.loc.gov/vocabulary/iso639-2/ger> a dcterms:LinguisticSystem ;
     rdfs:label "ger" .
@@ -80,14 +88,38 @@ ddbkg-resource:MMN9JNSOZ2SI2RDROU0MIKOWO6RQ8K0V a mo:MusicalManifestation ;
 <UPIAUV3EEULHBUR6OA6XUEGFBV3TFPUG> a fabio:SubjectTerm ;
     skos:prefLabel "Tonträger (Gattung)"@de .
 
+<UTQJCKNBPM5W3UXFAW4BEWCIMXRQANII> a foaf:Person ;
+    foaf:givenName "Columbia" ;
+    foaf:lastName "Record" ;
+    foaf:name "Record, Columbia" .
+
+<UZTHVLKB6MURT3ECY4GLEE6PHV6IUB7K> a foaf:Person ;
+    foaf:givenName "Oskar" ;
+    foaf:lastName "Seagle" ;
+    foaf:name "Seagle, Oskar" .
+
+<http://d-nb.info/gnd/118684280> a foaf:Person ;
+    foaf:givenName "Stephen Collins" ;
+    foaf:lastName "Foster" ;
+    foaf:name "Foster, Stephen Collins" .
+
 <http://d-nb.info/gnd/4035669-3> a fabio:SubjectTerm,
         frbr:Subject ;
     skos:prefLabel "Lied"@de .
+
+<http://d-nb.info/gnd/5008770-8> a foaf:Person ;
+    foaf:givenName "Columbia Graphophone Company" ;
+    foaf:lastName "(London)" ;
+    foaf:name "(London), Columbia Graphophone Company" .
 
 ddbkg-resource:ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV a mo:MusicalItem,
         edm:ProvidedCHO,
         prov:Entity ;
     dc:description "Interpretation: Baritone solo and male quartette. Sung by Oscar Seagle and Columbia Stellar Quartette. With orchestra accompaniment, [Aufnahme: New York, 25. September 1918]"@de ;
+    dcterms:creator <UTQJCKNBPM5W3UXFAW4BEWCIMXRQANII>,
+        <UZTHVLKB6MURT3ECY4GLEE6PHV6IUB7K>,
+        <http://d-nb.info/gnd/118684280>,
+        <http://d-nb.info/gnd/5008770-8> ;
     dcterms:extent "Durchmesser: 30 cm"@de ;
     dcterms:format "SOUND",
         "1 Schellackplatte : 78 UpM (Material/Technik)"@de ;
@@ -100,11 +132,11 @@ ddbkg-resource:ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV a mo:MusicalItem,
     fabio:hasReproduction <http://mediathek.slub-dresden.de/ton70912517.html> ;
     fabio:hasSubjectTerm <UPIAUV3EEULHBUR6OA6XUEGFBV3TFPUG>,
         <http://d-nb.info/gnd/4035669-3> ;
-    fabio:isExemplarOf ddbkg-resource:MMN9JNSOZ2SI2RDROU0MIKOWO6RQ8K0V ;
-    fabio:isRepresentationOf ddbkg-resource:EET2DJIDCPLZBRBJZ8HNPSTKZFWC3XWI ;
+    fabio:isExemplarOf ddbkg-resource:MMO3RRBOQR4FFMULFX8W2XEG4K8FYSXR ;
+    fabio:isRepresentationOf ddbkg-resource:EELQYELZPNN94T47OTHPSHPAHH0UPCOG ;
     edm:currentLocation <http://vocab.getty.edu/tgn/7003721> ;
     owl:sameAs ddb-item:ILNOJIJWFWN3WFHQBS6RXI4QJ3BOXZVV ;
     prov:generatedAtTime "2020-09-17T08:50:06+0200" ;
-    prov:wasAttributedTo ddbkg-resource:AA0GRBSHQEKEDS4AJZQVGYV7IEQHXE99 ;
-    prov:wasDerivedFrom ddbkg-resource:DD1RB4BWH5Z6UTKAGZ9C2SEUD1KL4PRM .
+    prov:wasAttributedTo ddbkg-resource:AA4XOSGWVZ5SWAWFPN6MDPSQ9KA8KR9M ;
+    prov:wasDerivedFrom ddbkg-resource:DD1TNRJQQ4B47HXFLRMHN1OZOZJI3AZD .
 
