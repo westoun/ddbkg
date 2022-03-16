@@ -699,12 +699,16 @@
         <li><a href="#cq10">CQ10</a></li>
       </ul>
     </li>
-    <li><a href="#audio-mo--aco">Audio (MO &amp; ACO)</a>
+    <li><a href="#audio">Audio</a>
       <ul>
-        <li><a href="#cq0-template">CQ0 Template</a></li>
+        <li><a href="#cq11">CQ11</a></li>
+        <li><a href="#cq12">CQ12</a></li>
+        <li><a href="#cq13">CQ13</a></li>
+        <li><a href="#cq14">CQ14</a></li>
+        <li><a href="#cq15">CQ15</a></li>
+        <li><a href="#cq16">CQ16</a></li>
       </ul>
     </li>
-    <li><a href="#references">References:</a></li>
   </ul>
 </nav>
 
@@ -1153,14 +1157,15 @@ SELECT DISTINCT ?otherAuthors ?title ?ddbitem WHERE {
 
 </li>
 </ul>
-<h2 id="audio-mo--aco">Audio (MO &amp; ACO)</h2>
-<p>The following CQs are from Ceriani et al. (2018) &amp; Turchet et al. (2020):</p>
-<h3 id="cq0-template">CQ0 Template</h3>
-<ul>
-<li>Question
-<pre><code>SELECT
-</code></pre>
-<ul class="cta-group">
+<h2 id="audio">Audio</h2>
+<!--
+The following CQs are from Ceriani et al. (2018) & Turchet et al. (2020):
+### CQ0 Template
+- Question
+    ```
+    SELECT
+    ```
+    <ul class="cta-group">
   
   <li>
     <a href=""  class="btn btn-primary px-3 py-3">Run 👉</a>
@@ -1169,11 +1174,169 @@ SELECT DISTINCT ?otherAuthors ?title ?ddbitem WHERE {
   
 </ul>
 
+
+-->
+<h3 id="cq11">CQ11</h3>
+<ul>
+<li>Which audio objects have musical content?
+<pre><code>PREFIX mo: &lt;http://purl.org/ontology/mo/&gt;
+      
+SELECT DISTINCT ?ddbitem ?item WHERE {  
+   ?ddbobj rdf:type mo:MusicalItem ;
+       dcterms:title ?title ;
+       owl:sameAs ?ddbitem FILTER regex(?ddbitem, &quot;deutsche-digitale-bibliothek&quot;, &quot;i&quot;)
+}
+</code></pre>
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=&#43;&#43;&#43;&#43;PREFIX&#43;mo%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fontology%2Fmo%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;%3Fddbitem&#43;%3Ftitle&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbobj&#43;rdf%3Atype&#43;mo%3AMusicalItem&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;dcterms%3Atitle&#43;%3Ftitle&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;owl%3AsameAs&#43;%3Fddbitem&#43;FILTER&#43;regex%28%3Fddbitem%2C&#43;%22deutsche-digitale-bibliothek%22%2C&#43;%22i%22%29%0D%0A&#43;&#43;&#43;&#43;%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
 </li>
 </ul>
-<h2 id="references">References:</h2>
-<p>[1] Ceriani, M., Fazekas, G.: Audio Commons Ontology: A Data Model for an AudioContent Ecosystem. In: SEMWEB (2018)</p>
-<p>[2] L. Turchet, F. Antoniazzi, F. Viola, F. Giunchiglia, and G. Fazekas: The Internet of Musical Things Ontology. In Journal of Web Semantics 60, 100548 (2020)</p>
+<h3 id="cq12">CQ12</h3>
+<ul>
+<li>How many objects in the DDB are recordings of Arias?
+<pre><code>PREFIX mo: &lt;http://purl.org/ontology/mo/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+      
+SELECT DISTINCT COUNT(?ddbobj) WHERE {  
+   ?ddbobj rdf:type mo:MusicalItem ;
+       fabio:hasSubjectTerm ?subject .
+   ?subject skos:prefLabel ?subject_label FILTER regex(?subject_label, &quot;arie&quot;, &quot;i&quot;)
+}
+</code></pre>
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=&#43;&#43;&#43;&#43;PREFIX&#43;mo%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fontology%2Fmo%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;skos%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;COUNT%28%3Fddbobj%29&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbobj&#43;rdf%3Atype&#43;mo%3AMusicalItem&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;fabio%3AhasSubjectTerm&#43;%3Fsubject&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fsubject&#43;skos%3AprefLabel&#43;%3Fsubject_label&#43;FILTER&#43;regex%28%3Fsubject_label%2C&#43;%22arie%22%2C&#43;%22i%22%29%0D%0A&#43;&#43;&#43;&#43;%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+</li>
+</ul>
+<h3 id="cq13">CQ13</h3>
+<ul>
+<li>How many objects in the DDB are recordings of animal sounds?
+<pre><code>PREFIX aco: &lt;https://w3id.org/ac-ontology/aco#&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+      
+SELECT DISTINCT COUNT(?ddbobj) WHERE {  
+   ?ddbobj rdf:type aco:AudioItem;
+       fabio:hasSubjectTerm ?subject .
+   ?subject skos:prefLabel ?subject_label FILTER regex(?subject_label, &quot;tierstimme&quot;, &quot;i&quot;)
+}
+</code></pre>
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=&#43;&#43;&#43;&#43;PREFIX&#43;aco%3A&#43;%3Chttps%3A%2F%2Fw3id.org%2Fac-ontology%2Faco%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;skos%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;COUNT%28%3Fddbobj%29&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbobj&#43;rdf%3Atype&#43;aco%3AAudioItem%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;fabio%3AhasSubjectTerm&#43;%3Fsubject&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fsubject&#43;skos%3AprefLabel&#43;%3Fsubject_label&#43;FILTER&#43;regex%28%3Fsubject_label%2C&#43;%22tierstimme%22%2C&#43;%22i%22%29%0D%0A&#43;&#43;&#43;&#43;%7D%0D%0A&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+</li>
+</ul>
+<h3 id="cq14">CQ14</h3>
+<ul>
+<li>Are there audio books in the DDB?
+<pre><code>PREFIX aco: &lt;https://w3id.org/ac-ontology/aco#&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+      
+SELECT DISTINCT ?ddbitem ?title WHERE {  
+   ?ddbobj rdf:type aco:AudioItem;
+       dcterms:title ?title ;
+       dcterms:type ?obj_type ;
+       owl:sameAs ?ddbitem FILTER regex(?ddbitem, &quot;deutsche-digitale-bibliothek&quot;, &quot;i&quot;) .
+   ?obj_type skos:prefLabel ?type_label FILTER regex(?type_label, &quot;monografie&quot;, &quot;i&quot;)
+}
+</code></pre>
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=&#43;&#43;&#43;&#43;PREFIX&#43;aco%3A&#43;%3Chttps%3A%2F%2Fw3id.org%2Fac-ontology%2Faco%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;skos%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;fabio%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Ffabio%2F%3E%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;%3Fddbitem&#43;%3Ftitle&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbobj&#43;rdf%3Atype&#43;aco%3AAudioItem%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;dcterms%3Atitle&#43;%3Ftitle&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;dcterms%3Atype&#43;%3Fobj_type&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;owl%3AsameAs&#43;%3Fddbitem&#43;FILTER&#43;regex%28%3Fddbitem%2C&#43;%22deutsche-digitale-bibliothek%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fobj_type&#43;skos%3AprefLabel&#43;%3Ftype_label&#43;FILTER&#43;regex%28%3Ftype_label%2C&#43;%22monografie%22%2C&#43;%22i%22%29%0D%0A&#43;&#43;&#43;&#43;%7D%0D%0A&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+</li>
+</ul>
+<h3 id="cq15">CQ15</h3>
+<ul>
+<li>Are there recordings of arias from Puccini&rsquo;s Tosca?
+<pre><code>PREFIX mo: &lt;http://purl.org/ontology/mo/&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?ddbitem ?title WHERE {  
+   ?ddbobj rdf:type mo:MusicalItem ;
+       dcterms:creator ?creator ;
+       dcterms:title ?title FILTER regex (?title, &quot;tosca&quot;, &quot;i&quot;) .
+   ?ddbobj owl:sameAs ?ddbitem FILTER regex(?ddbitem, &quot;deutsche-digitale-bibliothek&quot;, &quot;i&quot;) .
+   ?creator foaf:name ?creator_name FILTER regex(?creator_name, &quot;puccini&quot;, &quot;i&quot;) .
+}
+</code></pre>
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=PREFIX&#43;mo%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fontology%2Fmo%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;rdfs%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;%3Fddbitem&#43;%3Ftitle&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbobj&#43;rdf%3Atype&#43;mo%3AMusicalItem&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;dcterms%3Acreator&#43;%3Fcreator&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;dcterms%3Atitle&#43;%3Ftitle&#43;FILTER&#43;regex&#43;%28%3Ftitle%2C&#43;%22tosca%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbobj&#43;owl%3AsameAs&#43;%3Fddbitem&#43;FILTER&#43;regex%28%3Fddbitem%2C&#43;%22deutsche-digitale-bibliothek%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fcreator&#43;foaf%3Aname&#43;%3Fcreator_name&#43;FILTER&#43;regex%28%3Fcreator_name%2C&#43;%22puccini%22%2C&#43;%22i%22%29&#43;.%0D%0A&#43;&#43;&#43;&#43;%7D&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+</li>
+</ul>
+<h3 id="cq16">CQ16</h3>
+<ul>
+<li>How many objects were provided by museums and who are these providers?
+<pre><code>PREFIX mo: &lt;http://purl.org/ontology/mo/&gt;
+PREFIX aco: &lt;https://w3id.org/ac-ontology/aco#&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX prov: &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+
+SELECT DISTINCT ?provider_name (COUNT(?ddbobj) as ?NumObjects) WHERE {  
+   VALUES (?type) { (mo:MusicalItem) (aco:AudioItem) } 
+   ?ddbobj prov:wasDerivedFrom ?dataset .
+   ?dataset prov:wasAttributedTo ?provider .
+   ?provider dcterms:type ?sparte ;
+       foaf:name ?provider_name .
+  FILTER regex(?sparte, &quot;sparte006&quot;) 
+} GROUP BY ?provider_name
+</code></pre>
+<ul class="cta-group">
+  
+  <li>
+    <a href="https://ddbkg.fiz-karlsruhe.de/sparql?default-graph-uri=&amp;qtxt=&#43;&#43;&#43;&#43;PREFIX&#43;mo%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fontology%2Fmo%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;aco%3A&#43;%3Chttps%3A%2F%2Fw3id.org%2Fac-ontology%2Faco%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;dcterms%3A&#43;%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;rdfs%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;prov%3A&#43;%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fprov%23%3E%0D%0A&#43;&#43;&#43;&#43;PREFIX&#43;foaf%3A&#43;%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0A%0D%0A&#43;&#43;&#43;&#43;SELECT&#43;DISTINCT&#43;%3Fprovider_name&#43;%28COUNT%28%3Fddbobj%29&#43;as&#43;%3FNumObjects%29&#43;WHERE&#43;%7B&#43;&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;VALUES&#43;%28%3Ftype%29&#43;%7B&#43;%28mo%3AMusicalItem%29&#43;%28aco%3AAudioItem%29&#43;%7D&#43;%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fddbobj&#43;prov%3AwasDerivedFrom&#43;%3Fdataset&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fdataset&#43;prov%3AwasAttributedTo&#43;%3Fprovider&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;%3Fprovider&#43;dcterms%3Atype&#43;%3Fsparte&#43;%3B%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;&#43;foaf%3Aname&#43;%3Fprovider_name&#43;.%0D%0A&#43;&#43;&#43;&#43;&#43;&#43;FILTER&#43;regex%28%3Fsparte%2C&#43;%22sparte006%22%29&#43;%0D%0A&#43;&#43;&#43;&#43;%7D&#43;GROUP&#43;BY&#43;%3Fprovider_name%0D%0A&amp;format=text%2Fhtml&amp;should-sponge=&amp;timeout=0&amp;signal_void=on"  class="btn btn-primary px-3 py-3">Run 👉</a>
+  </li>
+  
+  
+</ul>
+
+</li>
+</ul>
+<!-- FOOTNOTE
+[^1]: German Authority File or [*Gemeinsame Normdatei*](https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html)
+ 
+## References:
+[1] Ceriani, M., Fazekas, G.: Audio Commons Ontology: A Data Model for an AudioContent Ecosystem. In: SEMWEB (2018)
+
+[2] L. Turchet, F. Antoniazzi, F. Viola, F. Giunchiglia, and G. Fazekas: The Internet of Musical Things Ontology. In Journal of Web Semantics 60, 100548 (2020)
+-->
 
           </div>
 
