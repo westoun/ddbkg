@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <title>DDB-KG - The German Digital Library Knowledge Graph</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
     <style>
         #pylode {
             position: fixed;
             top: 130px;
-            left: -80px;
+            left: -60px;
             font-size: small;
             transform: rotate(-90deg);
             color: grey;
@@ -20,44 +22,15 @@
         #pylode a:hover {
             color: #333;
         }
-        #pylode #p {
-            color: #329545;
-        }
-        #pylode #y {
-            color: #f9cb33;
-        }
-        #pylode #version {
-            font-size: 1.0em;
-        }
 
         .cardinality {
             font-style: italic;
             color: #aa00aa;
         }
 
-        dl {
-            /*border: 1px solid navy;*/
-            /*padding:5px;*/
-        }
-
         dt {
             font-weight: bold;
-            padding: 0;
-        }
-
-        dd {
-            margin-bottom: 10px;
-            padding-top: 7px;
-        }
-
-        #metadata ul,
-        #classes ul {
-            list-style-type: none;
-        }
-
-        #metadata ul li,
-        #classes ul li {
-            margin-left: -40px;
+            padding: 5px 0 5px 0;
         }
 
         ul.hlist {
@@ -119,13 +92,14 @@
         }
         h3 {
             font: 120% sans-serif;
-            margin-top: 20px;
+            margin-top: 3px;
             padding-bottom: 5px;
             border-bottom: 1px solid navy;
         }
         h4 { font: bold 100% sans-serif }
         h5 { font: italic 100% sans-serif }
         h6 { font: small-caps 100% sans-serif }
+
 
         body {
             padding: 2em 70px 2em 70px;
@@ -158,9 +132,10 @@
         .sup-ap,
         .sup-p,
         .sup-ni,
-        .sup-con,
-        .sup-col {
+        .sup-cp,
+        .sup-cl {
             cursor:help;
+            margin-left: 3px;
         }
 
         .sup-c {
@@ -191,17 +166,14 @@
             color:brown;
         }
 
-        .sup-con {
+        .sup-cp {
             color:orange;
         }
 
-        .sup-col {
+        .sup-cl {
             color:darkred;
         }
 
-        sup {
-            margin-left: -3px;
-        }
         code {
             font-size: large;
             color: darkred;
@@ -212,2429 +184,1259 @@
             color: #336;
             text-decoration: none;
         }
-
-#toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    height: 100%;
-    overflow-y: auto;
-    padding: 10px;
-    border: solid 1px navy;
-    font-size: small;
-    width: 180px;
-}
-#toc h3 {
-    margin-top: 5px;
-}
-
-#toc ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-#toc .first > li {
-    margin-top: 5px;
-}
-
-#toc .second,
-#toc .third {
-    padding-left: 10px;
-}
-
-#content {
-    width: calc(100% - 150px);
-}
-
-.hover_property {
-    cursor: help;
-    text-decoration: none;
-    border-bottom: dashed 1px;
-}
-
-.setclass {
-    list-style-type: none;
-}
-	</style>
-    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
-    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <script id="schema.org" type="application/ld+json">
-[
+    </style>
+    
+    <script type="application/ld+json">
+      [
   {
     "@id": "http://ise-fizkarlsruhe.github.io/ddbkg/ddbo",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
-    "https://schema.org/creator": [
-      {
-        "@value": "1. Mary Ann Tan"
-      },
-      {
-        "@value": "2. Tabea Tietz"
-      },
-      {
-        "@value": "3. Oleksandra Bruns"
-      },
-      {
-        "@value": "4. Etienne Posthumus"
-      },
-      {
-        "@value": "5. Danilo Dessì"
-      },
-      {
-        "@value": "6. Harald Sack"
-      }
-    ],
     "https://schema.org/name": [
       {
-        "@language": "en",
         "@value": "DDB-KG - The German Digital Library Knowledge Graph"
       }
     ]
   }
 ]
-	</script>
-  </head>
-  <body>
-    <div id="content">
-      <div class="section" id="metadata">
-        <h1>DDB-KG - The German Digital Library Knowledge Graph</h1>
-        <h2>Metadata</h2>
-        <dl>
-          <div>
-            <dt>
-              <strong>IRI</strong>
-            </dt>
-            <dd>
-              <code>http://ise-fizkarlsruhe.github.io/ddbkg/ddbo</code>
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/title" title="A name given to the resource. Defined in DCMI Metadata Terms">Title</a>
-            </dt>
-            <dd><p>DDB-KG - The German Digital Library Knowledge Graph</p></dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/creator" title="An entity responsible for making the resource. Defined in DCMI Metadata Terms">Creator</a>
-            </dt>
-            <dd>
-              <ul>
-                <li><ol>
-<li>Mary Ann Tan</li>
-</ol></li>
-                <li><ol>
-<li>Tabea Tietz</li>
-</ol></li>
-                <li><ol>
-<li>Oleksandra Bruns</li>
-</ol></li>
-                <li><ol>
-<li>Etienne Posthumus</li>
-</ol></li>
-                <li><ol>
-<li>Danilo Dessì</li>
-</ol></li>
-                <li><ol>
-<li>Harald Sack</li>
-</ol></li>
-              </ul>
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespacePrefix" title="None. Defined in None">Preferred Namespace Prefix</a>
-            </dt>
-            <dd><p>ddbo</p></dd>
-          </div>
-        </dl>
-      </div>
-      <div class="section" id="classes">
-        <h2>Classes</h2>
-        <div class="property entity" id="VideoItem">
-          <h3>Video Item
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoItem</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.8.3</span>
+  </div>
+  <h1>DDB-KG - The German Digital Library Knowledge Graph</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>http://ise-fizkarlsruhe.github.io/ddbkg/ddbo</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+            1. Mary Ann Tan<br/>
+            2. Tabea Tietz<br/>
+            3. Oleksandra Bruns<br/>
+            4. Etienne Posthumus<br/>
+            5. Danilo Dessì<br/>
+            6. Harald Sack<br/>
+        </dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="data_file.ttl">RDF (turtle)</a></dd>
+    </dl>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="text-align:center;">
+            <img src="https://ise-fizkarlsruhe.github.io/ddbkg/images/TvFS.png">
         </div>
-        <div class="property entity" id="VideoManifestation">
-          <h3>Video Manifestation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="mo:MusicalExpression">
-          <h3>mo:MusicalExpression
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/ontology/mo/MusicalExpression</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/ac-ontology/aco#AudioExpression">aco:AudioExpression</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="mo:MusicalItem">
-          <h3>mo:MusicalItem
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/ontology/mo/MusicalItem</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/ac-ontology/aco#AudioItem">aco:AudioItem</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="mo:MusicalManifestation">
-          <h3>mo:MusicalManifestation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/ontology/mo/MusicalManifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">aco:AudioManifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="mo:MusicalWork">
-          <h3>mo:MusicalWork
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/ontology/mo/MusicalWork</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="mo:Record">
-          <h3>mo:Record
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/ontology/mo/Record</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/ac-ontology/aco#AudioCollection">aco:AudioCollection</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Abschnitt">
-          <h3>Abschnittdoco:Section
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/doco/Section</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:AnalogManifestation">
-          <h3>fabio:AnalogManifestation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/AnalogManifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/spar/fabio/PrintObject">fabio:PrintObject</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="digitaleAusprgung">
-          <h3>digitale Ausprägungfabio:DigitalManifestation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/DigitalManifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/spar/fabio/WebManifestation">fabio:WebManifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:Expression">
-          <h3>fabio:Expression
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/Expression</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:Item">
-          <h3>fabio:Item
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/Item</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Ausprgung">
-          <h3>Ausprägungfabio:Manifestation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/Manifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/AnalogManifestation">fabio:AnalogManifestation</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/DigitalManifestation">fabio:DigitalManifestation</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/ManifestationCollection">fabio:ManifestationCollection</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/Page">fabio:Page</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:ManifestationCollection">
-          <h3>fabio:ManifestationCollection
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/ManifestationCollection</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:Page">
-          <h3>fabio:Page
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/Page</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:PrintObject">
-          <h3>fabio:PrintObject
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/PrintObject</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/spar/fabio/AnalogManifestation">fabio:AnalogManifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:WebManifestation">
-          <h3>fabio:WebManifestation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/WebManifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/spar/fabio/DigitalManifestation">fabio:DigitalManifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Werk">
-          <h3>Werkfabio:Work
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/Work</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:Endeavor">
-          <h3>frbr:Endeavor
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#Endeavor</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:Expression">
-          <h3>frbr:Expression
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#Expression</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Endeavor">frbr:Endeavor</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/hasRepresentation">fabio:hasRepresentation</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#embodiment">frbr:embodiment</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#realization">frbr:realization</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/Expression">fabio:Expression</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/ac-ontology/aco#AudioExpression">aco:AudioExpression</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:Item">
-          <h3>frbr:Item
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#Item</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Endeavor">frbr:Endeavor</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/hasRepresentation">fabio:hasRepresentation</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#exemplar">frbr:exemplar</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoItem">ddbo:VideoItem</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/Item">fabio:Item</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/ac-ontology/aco#AudioItem">aco:AudioItem</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:Manifestation">
-          <h3>frbr:Manifestation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#Manifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Endeavor">frbr:Endeavor</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#exemplar">frbr:exemplar</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/hasManifestation">fabio:hasManifestation</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#embodiment">frbr:embodiment</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation">ddbo:VideoManifestation</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">aco:AudioManifestation</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:Work">
-          <h3>frbr:Work
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#Work</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Endeavor">frbr:Endeavor</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/hasManifestation">fabio:hasManifestation</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#realization">frbr:realization</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/ontology/mo/MusicalWork">mo:MusicalWork</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/Work">fabio:Work</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="edm:Event">
-          <h3>edm:Event
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.europeana.eu/schemas/edm/Event</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="edm:ProvidedCHO">
-          <h3>edm:ProvidedCHO
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.europeana.eu/schemas/edm/ProvidedCHO</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Thing">
-          <h3>Thing
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2002/07/owl#Thing</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Organization">
-          <h3>Organization
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://xmlns.com/foaf/0.1/Organization</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Person">
-          <h3>Person
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://xmlns.com/foaf/0.1/Person</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="aco:AudioClip">
-          <h3>aco:AudioClip
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/ac-ontology/aco#AudioClip</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">aco:AudioManifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="aco:AudioCollection">
-          <h3>aco:AudioCollection
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/ac-ontology/aco#AudioCollection</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">aco:AudioManifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/ontology/mo/Record">mo:Record</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="AudioExpression">
-          <h3>Audio Expression
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/ac-ontology/aco#AudioExpression</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/ontology/mo/MusicalExpression">mo:MusicalExpression</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="aco:AudioFile">
-          <h3>aco:AudioFile
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/ac-ontology/aco#AudioFile</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/ac-ontology/aco#AudioItem">aco:AudioItem</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="aco:AudioItem">
-          <h3>aco:AudioItem
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/ac-ontology/aco#AudioItem</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/ontology/mo/MusicalItem">mo:MusicalItem</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/ac-ontology/aco#AudioFile">aco:AudioFile</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="aco:AudioManifestation">
-          <h3>aco:AudioManifestation
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/ac-ontology/aco#AudioManifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/ontology/mo/MusicalManifestation">mo:MusicalManifestation</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/ac-ontology/aco#AudioClip">aco:AudioClip</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/ac-ontology/aco#AudioCollection">aco:AudioCollection</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <div class="section" id="objectproperties">
-        <h2>Object Properties</h2>
-        <div class="property entity" id="creator">
-          <h3>creator
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/dc/terms/creator</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="format">
-          <h3>format
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/dc/terms/format</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="language">
-          <h3>language
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/dc/terms/language</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="license">
-          <h3>license
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/dc/terms/license</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="publisher">
-          <h3>publisher
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/dc/terms/publisher</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:hasManifestation">
-          <h3>fabio:hasManifestation
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/hasManifestation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="hasPlaceOfPublication">
-          <h3>has place of publication
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/hasPlaceOfPublication</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:hasPortrayal">
-          <h3>fabio:hasPortrayal
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/hasPortrayal</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:hasRepresentation">
-          <h3>fabio:hasRepresentation
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/hasRepresentation</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:isManifestationOf">
-          <h3>fabio:isManifestationOf
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/isManifestationOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:isPortrayalOf">
-          <h3>fabio:isPortrayalOf
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/isPortrayalOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="fabio:isRepresentationOf">
-          <h3>fabio:isRepresentationOf
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/spar/fabio/isRepresentationOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:embodiment">
-          <h3>frbr:embodiment
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#embodiment</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:embodimentOf">
-          <h3>frbr:embodimentOf
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#embodimentOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:exemplar">
-          <h3>frbr:exemplar
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#exemplar</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Manifestation">frbr:Manifestation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:exemplarOf">
-          <h3>frbr:exemplarOf
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#exemplarOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:part">
-          <h3>frbr:part
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#part</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:partOf">
-          <h3>frbr:partOf
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#partOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:realization">
-          <h3>frbr:realization
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#realization</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Expression">frbr:Expression</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:realizationOf">
-          <h3>frbr:realizationOf
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#realizationOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">frbr:relatedEndeavor</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="frbr:relatedEndeavor">
-          <h3>frbr:relatedEndeavor
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/frbr/core#relatedEndeavor</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">Super Property Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/hasManifestation">fabio:hasManifestation</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/hasPortrayal">fabio:hasPortrayal</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/hasRepresentation">fabio:hasRepresentation</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/isManifestationOf">fabio:isManifestationOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/isPortrayalOf">fabio:isPortrayalOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/spar/fabio/isRepresentationOf">fabio:isRepresentationOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#embodiment">frbr:embodiment</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#embodimentOf">frbr:embodimentOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#exemplar">frbr:exemplar</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#exemplarOf">frbr:exemplarOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#part">frbr:part</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#partOf">frbr:partOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#realization">frbr:realization</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://purl.org/vocab/frbr/core#realizationOf">frbr:realizationOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Work">frbr:Work</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://purl.org/vocab/frbr/core#Item">frbr:Item</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="topObjectProperty">
-          <h3>top object property
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2002/07/owl#topObjectProperty</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <div class="section" id="datatypeproperties">
-        <h2>Datatype Properties</h2>
-        <div class="property entity" id="schema:thumbnail">
-          <h3>schema:thumbnail
-            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.schema.org/thumbnail</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="topDataProperty">
-          <h3>top data property
-            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2002/07/owl#topDataProperty</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <div class="section" id="annotationproperties">
-        <h2>Annotation Properties</h2>
-        <div class="property entity" id="creator">
-          <h3>creator
-            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/dc/terms/creator</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="preferredNamespacePrefix">
-          <h3>preferred namespace prefix
-            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/vann/preferredNamespacePrefix</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="preferredNamespaceUri">
-          <h3>preferred namespace uri
-            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/vocab/vann/preferredNamespaceUri</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="altLabel">
-          <h3>alt label
-            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2004/02/skos/core#altLabel</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel).</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>
-                  <sup class="sup-p" title="RDF Property">p</sup>
-                </span>
-              </td>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#AudioExpression">AudioExpression</a></li>
+        <li><a href="#Ausprgung">Ausprägung</a></li>
+        <li><a href="#Organization">Organization</a></li>
+        <li><a href="#Person">Person</a></li>
+        <li><a href="#Thing">Thing</a></li>
+        <li><a href="#VideoItem">Video Item</a></li>
+        <li><a href="#VideoManifestation">Video Manifestation</a></li>
+        <li><a href="#aco:AudioClip">aco:AudioClip</a></li>
+        <li><a href="#aco:AudioCollection">aco:AudioCollection</a></li>
+        <li><a href="#aco:AudioFile">aco:AudioFile</a></li>
+        <li><a href="#aco:AudioItem">aco:AudioItem</a></li>
+        <li><a href="#aco:AudioManifestation">aco:AudioManifestation</a></li>
+        <li><a href="#doco:Section">doco:Section</a></li>
+        <li><a href="#edm:Event">edm:Event</a></li>
+        <li><a href="#edm:ProvidedCHO">edm:ProvidedCHO</a></li>
+        <li><a href="#fabio:AnalogManifestation">fabio:AnalogManifestation</a></li>
+        <li><a href="#fabio:DigitalManifestation">fabio:DigitalManifestation</a></li>
+        <li><a href="#fabio:Expression">fabio:Expression</a></li>
+        <li><a href="#fabio:Item">fabio:Item</a></li>
+        <li><a href="#fabio:ManifestationCollection">fabio:ManifestationCollection</a></li>
+        <li><a href="#fabio:Page">fabio:Page</a></li>
+        <li><a href="#fabio:PrintObject">fabio:PrintObject</a></li>
+        <li><a href="#fabio:WebManifestation">fabio:WebManifestation</a></li>
+        <li><a href="#fabio:Work">fabio:Work</a></li>
+        <li><a href="#frbr:Endeavor">frbr:Endeavor</a></li>
+        <li><a href="#frbr:Expression">frbr:Expression</a></li>
+        <li><a href="#frbr:Item">frbr:Item</a></li>
+        <li><a href="#frbr:Manifestation">frbr:Manifestation</a></li>
+        <li><a href="#frbr:Work">frbr:Work</a></li>
+        <li><a href="#mo:MusicalExpression">mo:MusicalExpression</a></li>
+        <li><a href="#mo:MusicalItem">mo:MusicalItem</a></li>
+        <li><a href="#mo:MusicalManifestation">mo:MusicalManifestation</a></li>
+        <li><a href="#mo:MusicalWork">mo:MusicalWork</a></li>
+        <li><a href="#mo:Record">mo:Record</a></li>
+    </ul>
+    <div class="entity class" id="VideoItem">
+        <h3>Video Item<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoItem</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Item">http://purl.org/vocab/frbr/core#Item</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
             </tr>
-          </table>
-        </div>
-      </div>
-      <div id="namespaces">
-        <h2>Namespaces</h2>
-        <dl>
-          <dt id="dcterms">dcterms</dt>
-          <dd>
-            <code>http://purl.org/dc/terms/</code>
-          </dd>
-          <dt id="doco">doco</dt>
-          <dd>
-            <code>http://purl.org/spar/doco/</code>
-          </dd>
-          <dt id="edm">edm</dt>
-          <dd>
-            <code>http://www.europeana.eu/schemas/edm/</code>
-          </dd>
-          <dt id="fabio">fabio</dt>
-          <dd>
-            <code>http://purl.org/spar/fabio/</code>
-          </dd>
-          <dt id="foaf">foaf</dt>
-          <dd>
-            <code>http://xmlns.com/foaf/0.1/</code>
-          </dd>
-          <dt id="mo">mo</dt>
-          <dd>
-            <code>http://purl.org/ontology/mo/</code>
-          </dd>
-          <dt id="ns1">ns1</dt>
-          <dd>
-            <code>http://ise-fizkarlsruhe.github.io/ddbkg/</code>
-          </dd>
-          <dt id="frbr">frbr</dt>
-          <dd>
-            <code>http://purl.org/vocab/frbr/core#</code>
-          </dd>
-          <dt id="aco">aco</dt>
-          <dd>
-            <code>https://w3id.org/ac-ontology/aco#</code>
-          </dd>
-          <dt id="ddbo">ddbo</dt>
-          <dd>
-            <code>http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#</code>
-          </dd>
-          <dt id="owl">owl</dt>
-          <dd>
-            <code>http://www.w3.org/2002/07/owl#</code>
-          </dd>
-          <dt id="prov">prov</dt>
-          <dd>
-            <code>http://www.w3.org/ns/prov#</code>
-          </dd>
-          <dt id="rdf">rdf</dt>
-          <dd>
-            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
-          </dd>
-          <dt id="rdfs">rdfs</dt>
-          <dd>
-            <code>http://www.w3.org/2000/01/rdf-schema#</code>
-          </dd>
-          <dt id="schema1">schema1</dt>
-          <dd>
-            <code>http://www.schema.org/</code>
-          </dd>
-          <dt id="skos">skos</dt>
-          <dd>
-            <code>http://www.w3.org/2004/02/skos/core#</code>
-          </dd>
-          <dt id="vann">vann</dt>
-          <dd>
-            <code>http://purl.org/vocab/vann/</code>
-          </dd>
-        </dl>
-      </div>
-      <div id="legend">
-        <h2>Legend</h2>
-        <table class="entity">
-          <tr>
-            <td>
-              <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-            </td>
-            <td>Classes</td>
-          </tr>
-          <tr>
-            <td>
-              <sup class="sup-op" title="OWL Object Property">op</sup>
-            </td>
-            <td>Object Properties</td>
-          </tr>
-          <tr>
-            <td>
-              <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-            </td>
-            <td>Datatype Properties</td>
-          </tr>
-          <tr>
-            <td>
-              <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-            </td>
-            <td>Annotation Properties</td>
-          </tr>
         </table>
-      </div>
     </div>
-    <div id="pylode">
-      <p>made by 
-        <a href="https://github.com/rdflib/pyLODE">
-          <span id="p">p</span>
-          <span id="y">y</span>
-          <span>LODE</span>
-        </a>
-        <a href="https://github.com/rdflib/pyLODE/release/3.0.2a" id="version">3.0.2a</a>
-      </p>
+    <div class="entity class" id="VideoManifestation">
+        <h3>Video Manifestation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
     </div>
-    <div id="toc">
-      <h3>Table of Contents</h3>
-      <ul class="first">
-        <li>
-          <h4>
-            <a href="#metadata">Metadata</a>
-          </h4>
-        </li>
-        <li>
-          <h4>
-            <a href="#classes">Classes</a>
-          </h4>
-          <ul class="second">
-            <li>
-              <a href="#VideoItem">Video Item</a>
-            </li>
-            <li>
-              <a href="#VideoManifestation">Video Manifestation</a>
-            </li>
-            <li>
-              <a href="#mo:MusicalExpression">mo:MusicalExpression</a>
-            </li>
-            <li>
-              <a href="#mo:MusicalItem">mo:MusicalItem</a>
-            </li>
-            <li>
-              <a href="#mo:MusicalManifestation">mo:MusicalManifestation</a>
-            </li>
-            <li>
-              <a href="#mo:MusicalWork">mo:MusicalWork</a>
-            </li>
-            <li>
-              <a href="#mo:Record">mo:Record</a>
-            </li>
-            <li>
-              <a href="#Abschnitt">Abschnittdoco:Section</a>
-            </li>
-            <li>
-              <a href="#fabio:AnalogManifestation">fabio:AnalogManifestation</a>
-            </li>
-            <li>
-              <a href="#digitaleAusprgung">digitale Ausprägungfabio:DigitalManifestation</a>
-            </li>
-            <li>
-              <a href="#fabio:Expression">fabio:Expression</a>
-            </li>
-            <li>
-              <a href="#fabio:Item">fabio:Item</a>
-            </li>
-            <li>
-              <a href="#Ausprgung">Ausprägungfabio:Manifestation</a>
-            </li>
-            <li>
-              <a href="#fabio:ManifestationCollection">fabio:ManifestationCollection</a>
-            </li>
-            <li>
-              <a href="#fabio:Page">fabio:Page</a>
-            </li>
-            <li>
-              <a href="#fabio:PrintObject">fabio:PrintObject</a>
-            </li>
-            <li>
-              <a href="#fabio:WebManifestation">fabio:WebManifestation</a>
-            </li>
-            <li>
-              <a href="#Werk">Werkfabio:Work</a>
-            </li>
-            <li>
-              <a href="#frbr:Endeavor">frbr:Endeavor</a>
-            </li>
-            <li>
-              <a href="#frbr:Expression">frbr:Expression</a>
-            </li>
-            <li>
-              <a href="#frbr:Item">frbr:Item</a>
-            </li>
-            <li>
-              <a href="#frbr:Manifestation">frbr:Manifestation</a>
-            </li>
-            <li>
-              <a href="#frbr:Work">frbr:Work</a>
-            </li>
-            <li>
-              <a href="#edm:Event">edm:Event</a>
-            </li>
-            <li>
-              <a href="#edm:ProvidedCHO">edm:ProvidedCHO</a>
-            </li>
-            <li>
-              <a href="#Thing">Thing</a>
-            </li>
-            <li>
-              <a href="#Organization">Organization</a>
-            </li>
-            <li>
-              <a href="#Person">Person</a>
-            </li>
-            <li>
-              <a href="#aco:AudioClip">aco:AudioClip</a>
-            </li>
-            <li>
-              <a href="#aco:AudioCollection">aco:AudioCollection</a>
-            </li>
-            <li>
-              <a href="#AudioExpression">Audio Expression</a>
-            </li>
-            <li>
-              <a href="#aco:AudioFile">aco:AudioFile</a>
-            </li>
-            <li>
-              <a href="#aco:AudioItem">aco:AudioItem</a>
-            </li>
-            <li>
-              <a href="#aco:AudioManifestation">aco:AudioManifestation</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h4>
-            <a href="#objectproperties">Object Properties</a>
-          </h4>
-          <ul class="second">
-            <li>
-              <a href="#creator">creator</a>
-            </li>
-            <li>
-              <a href="#format">format</a>
-            </li>
-            <li>
-              <a href="#language">language</a>
-            </li>
-            <li>
-              <a href="#license">license</a>
-            </li>
-            <li>
-              <a href="#publisher">publisher</a>
-            </li>
-            <li>
-              <a href="#fabio:hasManifestation">fabio:hasManifestation</a>
-            </li>
-            <li>
-              <a href="#hasPlaceOfPublication">has place of publication</a>
-            </li>
-            <li>
-              <a href="#fabio:hasPortrayal">fabio:hasPortrayal</a>
-            </li>
-            <li>
-              <a href="#fabio:hasRepresentation">fabio:hasRepresentation</a>
-            </li>
-            <li>
-              <a href="#fabio:isManifestationOf">fabio:isManifestationOf</a>
-            </li>
-            <li>
-              <a href="#fabio:isPortrayalOf">fabio:isPortrayalOf</a>
-            </li>
-            <li>
-              <a href="#fabio:isRepresentationOf">fabio:isRepresentationOf</a>
-            </li>
-            <li>
-              <a href="#frbr:embodiment">frbr:embodiment</a>
-            </li>
-            <li>
-              <a href="#frbr:embodimentOf">frbr:embodimentOf</a>
-            </li>
-            <li>
-              <a href="#frbr:exemplar">frbr:exemplar</a>
-            </li>
-            <li>
-              <a href="#frbr:exemplarOf">frbr:exemplarOf</a>
-            </li>
-            <li>
-              <a href="#frbr:part">frbr:part</a>
-            </li>
-            <li>
-              <a href="#frbr:partOf">frbr:partOf</a>
-            </li>
-            <li>
-              <a href="#frbr:realization">frbr:realization</a>
-            </li>
-            <li>
-              <a href="#frbr:realizationOf">frbr:realizationOf</a>
-            </li>
-            <li>
-              <a href="#frbr:relatedEndeavor">frbr:relatedEndeavor</a>
-            </li>
-            <li>
-              <a href="#topObjectProperty">top object property</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h4>
-            <a href="#datatypeproperties">Datatype Properties</a>
-          </h4>
-          <ul class="second">
-            <li>
-              <a href="#schema:thumbnail">schema:thumbnail</a>
-            </li>
-            <li>
-              <a href="#topDataProperty">top data property</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h4>
-            <a href="#annotationproperties">Annotation Properties</a>
-          </h4>
-          <ul class="second">
-            <li>
-              <a href="#creator">creator</a>
-            </li>
-            <li>
-              <a href="#preferredNamespacePrefix">preferred namespace prefix</a>
-            </li>
-            <li>
-              <a href="#preferredNamespaceUri">preferred namespace uri</a>
-            </li>
-            <li>
-              <a href="#altLabel">alt label</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h4>
-            <a href="#namespaces">Namespaces</a>
-          </h4>
-          <ul class="second">
-            <li>
-              <a href="#dcterms">dcterms</a>
-            </li>
-            <li>
-              <a href="#doco">doco</a>
-            </li>
-            <li>
-              <a href="#edm">edm</a>
-            </li>
-            <li>
-              <a href="#fabio">fabio</a>
-            </li>
-            <li>
-              <a href="#foaf">foaf</a>
-            </li>
-            <li>
-              <a href="#mo">mo</a>
-            </li>
-            <li>
-              <a href="#ns1">ns1</a>
-            </li>
-            <li>
-              <a href="#frbr">frbr</a>
-            </li>
-            <li>
-              <a href="#aco">aco</a>
-            </li>
-            <li>
-              <a href="#ddbo">ddbo</a>
-            </li>
-            <li>
-              <a href="#owl">owl</a>
-            </li>
-            <li>
-              <a href="#prov">prov</a>
-            </li>
-            <li>
-              <a href="#rdf">rdf</a>
-            </li>
-            <li>
-              <a href="#rdfs">rdfs</a>
-            </li>
-            <li>
-              <a href="#schema1">schema1</a>
-            </li>
-            <li>
-              <a href="#skos">skos</a>
-            </li>
-            <li>
-              <a href="#vann">vann</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h4>
-            <a href="#legend">Legend</a>
-          </h4>
-          <ul class="second"></ul>
-        </li>
-      </ul>
+    <div class="entity class" id="mo:MusicalExpression">
+        <h3>mo:MusicalExpression<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/ontology/mo/MusicalExpression</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioExpression">https://w3id.org/ac-ontology/aco#AudioExpression</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
     </div>
-  </body>
+    <div class="entity class" id="mo:MusicalItem">
+        <h3>mo:MusicalItem<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/ontology/mo/MusicalItem</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioItem">https://w3id.org/ac-ontology/aco#AudioItem</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="mo:MusicalManifestation">
+        <h3>mo:MusicalManifestation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/ontology/mo/MusicalManifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">https://w3id.org/ac-ontology/aco#AudioManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="mo:MusicalWork">
+        <h3>mo:MusicalWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/ontology/mo/MusicalWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Work">http://purl.org/vocab/frbr/core#Work</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="mo:Record">
+        <h3>mo:Record<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/ontology/mo/Record</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioCollection">https://w3id.org/ac-ontology/aco#AudioCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="doco:Section">
+        <h3>doco:Section<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/doco/Section</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:AnalogManifestation">
+        <h3>fabio:AnalogManifestation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/AnalogManifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/PrintObject">fabio:PrintObject</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:DigitalManifestation">
+        <h3>fabio:DigitalManifestation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/DigitalManifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/WebManifestation">fabio:WebManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:Expression">
+        <h3>fabio:Expression<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/Expression</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Expression">http://purl.org/vocab/frbr/core#Expression</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:Item">
+        <h3>fabio:Item<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/Item</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Item">http://purl.org/vocab/frbr/core#Item</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Ausprgung">
+        <h3>Ausprägung<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/Manifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/DigitalManifestation">fabio:DigitalManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/spar/fabio/Page">fabio:Page</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/spar/fabio/AnalogManifestation">fabio:AnalogManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/spar/fabio/ManifestationCollection">fabio:ManifestationCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:ManifestationCollection">
+        <h3>fabio:ManifestationCollection<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/ManifestationCollection</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:Page">
+        <h3>fabio:Page<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/Page</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:PrintObject">
+        <h3>fabio:PrintObject<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/PrintObject</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/AnalogManifestation">fabio:AnalogManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:WebManifestation">
+        <h3>fabio:WebManifestation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/WebManifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/DigitalManifestation">fabio:DigitalManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="fabio:Work">
+        <h3>fabio:Work<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/Work</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Work">http://purl.org/vocab/frbr/core#Work</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="frbr:Endeavor">
+        <h3>frbr:Endeavor<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#Endeavor</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Expression">http://purl.org/vocab/frbr/core#Expression</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#Item">http://purl.org/vocab/frbr/core#Item</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#Work">http://purl.org/vocab/frbr/core#Work</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="frbr:Expression">
+        <h3>frbr:Expression<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#Expression</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Endeavor">http://purl.org/vocab/frbr/core#Endeavor</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioExpression">https://w3id.org/ac-ontology/aco#AudioExpression</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/spar/fabio/Expression">fabio:Expression</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/hasRepresentation">fabio:hasRepresentation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#embodiment">http://purl.org/vocab/frbr/core#embodiment</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#realization">http://purl.org/vocab/frbr/core#realization</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="frbr:Item">
+        <h3>frbr:Item<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#Item</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Endeavor">http://purl.org/vocab/frbr/core#Endeavor</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/Item">fabio:Item</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoItem">http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoItem</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioItem">https://w3id.org/ac-ontology/aco#AudioItem</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/hasRepresentation">fabio:hasRepresentation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#exemplar">http://purl.org/vocab/frbr/core#exemplar</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="frbr:Manifestation">
+        <h3>frbr:Manifestation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#Manifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Endeavor">http://purl.org/vocab/frbr/core#Endeavor</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation">http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">https://w3id.org/ac-ontology/aco#AudioManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#exemplar">http://purl.org/vocab/frbr/core#exemplar</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#embodiment">http://purl.org/vocab/frbr/core#embodiment</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/spar/fabio/hasManifestation">fabio:hasManifestation</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="frbr:Work">
+        <h3>frbr:Work<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#Work</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Endeavor">http://purl.org/vocab/frbr/core#Endeavor</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/Work">fabio:Work</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/ontology/mo/MusicalWork">mo:MusicalWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/hasManifestation">fabio:hasManifestation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#realization">http://purl.org/vocab/frbr/core#realization</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="edm:Event">
+        <h3>edm:Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.europeana.eu/schemas/edm/Event</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="edm:ProvidedCHO">
+        <h3>edm:ProvidedCHO<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.europeana.eu/schemas/edm/ProvidedCHO</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Thing">
+        <h3>Thing<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2002/07/owl#Thing</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Organization">
+        <h3>Organization<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://xmlns.com/foaf/0.1/Organization</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Person">
+        <h3>Person<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://xmlns.com/foaf/0.1/Person</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="aco:AudioClip">
+        <h3>aco:AudioClip<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/ac-ontology/aco#AudioClip</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">https://w3id.org/ac-ontology/aco#AudioManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="aco:AudioCollection">
+        <h3>aco:AudioCollection<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/ac-ontology/aco#AudioCollection</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">https://w3id.org/ac-ontology/aco#AudioManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/ontology/mo/Record">mo:Record</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AudioExpression">
+        <h3>AudioExpression<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/ac-ontology/aco#AudioExpression</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Expression">http://purl.org/vocab/frbr/core#Expression</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/ontology/mo/MusicalExpression">mo:MusicalExpression</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="aco:AudioFile">
+        <h3>aco:AudioFile<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/ac-ontology/aco#AudioFile</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioItem">https://w3id.org/ac-ontology/aco#AudioItem</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="aco:AudioItem">
+        <h3>aco:AudioItem<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/ac-ontology/aco#AudioItem</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Item">http://purl.org/vocab/frbr/core#Item</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/ontology/mo/MusicalItem">mo:MusicalItem</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioFile">https://w3id.org/ac-ontology/aco#AudioFile</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="aco:AudioManifestation">
+        <h3>aco:AudioManifestation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/ac-ontology/aco#AudioManifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioClip">https://w3id.org/ac-ontology/aco#AudioClip</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioCollection">https://w3id.org/ac-ontology/aco#AudioCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/ontology/mo/MusicalManifestation">mo:MusicalManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#creator">creator</a></li>
+        <li><a href="#format">format</a></li>
+        <li><a href="#language">language</a></li>
+        <li><a href="#license">license</a></li>
+        <li><a href="#publisher">publisher</a></li>
+        <li><a href="#fabio:hasManifestation">fabio:hasManifestation</a></li>
+        <li><a href="#hasPlaceOfPublication">hasPlaceOfPublication</a></li>
+        <li><a href="#fabio:hasPortrayal">fabio:hasPortrayal</a></li>
+        <li><a href="#fabio:hasRepresentation">fabio:hasRepresentation</a></li>
+        <li><a href="#fabio:isManifestationOf">fabio:isManifestationOf</a></li>
+        <li><a href="#fabio:isPortrayalOf">fabio:isPortrayalOf</a></li>
+        <li><a href="#fabio:isRepresentationOf">fabio:isRepresentationOf</a></li>
+        <li><a href="#frbr:embodiment">frbr:embodiment</a></li>
+        <li><a href="#frbr:embodimentOf">frbr:embodimentOf</a></li>
+        <li><a href="#frbr:exemplar">frbr:exemplar</a></li>
+        <li><a href="#frbr:exemplarOf">frbr:exemplarOf</a></li>
+        <li><a href="#frbr:part">frbr:part</a></li>
+        <li><a href="#frbr:partOf">frbr:partOf</a></li>
+        <li><a href="#frbr:realization">frbr:realization</a></li>
+        <li><a href="#frbr:realizationOf">frbr:realizationOf</a></li>
+        <li><a href="#frbr:relatedEndeavor">frbr:relatedEndeavor</a></li>
+        <li><a href="#topObjectProperty">topObjectProperty</a></li>
+    </ul>
+    <div class="entity property" id="creator">
+        <h3>creator<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/creator</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="format">
+        <h3>format<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/format</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="language">
+        <h3>language<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/language</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="license">
+        <h3>license<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/license</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="publisher">
+        <h3>publisher<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/publisher</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fabio:hasManifestation">
+        <h3>fabio:hasManifestation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/hasManifestation</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/isManifestationOf">fabio:isManifestationOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Work">http://purl.org/vocab/frbr/core#Work</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasPlaceOfPublication">
+        <h3>hasPlaceOfPublication<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/hasPlaceOfPublication</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fabio:hasPortrayal">
+        <h3>fabio:hasPortrayal<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/hasPortrayal</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/isPortrayalOf">fabio:isPortrayalOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fabio:hasRepresentation">
+        <h3>fabio:hasRepresentation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/hasRepresentation</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://purl.org/spar/fabio/isRepresentationOf">fabio:isRepresentationOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Expression">http://purl.org/vocab/frbr/core#Expression</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Item">http://purl.org/vocab/frbr/core#Item</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fabio:isManifestationOf">
+        <h3>fabio:isManifestationOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/isManifestationOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fabio:isPortrayalOf">
+        <h3>fabio:isPortrayalOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/isPortrayalOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fabio:isRepresentationOf">
+        <h3>fabio:isRepresentationOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/spar/fabio/isRepresentationOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:embodiment">
+        <h3>frbr:embodiment<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#embodiment</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#embodimentOf">http://purl.org/vocab/frbr/core#embodimentOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Expression">http://purl.org/vocab/frbr/core#Expression</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:embodimentOf">
+        <h3>frbr:embodimentOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#embodimentOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:exemplar">
+        <h3>frbr:exemplar<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#exemplar</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#exemplarOf">http://purl.org/vocab/frbr/core#exemplarOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Item">http://purl.org/vocab/frbr/core#Item</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:exemplarOf">
+        <h3>frbr:exemplarOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#exemplarOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:part">
+        <h3>frbr:part<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#part</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#partOf">http://purl.org/vocab/frbr/core#partOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:partOf">
+        <h3>frbr:partOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#partOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:realization">
+        <h3>frbr:realization<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#realization</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#realizationOf">http://purl.org/vocab/frbr/core#realizationOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Work">http://purl.org/vocab/frbr/core#Work</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Expression">http://purl.org/vocab/frbr/core#Expression</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:realizationOf">
+        <h3>frbr:realizationOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#realizationOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="frbr:relatedEndeavor">
+        <h3>frbr:relatedEndeavor<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/frbr/core#relatedEndeavor</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Work">http://purl.org/vocab/frbr/core#Work</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://purl.org/vocab/frbr/core#Item">http://purl.org/vocab/frbr/core#Item</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="topObjectProperty">
+        <h3>topObjectProperty<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2002/07/owl#topObjectProperty</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#schema:thumbnail">schema:thumbnail</a></li>
+        <li><a href="#topDataProperty">topDataProperty</a></li>
+    </ul>
+    <div class="entity property" id="schema:thumbnail">
+        <h3>schema:thumbnail<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.schema.org/thumbnail</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="topDataProperty">
+        <h3>topDataProperty<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2002/07/owl#topDataProperty</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="annotationproperties">
+    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#preferredNamespacePrefix">preferredNamespacePrefix</a></li>
+        <li><a href="#preferredNamespaceUri">preferredNamespaceUri</a></li>
+        <li><a href="#altLabel">altLabel</a></li>
+    </ul>
+    <div class="entity property" id="preferredNamespacePrefix">
+        <h3>preferredNamespacePrefix<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/vann/preferredNamespacePrefix</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="preferredNamespaceUri">
+        <h3>preferredNamespaceUri<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/vann/preferredNamespaceUri</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="altLabel">
+        <h3>altLabel<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#altLabel</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+    </ul>
+</section>
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>http://ise-fizkarlsruhe.github.io/ddbkg/ddbo#</code></dd>
+        <dt>dcat</dt>
+        <dd><code>http://www.w3.org/ns/dcat#</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>doco</dt>
+        <dd><code>http://purl.org/spar/doco/</code></dd>
+        <dt>edm</dt>
+        <dd><code>http://www.europeana.eu/schemas/edm/</code></dd>
+        <dt>fabio</dt>
+        <dd><code>http://purl.org/spar/fabio/</code></dd>
+        <dt>foaf</dt>
+        <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
+        <dt>frbr</dt>
+        <dd><code>http://purl.org/spar/fabio/core#</code></dd>
+        <dt>mo</dt>
+        <dd><code>http://purl.org/ontology/mo/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>schema</dt>
+        <dd><code>http://www.schema.org/</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
 </html>
