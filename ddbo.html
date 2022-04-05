@@ -233,6 +233,7 @@
         <li><a href="#objectproperties">Object Properties</a></li>
         <li><a href="#datatypeproperties">Datatype Properties</a></li>
         <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
         <li><a href="#legend">Legend</a></li>
     </ol>
@@ -249,19 +250,22 @@
   <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#Abschnitt">Abschnitt</a></li>
+        <li><a href="#Agent">Agent</a></li>
         <li><a href="#AudioExpression">AudioExpression</a></li>
         <li><a href="#Ausprgung">Ausprägung</a></li>
+        <li><a href="#Concept">Concept</a></li>
         <li><a href="#Organization">Organization</a></li>
         <li><a href="#Person">Person</a></li>
         <li><a href="#Thing">Thing</a></li>
         <li><a href="#VideoItem">Video Item</a></li>
         <li><a href="#VideoManifestation">Video Manifestation</a></li>
+        <li><a href="#Werk">Werk</a></li>
         <li><a href="#aco:AudioClip">aco:AudioClip</a></li>
         <li><a href="#aco:AudioCollection">aco:AudioCollection</a></li>
         <li><a href="#aco:AudioFile">aco:AudioFile</a></li>
         <li><a href="#aco:AudioItem">aco:AudioItem</a></li>
         <li><a href="#aco:AudioManifestation">aco:AudioManifestation</a></li>
-        <li><a href="#doco:Section">doco:Section</a></li>
         <li><a href="#edm:Event">edm:Event</a></li>
         <li><a href="#edm:ProvidedCHO">edm:ProvidedCHO</a></li>
         <li><a href="#fabio:AnalogManifestation">fabio:AnalogManifestation</a></li>
@@ -272,17 +276,25 @@
         <li><a href="#fabio:Page">fabio:Page</a></li>
         <li><a href="#fabio:PrintObject">fabio:PrintObject</a></li>
         <li><a href="#fabio:WebManifestation">fabio:WebManifestation</a></li>
-        <li><a href="#fabio:Work">fabio:Work</a></li>
         <li><a href="#frbr:Endeavor">frbr:Endeavor</a></li>
         <li><a href="#frbr:Expression">frbr:Expression</a></li>
         <li><a href="#frbr:Item">frbr:Item</a></li>
         <li><a href="#frbr:Manifestation">frbr:Manifestation</a></li>
         <li><a href="#frbr:Work">frbr:Work</a></li>
+        <li><a href="#mo:MusicArtist">mo:MusicArtist</a></li>
         <li><a href="#mo:MusicalExpression">mo:MusicalExpression</a></li>
         <li><a href="#mo:MusicalItem">mo:MusicalItem</a></li>
         <li><a href="#mo:MusicalManifestation">mo:MusicalManifestation</a></li>
         <li><a href="#mo:MusicalWork">mo:MusicalWork</a></li>
         <li><a href="#mo:Record">mo:Record</a></li>
+        <li><a href="#mo:ReleaseType">mo:ReleaseType</a></li>
+        <li><a href="#rico:Concept">rico:Concept</a></li>
+        <li><a href="#rico:Record">rico:Record</a></li>
+        <li><a href="#rico:RecordPart">rico:RecordPart</a></li>
+        <li><a href="#rico:RecordSet">rico:RecordSet</a></li>
+        <li><a href="#rico:RecordSetType">rico:RecordSetType</a></li>
+        <li><a href="#rico:Thing">rico:Thing</a></li>
+        <li><a href="#rico:Type">rico:Type</a></li>
     </ul>
     <div class="entity class" id="VideoItem">
         <h3>Video Item<sup title="class" class="sup-c">c</sup></h3>
@@ -310,6 +322,21 @@
                 <th>Super-classes</th>
                 <td>
                     <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="mo:MusicArtist">
+        <h3>mo:MusicArtist<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/ontology/mo/MusicArtist</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -389,8 +416,17 @@
             </tr>
         </table>
     </div>
-    <div class="entity class" id="doco:Section">
-        <h3>doco:Section<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="mo:ReleaseType">
+        <h3>mo:ReleaseType<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/ontology/mo/ReleaseType</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Abschnitt">
+        <h3>Abschnitt<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -486,10 +522,10 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://purl.org/spar/fabio/DigitalManifestation">fabio:DigitalManifestation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/spar/fabio/Page">fabio:Page</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/spar/fabio/AnalogManifestation">fabio:AnalogManifestation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/spar/fabio/ManifestationCollection">fabio:ManifestationCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/spar/fabio/DigitalManifestation">fabio:DigitalManifestation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -554,8 +590,8 @@
             </tr>
         </table>
     </div>
-    <div class="entity class" id="fabio:Work">
-        <h3>fabio:Work<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="Werk">
+        <h3>Werk<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -579,9 +615,9 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/vocab/frbr/core#Expression">http://purl.org/vocab/frbr/core#Expression</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/vocab/frbr/core#Item">http://purl.org/vocab/frbr/core#Item</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/vocab/frbr/core#Manifestation">http://purl.org/vocab/frbr/core#Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/vocab/frbr/core#Work">http://purl.org/vocab/frbr/core#Work</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -603,8 +639,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/ac-ontology/aco#AudioExpression">https://w3id.org/ac-ontology/aco#AudioExpression</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/spar/fabio/Expression">fabio:Expression</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioExpression">https://w3id.org/ac-ontology/aco#AudioExpression</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -646,9 +682,9 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://purl.org/spar/fabio/hasRepresentation">fabio:hasRepresentation</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://purl.org/vocab/frbr/core#exemplar">http://purl.org/vocab/frbr/core#exemplar</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/vocab/frbr/core#exemplar">http://purl.org/vocab/frbr/core#exemplar</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/spar/fabio/hasRepresentation">fabio:hasRepresentation</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -669,8 +705,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation">http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/spar/fabio/Manifestation">fabio:Manifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation">http://ise-fizkkarlsruhe.github.io/ddbkg/ddbo#VideoManifestation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/ac-ontology/aco#AudioManifestation">https://w3id.org/ac-ontology/aco#AudioManifestation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -712,9 +748,9 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://purl.org/spar/fabio/hasManifestation">fabio:hasManifestation</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://purl.org/vocab/frbr/core#relatedEndeavor">http://purl.org/vocab/frbr/core#relatedEndeavor</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://purl.org/vocab/frbr/core#realization">http://purl.org/vocab/frbr/core#realization</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/spar/fabio/hasManifestation">fabio:hasManifestation</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -743,6 +779,30 @@
             <tr>
                 <th>URI</th>
                 <td><code>http://www.w3.org/2002/07/owl#Thing</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Concept">
+        <h3>Concept<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#Concept</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Agent">
+        <h3>Agent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://xmlns.com/foaf/0.1/Agent</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://purl.org/ontology/mo/MusicArtist">mo:MusicArtist</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
             </tr>
         </table>
     </div>
@@ -852,8 +912,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://purl.org/ontology/mo/MusicalItem">mo:MusicalItem</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/ac-ontology/aco#AudioFile">https://w3id.org/ac-ontology/aco#AudioFile</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/ontology/mo/MusicalItem">mo:MusicalItem</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -874,9 +934,141 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/ac-ontology/aco#AudioClip">https://w3id.org/ac-ontology/aco#AudioClip</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ac-ontology/aco#AudioCollection">https://w3id.org/ac-ontology/aco#AudioCollection</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/ontology/mo/MusicalManifestation">mo:MusicalManifestation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioCollection">https://w3id.org/ac-ontology/aco#AudioCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ac-ontology/aco#AudioClip">https://w3id.org/ac-ontology/aco#AudioClip</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="rico:Concept">
+        <h3>rico:Concept<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#Concept</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Type">rico:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="rico:Record">
+        <h3>rico:Record<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#Record</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="rico:RecordPart">
+        <h3>rico:RecordPart<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#RecordPart</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="rico:RecordSet">
+        <h3>rico:RecordSet<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#RecordSet</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#isRecordSetTypeOf">rico:isRecordSetTypeOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="rico:RecordSetType">
+        <h3>rico:RecordSetType<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#RecordSetType</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Type">rico:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#isRecordSetTypeOf">rico:isRecordSetTypeOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="rico:Thing">
+        <h3>rico:Thing<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#Thing</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Record">rico:Record</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://www.ica.org/standards/RiC/ontology#RecordSet">rico:RecordSet</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Concept">rico:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://www.ica.org/standards/RiC/ontology#RecordPart">rico:RecordPart</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="rico:Type">
+        <h3>rico:Type<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#Type</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#Concept">rico:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#RecordSetType">rico:RecordSetType</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -906,7 +1098,14 @@
         <li><a href="#frbr:realization">frbr:realization</a></li>
         <li><a href="#frbr:realizationOf">frbr:realizationOf</a></li>
         <li><a href="#frbr:relatedEndeavor">frbr:relatedEndeavor</a></li>
+        <li><a href="#vra:composer">vra:composer</a></li>
+        <li><a href="#vra:creator">vra:creator</a></li>
         <li><a href="#topObjectProperty">topObjectProperty</a></li>
+        <li><a href="#rico:hasOrHadCategory">rico:hasOrHadCategory</a></li>
+        <li><a href="#rico:hasRecordSetType">rico:hasRecordSetType</a></li>
+        <li><a href="#rico:isOrWasCategoryOf">rico:isOrWasCategoryOf</a></li>
+        <li><a href="#rico:isRecordSetTypeOf">rico:isRecordSetTypeOf</a></li>
+        <li><a href="#rico:isRelatedTo">rico:isRelatedTo</a></li>
     </ul>
     <div class="entity property" id="creator">
         <h3>creator<sup title="object property" class="sup-op">op</sup></h3>
@@ -1295,12 +1494,129 @@
             </tr>
         </table>
     </div>
+    <div class="entity property" id="vra:composer">
+        <h3>vra:composer<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vra/composer</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/vra/creator">vra:creator</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="vra:creator">
+        <h3>vra:creator<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vra/creator</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/dc/terms/creator">dcterms:creator</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="topObjectProperty">
         <h3>topObjectProperty<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td><code>http://www.w3.org/2002/07/owl#topObjectProperty</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rico:hasOrHadCategory">
+        <h3>rico:hasOrHadCategory<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#hasOrHadCategory</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rico:hasRecordSetType">
+        <h3>rico:hasRecordSetType<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#hasRecordSetType</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#hasOrHadCategory">rico:hasOrHadCategory</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#isRecordSetTypeOf">rico:isRecordSetTypeOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rico:isOrWasCategoryOf">
+        <h3>rico:isOrWasCategoryOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#isOrWasCategoryOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rico:isRecordSetTypeOf">
+        <h3>rico:isRecordSetTypeOf<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#isRecordSetTypeOf</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#isOrWasCategoryOf">rico:isOrWasCategoryOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#RecordSetType">rico:RecordSetType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://www.ica.org/standards/RiC/ontology#RecordSet">rico:RecordSet</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rico:isRelatedTo">
+        <h3>rico:isRelatedTo<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://www.ica.org/standards/RiC/ontology#isRelatedTo</code></td>
             </tr>
         </table>
     </div>
@@ -1384,7 +1700,67 @@
   <section id="namedindividuals">
     <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#ric-rst:Collection">ric-rst:Collection</a></li>
+        <li><a href="#ric-rst:File">ric-rst:File</a></li>
+        <li><a href="#ric-rst:Fonds">ric-rst:Fonds</a></li>
     </ul>
+    <div class="entity named_individual" id="ric-rst:Collection">
+        <h3>ric-rst:Collection<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Collection
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://www.ica.org/standards/RiC/ontology#RecordSetType">rico:RecordSetType</a><br/>
+                <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ric-rst:File">
+        <h3>ric-rst:File<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#File
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://www.ica.org/standards/RiC/ontology#RecordSetType">rico:RecordSetType</a><br/>
+                <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ric-rst:Fonds">
+        <h3>ric-rst:Fonds<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://www.ica.org/standards/RiC/ontology#RecordSetType">rico:RecordSetType</a><br/>
+                <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><br/>
+            </dd>
+        </table>
+    </div>
 </section>
   
   <section id="namespaces">
@@ -1406,6 +1782,8 @@
         <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
         <dt>frbr</dt>
         <dd><code>http://purl.org/spar/fabio/core#</code></dd>
+        <dt>lio</dt>
+        <dd><code>http://purl.org/net/lio#</code></dd>
         <dt>mo</dt>
         <dd><code>http://purl.org/ontology/mo/</code></dd>
         <dt>owl</dt>
@@ -1416,12 +1794,16 @@
         <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
         <dt>rdfs</dt>
         <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>rico</dt>
+        <dd><code>https://www.ica.org/standards/RiC/ontology#</code></dd>
         <dt>schema</dt>
         <dd><code>http://www.schema.org/</code></dd>
         <dt>sdo</dt>
         <dd><code>https://schema.org/</code></dd>
         <dt>skos</dt>
         <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vra</dt>
+        <dd><code>http://purl.org/vra/</code></dd>
         <dt>xsd</dt>
         <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
     </dl>
