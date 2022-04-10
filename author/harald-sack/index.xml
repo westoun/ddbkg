@@ -5,12 +5,37 @@
     <link>http://localhost:1313/ddbkg/author/harald-sack/</link>
       <atom:link href="http://localhost:1313/ddbkg/author/harald-sack/index.xml" rel="self" type="application/rss+xml" />
     <description>Harald Sack</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/ddbkg/author/harald-sack/avatar_hueb5ee6b4dcd57e14d79f2bbe8c929faf_31005_270x270_fill_q75_lanczos_center.jpg</url>
       <title>Harald Sack</title>
       <link>http://localhost:1313/ddbkg/author/harald-sack/</link>
     </image>
+    
+    <item>
+      <title>Audio Ontologies for Intangible Cultural Heritage</title>
+      <link>http://localhost:1313/ddbkg/publication/eswc2022pd/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ddbkg/publication/eswc2022pd/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    To be presented at &lt;a href=&#34;https://2022.eswc-conferences.org&#34;&gt;The 19th European
+Semantic Web Conference&lt;/a&gt; (May 29 - June 2, 2022) - &lt;a href=&#34;https://2022.eswc-conferences.org/call-for-posters-and-demos/&#34;&gt;Posters, Demos &amp;amp; Lightning Talks&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!---
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/).
+
+---&gt;
+</description>
+    </item>
     
     <item>
       <title>DDB-KG: The German Bibliographic Heritage in a Knowledge Graph</title>
@@ -43,7 +68,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
       <guid>http://localhost:1313/ddbkg/publication/preprint/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    To be presented at &lt;a href=&#34;https://iswc2021.semanticweb.org&#34;&gt;The 20th International
+    Presented at &lt;a href=&#34;https://iswc2021.semanticweb.org&#34;&gt;The 20th International
 Semantic Web Conference&lt;/a&gt; (October 24-28, 2021) - &lt;a href=&#34;https://iswc2021.semanticweb.org/posters-demos&#34;&gt;Posters, Demos &amp;amp; Lightning Talks&lt;/a&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
