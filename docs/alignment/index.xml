@@ -350,5 +350,16 @@ SELECT DISTINCT ?provider_name (COUNT(?ddbobj) as ?NumObjects) WHERE {
 </description>
     </item>
     
+    <item>
+      <title>Comparison of Cultural Heritage Ontologies</title>
+      <link>http://localhost:1313/ddbkg/docs/alignment/museum/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ddbkg/docs/alignment/museum/</guid>
+      <description>&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/spreadsheets/d/1hdy8pytVkGU1hK1Xd8DpfdbbUjP72XuxJreD6IWSxXU/edit#gid=1447618652&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
