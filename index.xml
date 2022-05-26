@@ -362,6 +362,34 @@ SELECT DISTINCT ?provider_name (COUNT(?ddbobj) as ?NumObjects) WHERE {
     </item>
     
     <item>
+      <title>Metadata Provenance</title>
+      <link>http://localhost:1313/ddbkg/docs/alignment/provenance/</link>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ddbkg/docs/alignment/provenance/</guid>
+      <description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-docs-prov-fig1&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://ise-fizkarlsruhe.github.io/ddbkg/images/prov.jpg&#34; alt=&#34;Metadata Provenance using PROV-O&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+      Metadata Provenance using PROV-O
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Audio Ontologies for Intangible Cultural Heritage</title>
       <link>http://localhost:1313/ddbkg/publication/eswc2022pd/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
