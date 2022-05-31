@@ -33,6 +33,16 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/ddbkg/</loc>
+    <lastmod>2022-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ddbkg/docs/</loc>
+    <lastmod>2022-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/ddbkg/tag/audio/</loc>
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
   </url>
@@ -49,11 +59,6 @@
   
   <url>
     <loc>http://localhost:1313/ddbkg/tag/cultural-heritage/</loc>
-    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/</loc>
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -95,11 +100,6 @@
   <url>
     <loc>http://localhost:1313/ddbkg/tags/</loc>
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ddbkg/docs/</loc>
-    <lastmod>2022-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
