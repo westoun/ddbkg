@@ -413,6 +413,35 @@ SELECT DISTINCT ?provider_name (COUNT(?ddbobj) as ?NumObjects) WHERE {
     </item>
     
     <item>
+      <title>Alignment of DDB Videos to FaBiO</title>
+      <link>http://localhost:1313/ddbkg/docs/alignment/videos/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ddbkg/docs/alignment/videos/</guid>
+      <description>&lt;p&gt;Video objects cover less than 1% of the DDB collection. Similar to audio, videos can be broadly categorized to those having creative and intellectual content and documentation. Search and retrieval of videos can benefit from adopting the endeavors of &lt;a href=&#34;https://www.ifla.org/references/best-practice-for-national-bibliographic-agencies-in-a-digital-age/resource-description-and-standards/bibliographic-control/functional-requirements-the-frbr-family-of-models/functional-requirements-for-bibliographic-records-frbr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FRBR&lt;/a&gt;. To this end, the FaBiO subclass &lt;a href=&#34;http://purl.org/spar/fabio/MovingImage&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fabio:MovingImage&lt;/a&gt; is used to represent resources on the Work level, while &lt;a href=&#34;http://purl.org/spar/fabio/Movie&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fabio:Movie&lt;/a&gt; is used on the Expression level. To address the granularity of the collection, additional subclasses are defined on the Expression level for the different types, e.g. &lt;a href=&#34;https://ise-fizkarlsruhe.github.io/ddbkg/ddbo#Advertisement&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ddbo:Advertisement&lt;/a&gt;, &lt;a href=&#34;http://ise-fizkarlsruhe.github.io/ddbkg/ddbo#AmateurFilm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ddbo:AmateurFilm&lt;/a&gt;, &lt;a href=&#34;http://ise-fizkarlsruhe.github.io/ddbkg/ddbo#Trailer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ddbo:Trailer&lt;/a&gt;, as well as under the Manifestation and Item levels (Figure &lt;a href=&#34;docs-videos-fig1&#34;&gt;1&lt;/a&gt;).&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-docs-videos-fig1&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://ise-fizkarlsruhe.github.io/ddbkg/images/ddbo-video.jpg&#34; alt=&#34;Classes for different types of videos.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+      Classes for different types of videos.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Metadata Provenance</title>
       <link>http://localhost:1313/ddbkg/docs/alignment/provenance/</link>
       <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
