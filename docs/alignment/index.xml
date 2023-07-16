@@ -355,9 +355,49 @@ SELECT DISTINCT ?provider_name (COUNT(?ddbobj) as ?NumObjects) WHERE {
       <link>http://localhost:1313/ddbkg/docs/alignment/museum/</link>
       <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/ddbkg/docs/alignment/museum/</guid>
-      <description>&lt;div class=&#34;responsive-wrap&#34;&gt;
+      <description>&lt;p&gt;With tens of thousands of object types, objects from these sectors are the most diverse. In addition to art collections, mundane objects of cultural value can also be found. Through the use of CIDOC-CRM, DDB-EDM follows an event-centric paradigm. This approach is necessary when historical events associated with museum objects are available, such as sale, ownership transfer, or exhibition. However, most DDB objects only have information about its creation. Hence, it would be more efficient to use an object-centric ontologies such as &lt;a href=&#34;https://s3.amazonaws.com/VRA/ontology.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VRA Core 4.0&lt;/a&gt; where properties are directly linked to the object.  The class used to represent the CHO, &lt;a href=&#34;https://s3.amazonaws.com/VRA/ontology.html#Work&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vra:Work&lt;/a&gt;, is synonymous to frbr:Work. A &lt;em&gt;vra:Work&lt;/em&gt; is associated with a &lt;a href=&#34;https://s3.amazonaws.com/VRA/ontology.html#Image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vra:Image&lt;/a&gt; and could be part of a &lt;a href=&#34;https://s3.amazonaws.com/VRA/ontology.html#Collection&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vra:Collection&lt;/a&gt;. The ontology uses sub-properties to specify the type of vra:creator derived from list of artist roles specified by the Getty Union List of Names (ULAN). Locations (&lt;a href=&#34;https://s3.amazonaws.com/VRA/ontology.html#locationOf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vra:locationOf&lt;/a&gt;) and object relationships (&lt;a href=&#34;https://s3.amazonaws.com/VRA/ontology.html#isRelatedTo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vra:isRelatedTo&lt;/a&gt;) are also specialized using sub-properties. Most VRA object properties are intended to be used in conjunction with &lt;a href=&#34;https://www.getty.edu/research/tools/vocabularies/lod/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Getty Linked Open Data (LOD)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In summary, interoperability is ensured despite the adaptation of domain-specific ontologies by retaining the use of dcterms:* for generic descriptive attributes. Concurrently, FRBR-aligned ontologies are favored for sectors and media types only when they address the modeling requirements. FAIR-compliance is achieved by linking entities to the German Integrated Authority File aka Gemeinsame Normdatei (&lt;a href=&#34;https://doku.wikibase.wiki/wiki/Hauptseite&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GND&lt;/a&gt;), &lt;a href=&#34;https://www.wikidata.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikidata&lt;/a&gt;, and &lt;a href=&#34;https://iconclass.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Iconclass&lt;/a&gt;.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-docs-museum-fig1&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://ise-fizkarlsruhe.github.io/ddbkg/images/docs-museum-comparison.png&#34; alt=&#34;A Comparison of Ontologies for Museum Objects&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+      A Comparison of Ontologies for Museum Objects
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;div class=&#34;responsive-wrap&#34;&gt;
   &lt;iframe src=&#34;https://docs.google.com/spreadsheets/d/1hdy8pytVkGU1hK1Xd8DpfdbbUjP72XuxJreD6IWSxXU/edit#gid=1447618652&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Alignment of DDB Images to LIO</title>
+      <link>http://localhost:1313/ddbkg/docs/alignment/images/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ddbkg/docs/alignment/images/</guid>
+      <description>&lt;p&gt;Images. Images make up to 12% of the DDB collection in total and can be broadly categorized as photographic documentation of artworks, historical objects, monuments, and events, as well as creative works of well-known photographers. Within the DDB, there are several layers of representations of an image: the object being portrayed in the image, the photograph and the digitized form of the photograph. However, there is currently no distinction between these representation layers in the metadata. To address this, the Lightweight Image Ontology (&lt;a href=&#34;http://purl.org/net/lio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIO&lt;/a&gt;) is reused. To represent the stratified representations of an image, &lt;strong&gt;lio:Image&lt;/strong&gt;, a subclass of &lt;a href=&#34;http://xmlns.com/foaf/0.1/#term_Image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;foaf:Image&lt;/a&gt;, is defined as the subject image. The property &lt;a href=&#34;http://xmlns.com/foaf/0.1/#term_depicts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;foaf:depicts&lt;/a&gt; associates the subject image with the actual object, while &lt;strong&gt;lio:hasVisualPart&lt;/strong&gt; is used to specify design or other visual cues visible on the image.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  
+  &lt;li&gt;
+    &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1z-ixNa_rv-PumIhumgDSlMXGqRaamMSdcYn0LfPWq74/edit?usp=sharing&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Google Sheets 👉&lt;/a&gt;
+  &lt;/li&gt;
+  
+  
+&lt;/ul&gt;
+
 </description>
     </item>
     
@@ -366,7 +406,8 @@ SELECT DISTINCT ?provider_name (COUNT(?ddbobj) as ?NumObjects) WHERE {
       <link>http://localhost:1313/ddbkg/docs/alignment/provenance/</link>
       <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/ddbkg/docs/alignment/provenance/</guid>
-      <description>
+      <description>&lt;p&gt;The current DDB infrastructure is based on the Open Archival Information System Model (OAIS), a standard in library management systems. There are around 500 participating public institutions providing metadata in varying exchange formats. It is imperative that &lt;a href=&#34;https://dpworkshop.org/dpm-eng/foundation/oais/ingest.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ingesting&lt;/a&gt; external data into the DDB- EDM format can be traced in the KG. The PROV Ontology (&lt;a href=&#34;https://www.w3.org/TR/prov-o/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PROV-O&lt;/a&gt;) is utilized for this purpose. The CHO and original metadata are defined as instances of &lt;a href=&#34;https://www.w3.org/TR/prov-o/#Entity&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;prov:Entity&lt;/a&gt;. Since “ingest&amp;quot; is single activity, there is no need to define &lt;a href=&#34;https://www.w3.org/TR/prov-o/#Activity&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;prov:Activity&lt;/a&gt;. The metadata provider, DDB and the XSLT mapper are defined as &lt;a href=&#34;https://www.w3.org/TR/prov-o/#Agent&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;prov:Agent&lt;/a&gt;. The PROV-O representation of metadata provenance in the DDB is illustrated here in Figure &lt;a href=&#34;%28#docs-prov-fig1%29&#34;&gt;1&lt;/a&gt;.&lt;/p&gt;
+
 
 
 

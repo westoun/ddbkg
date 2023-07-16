@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Comparison of Cultural Heritage Ontologies" />
+  <meta name="description" content="Alignment of Museum Objects and Cultural Sites" />
 
   
   <link rel="alternate" hreflang="en-us" href="http://localhost:1313/ddbkg/docs/alignment/museum/" />
@@ -280,7 +280,7 @@
   <meta property="og:site_name" content="DDB-KG" />
   <meta property="og:url" content="http://localhost:1313/ddbkg/docs/alignment/museum/" />
   <meta property="og:title" content="Comparison of Cultural Heritage Ontologies | DDB-KG" />
-  <meta property="og:description" content="Comparison of Cultural Heritage Ontologies" /><meta property="og:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="Alignment of Museum Objects and Cultural Sites" /><meta property="og:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -656,6 +656,10 @@
 
 
 
+  <li class=""><a href="/ddbkg/docs/alignment/images/">Images (LIO)</a></li>
+
+
+
   <li class=""><a href="/ddbkg/docs/alignment/provenance/">Provenance</a></li>
 
       
@@ -747,7 +751,29 @@
           <h1>Comparison of Cultural Heritage Ontologies</h1>
 
           <div class="article-style">
-            <div class="responsive-wrap">
+            <p>With tens of thousands of object types, objects from these sectors are the most diverse. In addition to art collections, mundane objects of cultural value can also be found. Through the use of CIDOC-CRM, DDB-EDM follows an event-centric paradigm. This approach is necessary when historical events associated with museum objects are available, such as sale, ownership transfer, or exhibition. However, most DDB objects only have information about its creation. Hence, it would be more efficient to use an object-centric ontologies such as <a href="https://s3.amazonaws.com/VRA/ontology.html" target="_blank" rel="noopener">VRA Core 4.0</a> where properties are directly linked to the object.  The class used to represent the CHO, <a href="https://s3.amazonaws.com/VRA/ontology.html#Work" target="_blank" rel="noopener">vra:Work</a>, is synonymous to frbr:Work. A <em>vra:Work</em> is associated with a <a href="https://s3.amazonaws.com/VRA/ontology.html#Image" target="_blank" rel="noopener">vra:Image</a> and could be part of a <a href="https://s3.amazonaws.com/VRA/ontology.html#Collection" target="_blank" rel="noopener">vra:Collection</a>. The ontology uses sub-properties to specify the type of vra:creator derived from list of artist roles specified by the Getty Union List of Names (ULAN). Locations (<a href="https://s3.amazonaws.com/VRA/ontology.html#locationOf" target="_blank" rel="noopener">vra:locationOf</a>) and object relationships (<a href="https://s3.amazonaws.com/VRA/ontology.html#isRelatedTo" target="_blank" rel="noopener">vra:isRelatedTo</a>) are also specialized using sub-properties. Most VRA object properties are intended to be used in conjunction with <a href="https://www.getty.edu/research/tools/vocabularies/lod/" target="_blank" rel="noopener">Getty Linked Open Data (LOD)</a>.</p>
+<p>In summary, interoperability is ensured despite the adaptation of domain-specific ontologies by retaining the use of dcterms:* for generic descriptive attributes. Concurrently, FRBR-aligned ontologies are favored for sectors and media types only when they address the modeling requirements. FAIR-compliance is achieved by linking entities to the German Integrated Authority File aka Gemeinsame Normdatei (<a href="https://doku.wikibase.wiki/wiki/Hauptseite" target="_blank" rel="noopener">GND</a>), <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a>, and <a href="https://iconclass.org" target="_blank" rel="noopener">Iconclass</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-docs-museum-fig1">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://ise-fizkarlsruhe.github.io/ddbkg/images/docs-museum-comparison.png" alt="A Comparison of Ontologies for Museum Objects" loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      A Comparison of Ontologies for Museum Objects
+    </figcaption></figure>
+<div class="responsive-wrap">
   <iframe src="https://docs.google.com/spreadsheets/d/1hdy8pytVkGU1hK1Xd8DpfdbbUjP72XuxJreD6IWSxXU/edit#gid=1447618652" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 
@@ -774,7 +800,7 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/ddbkg/docs/alignment/provenance/" rel="prev">Metadata Provenance</a>
+    <a href="/ddbkg/docs/alignment/images/" rel="prev">Alignment of DDB Images to LIO</a>
   </div>
   
 </div>
