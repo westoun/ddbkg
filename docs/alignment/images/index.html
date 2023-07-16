@@ -751,16 +751,27 @@
           <h1>Alignment of DDB Images to LIO</h1>
 
           <div class="article-style">
-            <p>Images. Images make up to 12% of the DDB collection in total and can be broadly categorized as photographic documentation of artworks, historical objects, monuments, and events, as well as creative works of well-known photographers. Within the DDB, there are several layers of representations of an image: the object being portrayed in the image, the photograph and the digitized form of the photograph. However, there is currently no distinction between these representation layers in the metadata. To address this, the Lightweight Image Ontology (<a href="http://purl.org/net/lio" target="_blank" rel="noopener">LIO</a>) is reused. To represent the stratified representations of an image, <strong>lio:Image</strong>, a subclass of <a href="http://xmlns.com/foaf/0.1/#term_Image" target="_blank" rel="noopener">foaf:Image</a>, is defined as the subject image. The property <a href="http://xmlns.com/foaf/0.1/#term_depicts" target="_blank" rel="noopener">foaf:depicts</a> associates the subject image with the actual object, while <strong>lio:hasVisualPart</strong> is used to specify design or other visual cues visible on the image.</p>
-<ul class="cta-group">
-  
-  <li>
-    <a href="https://docs.google.com/spreadsheets/d/1z-ixNa_rv-PumIhumgDSlMXGqRaamMSdcYn0LfPWq74/edit?usp=sharing"  class="btn btn-primary px-3 py-3">Google Sheets 👉</a>
-  </li>
-  
-  
-</ul>
+            <p>Images make up to 12% of the DDB collection in total and can be broadly categorized as photographic documentation of artworks, historical objects, monuments, and events, as well as creative works of well-known photographers. Within the DDB, there are several layers of representations of an image: the object being portrayed in the image, the photograph and the digitized form of the photograph (Figure <a href="#docs-images-fig1">1</a>). However, there is currently no distinction between these representation layers in the metadata. To address this, the Lightweight Image Ontology (<a href="http://purl.org/net/lio" target="_blank" rel="noopener">LIO</a>) is reused. To represent the stratified representations of an image, <strong>lio:Image</strong>, a subclass of <a href="http://xmlns.com/foaf/0.1/#term_Image" target="_blank" rel="noopener">foaf:Image</a>, is defined as the subject image. The property <a href="http://xmlns.com/foaf/0.1/#term_depicts" target="_blank" rel="noopener">foaf:depicts</a> associates the subject image with the actual object, while <strong>lio:hasVisualPart</strong> is used to specify design or other visual cues visible on the image.</p>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-docs-images-fig1">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://ise-fizkarlsruhe.github.io/ddbkg/images/docs-images-levels.jpg" alt="Representation levels in images." loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      Representation levels in images.
+    </figcaption></figure>
 
           </div>
 

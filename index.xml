@@ -388,16 +388,27 @@ SELECT DISTINCT ?provider_name (COUNT(?ddbobj) as ?NumObjects) WHERE {
       <link>http://localhost:1313/ddbkg/docs/alignment/images/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/ddbkg/docs/alignment/images/</guid>
-      <description>&lt;p&gt;Images. Images make up to 12% of the DDB collection in total and can be broadly categorized as photographic documentation of artworks, historical objects, monuments, and events, as well as creative works of well-known photographers. Within the DDB, there are several layers of representations of an image: the object being portrayed in the image, the photograph and the digitized form of the photograph. However, there is currently no distinction between these representation layers in the metadata. To address this, the Lightweight Image Ontology (&lt;a href=&#34;http://purl.org/net/lio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIO&lt;/a&gt;) is reused. To represent the stratified representations of an image, &lt;strong&gt;lio:Image&lt;/strong&gt;, a subclass of &lt;a href=&#34;http://xmlns.com/foaf/0.1/#term_Image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;foaf:Image&lt;/a&gt;, is defined as the subject image. The property &lt;a href=&#34;http://xmlns.com/foaf/0.1/#term_depicts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;foaf:depicts&lt;/a&gt; associates the subject image with the actual object, while &lt;strong&gt;lio:hasVisualPart&lt;/strong&gt; is used to specify design or other visual cues visible on the image.&lt;/p&gt;
-&lt;ul class=&#34;cta-group&#34;&gt;
-  
-  &lt;li&gt;
-    &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1z-ixNa_rv-PumIhumgDSlMXGqRaamMSdcYn0LfPWq74/edit?usp=sharing&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Google Sheets 👉&lt;/a&gt;
-  &lt;/li&gt;
-  
-  
-&lt;/ul&gt;
+      <description>&lt;p&gt;Images make up to 12% of the DDB collection in total and can be broadly categorized as photographic documentation of artworks, historical objects, monuments, and events, as well as creative works of well-known photographers. Within the DDB, there are several layers of representations of an image: the object being portrayed in the image, the photograph and the digitized form of the photograph (Figure &lt;a href=&#34;#docs-images-fig1&#34;&gt;1&lt;/a&gt;). However, there is currently no distinction between these representation layers in the metadata. To address this, the Lightweight Image Ontology (&lt;a href=&#34;http://purl.org/net/lio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIO&lt;/a&gt;) is reused. To represent the stratified representations of an image, &lt;strong&gt;lio:Image&lt;/strong&gt;, a subclass of &lt;a href=&#34;http://xmlns.com/foaf/0.1/#term_Image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;foaf:Image&lt;/a&gt;, is defined as the subject image. The property &lt;a href=&#34;http://xmlns.com/foaf/0.1/#term_depicts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;foaf:depicts&lt;/a&gt; associates the subject image with the actual object, while &lt;strong&gt;lio:hasVisualPart&lt;/strong&gt; is used to specify design or other visual cues visible on the image.&lt;/p&gt;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-docs-images-fig1&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://ise-fizkarlsruhe.github.io/ddbkg/images/docs-images-levels.jpg&#34; alt=&#34;Representation levels in images.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+      Representation levels in images.
+    &lt;/figcaption&gt;&lt;/figure&gt;
 </description>
     </item>
     
