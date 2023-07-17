@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="Alignment of DDB-EDM to FaBiO" />
+  <meta name="description" content="Alignment of Archival Objects to RiC-O" />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/ddbkg/docs/alignment/library/" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/ddbkg/docs/alignment/archives/" />
 
   
 
@@ -261,7 +261,7 @@
   <link rel="icon" type="image/png" href="/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_32x32_fill_lanczos_center_2.png" />
   <link rel="apple-touch-icon" type="image/png" href="/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_180x180_fill_lanczos_center_2.png" />
 
-  <link rel="canonical" href="http://localhost:1313/ddbkg/docs/alignment/library/" />
+  <link rel="canonical" href="http://localhost:1313/ddbkg/docs/alignment/archives/" />
 
   
   
@@ -278,9 +278,9 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="DDB-KG" />
-  <meta property="og:url" content="http://localhost:1313/ddbkg/docs/alignment/library/" />
-  <meta property="og:title" content="Alignment of DDB-EDM to FaBiO | DDB-KG" />
-  <meta property="og:description" content="Alignment of DDB-EDM to FaBiO" /><meta property="og:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:url" content="http://localhost:1313/ddbkg/docs/alignment/archives/" />
+  <meta property="og:title" content="Alignment of Archival Objects to RiC-O | DDB-KG" />
+  <meta property="og:description" content="Alignment of Archival Objects to RiC-O" /><meta property="og:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="http://localhost:1313/ddbkg/media/icon_hu721a5c7ae71041b61d7aa8ba822170d4_1023_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -306,11 +306,11 @@
 
 
 
-  <title>Alignment of DDB-EDM to FaBiO | DDB-KG</title>
+  <title>Alignment of Archival Objects to RiC-O | DDB-KG</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="5c631ac6f4fbe3cb36d6d47eb08c9689" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="3b605eeac0baa754c54d8ab0e1247f17" >
 
   
   
@@ -644,7 +644,7 @@
       
 
 
-  <li class="active"><a href="/ddbkg/docs/alignment/library/">Libraries (FaBiO)</a></li>
+  <li class=""><a href="/ddbkg/docs/alignment/library/">Libraries (FaBiO)</a></li>
 
 
 
@@ -652,7 +652,7 @@
 
 
 
-  <li class=""><a href="/ddbkg/docs/alignment/archives/">Archives</a></li>
+  <li class="active"><a href="/ddbkg/docs/alignment/archives/">Archives</a></li>
 
 
 
@@ -748,7 +748,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        Libraries (FaBiO)
+        Archives
       </li>
     </ol>
   </nav>
@@ -756,23 +756,30 @@
 
           
 
-          <h1>Alignment of DDB-EDM to FaBiO</h1>
+          <h1>Alignment of Archival Objects to RiC-O</h1>
 
           <div class="article-style">
-            <p>All terms in the library dataset are assigned to FaBiO endeavor sub-classes manually when applicable. There is no 1-to-1 correspondence between a term and a FaBiO class; this is because a term has several conceptual equivalences: document type, document structure, production process, purpose, manifestation, and subject headings.</p>
-<p>The class/sub-class mapping is specified in the &lsquo;<em>Terms-FaBiO Classes</em>&rsquo; sheet below, while the data and object properties alignment is specified in the &lsquo;<em>WEMI Fields</em>&rsquo; sheet. This mapping is also available as JSON files: <a href="https://github.com/ISE-FIZKarlsruhe/ddbkg/blob/main/config/type2class.json" target="_blank" rel="noopener">type2class.json</a> and <a href="https://github.com/ISE-FIZKarlsruhe/ddbkg/blob/main/config/wemi_fields.json" target="_blank" rel="noopener">wemi_fields.json</a>.</p>
-<ul class="cta-group">
-  
-  <li>
-    <a href="https://docs.google.com/spreadsheets/d/1z-ixNa_rv-PumIhumgDSlMXGqRaamMSdcYn0LfPWq74/edit?usp=sharing"  class="btn btn-primary px-3 py-3">Google Sheets 👉</a>
-  </li>
-  
-  
-</ul>
+            <p>The hierarchy of DDB’s archival objects follows the Encoded Archival Description (<a href="https://www.landesarchiv-bw.de/ead" target="_blank" rel="noopener">EAD</a>). The <a href="https://wiki.deutsche-digitale-bibliothek.de/pages/viewpage.action?pageId=19010180" target="_blank" rel="noopener">DDB-EAD</a> hierarchy types are divided into two main types: “Tektonik” describes the organization of all holdings in a given archive, while “Findbuch” (Finding Aid) describes the organization of archival resources within a single holding. These are mapped to their respective classes in Record in Context Ontology (<a href="https://www.ica.org/standards/RiC/RiC-O_v0-2.html" target="_blank" rel="noopener">RiC-O</a>). RiC-O is an owl ontology developed by Expert Group on Archival Description (EGAD) that provides a unified formal specification to encompass existing archival standards with provisions for integration to the Linked Open Data (LOD) ecosystem. The hierarchical structure of archival record groups in RiC-O is modeled with named individuals which are members of the class <a href="https://www.ica.org/standards/RiC/RiC-O_v0-2.html#RecordSetType" target="_blank" rel="noopener">rico:RecordSetType</a>, which are then connected to an archival object via <a href="https://www.ica.org/standards/RiC/RiC-O_v0-2.html#hasRecordSetType" target="_blank" rel="noopener">rico:hasRecordSetType</a>. Such modeling addresses flexibility required by the use case of the DDB.</p>
 
-<div class="responsive-wrap">
-  <iframe src="https://docs.google.com/spreadsheets/d/1z-ixNa_rv-PumIhumgDSlMXGqRaamMSdcYn0LfPWq74/edit?usp=sharing" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-docs-archives-fig1">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://ise-fizkarlsruhe.github.io/ddbkg/images/ddbo-rico.jpg" alt="Alignment of DDB-EDM Archival Objects to RiCO" loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      Alignment of DDB-EDM Archival Objects to RiCO
+    </figcaption></figure>
 
           </div>
 
@@ -789,8 +796,15 @@
   
   
   <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/ddbkg/docs/alignment/audio/" rel="next">Audio Ontologies in the DDB</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/ddbkg/docs/alignment/audio/" rel="prev">Audio Ontologies in the DDB</a>
+    <a href="/ddbkg/docs/alignment/museum/" rel="prev">Comparison of Cultural Heritage Ontologies</a>
   </div>
   
 </div>

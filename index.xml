@@ -351,6 +351,35 @@ SELECT DISTINCT ?provider_name (COUNT(?ddbobj) as ?NumObjects) WHERE {
     </item>
     
     <item>
+      <title>Alignment of Archival Objects to RiC-O</title>
+      <link>http://localhost:1313/ddbkg/docs/alignment/archives/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ddbkg/docs/alignment/archives/</guid>
+      <description>&lt;p&gt;The hierarchy of DDB’s archival objects follows the Encoded Archival Description (&lt;a href=&#34;https://www.landesarchiv-bw.de/ead&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EAD&lt;/a&gt;). The &lt;a href=&#34;https://wiki.deutsche-digitale-bibliothek.de/pages/viewpage.action?pageId=19010180&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DDB-EAD&lt;/a&gt; hierarchy types are divided into two main types: “Tektonik” describes the organization of all holdings in a given archive, while “Findbuch” (Finding Aid) describes the organization of archival resources within a single holding. These are mapped to their respective classes in Record in Context Ontology (&lt;a href=&#34;https://www.ica.org/standards/RiC/RiC-O_v0-2.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RiC-O&lt;/a&gt;). RiC-O is an owl ontology developed by Expert Group on Archival Description (EGAD) that provides a unified formal specification to encompass existing archival standards with provisions for integration to the Linked Open Data (LOD) ecosystem. The hierarchical structure of archival record groups in RiC-O is modeled with named individuals which are members of the class &lt;a href=&#34;https://www.ica.org/standards/RiC/RiC-O_v0-2.html#RecordSetType&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rico:RecordSetType&lt;/a&gt;, which are then connected to an archival object via &lt;a href=&#34;https://www.ica.org/standards/RiC/RiC-O_v0-2.html#hasRecordSetType&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rico:hasRecordSetType&lt;/a&gt;. Such modeling addresses flexibility required by the use case of the DDB.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-docs-archives-fig1&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://ise-fizkarlsruhe.github.io/ddbkg/images/ddbo-rico.jpg&#34; alt=&#34;Alignment of DDB-EDM Archival Objects to RiCO&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+      Alignment of DDB-EDM Archival Objects to RiCO
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Comparison of Cultural Heritage Ontologies</title>
       <link>http://localhost:1313/ddbkg/docs/alignment/museum/</link>
       <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
