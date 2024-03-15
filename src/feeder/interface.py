@@ -6,10 +6,10 @@ from typing import Any
 
 
 class Feeder(ABC):
-    out_queue: Queue[Any]
+    out_queue: "Queue[Any]"
 
     @abstractmethod
-    def __init__(self, out_queue: Queue) -> None: ...
+    def __init__(self, out_queue: "Queue[Any]") -> None: ...
 
     @abstractmethod
     def run(self) -> None: ...

@@ -6,11 +6,11 @@ from typing import Any
 
 
 class Processor(ABC):
-    in_queue: Queue[Any]
-    out_queue: Queue[Any]
+    in_queue: "Queue[Any]"
+    out_queue: "Queue[Any]"
 
     @abstractmethod
-    def __init__(self, in_queue: Queue[Any], out_queue: Queue[Any]) -> None: ...
+    def __init__(self, in_queue: "Queue[Any]", out_queue: "Queue[Any]") -> None: ...
 
     @abstractmethod
     def run(self) -> None: ...

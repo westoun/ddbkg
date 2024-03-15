@@ -7,12 +7,13 @@ from .interface import Feeder
 
 
 class LinkFeeder(Feeder):
-    out_queue: Queue[Any]
+    out_queue: "Queue[str]"
     links: List[str]
 
-    def __init__(self, links: str, out_queue: Queue) -> None:
+    def __init__(self, links: str, out_queue: "Queue[str]") -> None:
         self.links = links
         self.out_queue = out_queue
 
     def run(self) -> None:
-        raise NotImplementedError()
+        for link in self.links:
+            self.out_queue.put(link)
