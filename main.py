@@ -5,15 +5,15 @@ from typing import List
 
 from src.feeder import Feeder, LinkFeeder
 from src.processors import Processor, LinkProcessor, XmlParser
-from src.sink import Sink, JsonFileSink
+from src.sink import Sink, JsonFileSink, PrintSink
 from src.types_ import ParsingResult, XmlObject
 
 
 def main():
 
-    link_queue: Queue[str] = Queue()
-    xml_object_queue: Queue[XmlObject] = Queue()
-    result_queue: Queue[ParsingResult] = Queue()
+    link_queue: Queue[str] = Queue(1000)
+    xml_object_queue: Queue[XmlObject] = Queue(1000)
+    result_queue: Queue[ParsingResult] = Queue(1000)
 
     link_feeder: Feeder = LinkFeeder(
         links=[
@@ -25,7 +25,8 @@ def main():
         in_queue=link_queue, out_queue=xml_object_queue
     )
     parser: Processor = XmlParser(in_queue=xml_object_queue, out_queue=result_queue)
-    sink: Sink = JsonFileSink(in_queue=result_queue)
+    # sink: Sink = JsonFileSink(in_queue=result_queue)
+    sink: Sink = PrintSink(in_queue=result_queue)
 
     # allocate workers based on which process step is the
     # bottleneck and how many resources are available.
