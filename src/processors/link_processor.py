@@ -21,7 +21,7 @@ class LinkProcessor(Processor):
             link: str = self.in_queue.get()
 
             if link is None:
-                self.out_queue.put(None)
+                self.in_queue.put(None)  # Alert other workers
                 break
 
             response = requests.get(link)
@@ -32,3 +32,5 @@ class LinkProcessor(Processor):
             xml_object = XmlObject(text=xml, object_id=object_id)
 
             self.out_queue.put(xml_object)
+
+        self.out_queue.put(None)

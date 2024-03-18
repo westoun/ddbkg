@@ -18,6 +18,7 @@ class PrintSink(Sink):
             parsing_result: ParsingResult = self.in_queue.get()
 
             if parsing_result is None:
+                self.in_queue.put(None)  # Alert other workers
                 break
 
             print(json.dumps(parsing_result.content, indent=4, ensure_ascii=False))

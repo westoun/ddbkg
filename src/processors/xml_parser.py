@@ -352,7 +352,7 @@ class XmlParser(Processor):
             xml_object: XmlObject = self.in_queue.get()
 
             if xml_object is None:
-                self.out_queue.put(None)
+                self.in_queue.put(None)  # Alert other workers
                 break
 
             self._parser.set_objid(xml_object.object_id)
@@ -362,3 +362,5 @@ class XmlParser(Processor):
                 content=result_content, object_id=xml_object.object_id
             )
             self.out_queue.put(parsing_result)
+
+        self.out_queue.put(None)

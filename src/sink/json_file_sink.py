@@ -21,6 +21,7 @@ class JsonFileSink(Sink):
             parsing_result: ParsingResult = self.in_queue.get()
 
             if parsing_result is None:
+                self.in_queue.put(None)  # Alert other workers
                 break
 
             file_path = f"{self.target_dir}/{parsing_result.object_id}.json"
