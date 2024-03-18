@@ -17,8 +17,6 @@ class PrintSink(Sink):
         while True:
             parsing_result: ParsingResult = self.in_queue.get()
 
-            # TODO: Check if this is best way to detect
-            # end of queue.
             if parsing_result is None:
                 break
 

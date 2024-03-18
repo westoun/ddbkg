@@ -351,9 +351,8 @@ class XmlParser(Processor):
         while True:
             xml_object: XmlObject = self.in_queue.get()
 
-            # TODO: Check if this is best way to detect
-            # end of queue.
             if xml_object is None:
+                self.out_queue.put(None)
                 break
 
             self._parser.set_objid(xml_object.object_id)

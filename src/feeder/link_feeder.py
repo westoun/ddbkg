@@ -17,3 +17,5 @@ class LinkFeeder(Feeder):
     def run(self) -> None:
         for link in self.links:
             self.out_queue.put(link)
+
+        self.out_queue.put(None)

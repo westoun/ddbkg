@@ -20,9 +20,8 @@ class LinkProcessor(Processor):
         while True:
             link: str = self.in_queue.get()
 
-            # TODO: Check if this is best way to detect
-            # end of queue.
             if link is None:
+                self.out_queue.put(None)
                 break
 
             response = requests.get(link)

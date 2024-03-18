@@ -18,6 +18,7 @@ def main():
     link_feeder: Feeder = LinkFeeder(
         links=[
             "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH"
+            ,"http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH"
         ],
         out_queue=link_queue,
     )
