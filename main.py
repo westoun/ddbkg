@@ -3,7 +3,7 @@
 from multiprocessing import Queue, Process
 from typing import List
 
-from src.feeder import Feeder, LinkFeeder
+from src.feeder import Feeder, LinkFeeder, Sqlite3Feeder
 from src.processors import Processor, LinkProcessor, XmlParser
 from src.sink import Sink, JsonFileSink, PrintSink
 from src.types_ import ParsingResult, XmlObject
@@ -15,10 +15,13 @@ def main():
     xml_object_queue: Queue[XmlObject] = Queue(1000)
     result_queue: Queue[ParsingResult] = Queue(1000)
 
+    # sqlite3_feeder: Feeder = Sqlite3Feeder(
+    #     out_queue=xml_object_queue, db_path="sector2.sqlite3"
+    # )
     link_feeder: Feeder = LinkFeeder(
         links=[
-            "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH"
-            ,"http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH"
+            "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH",
+            "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH",
         ],
         out_queue=link_queue,
     )
@@ -26,14 +29,13 @@ def main():
         in_queue=link_queue, out_queue=xml_object_queue
     )
     parser: Processor = XmlParser(in_queue=xml_object_queue, out_queue=result_queue)
-    # sink: Sink = JsonFileSink(in_queue=result_queue)
-    sink: Sink = PrintSink(in_queue=result_queue)
-
-    # allocate workers based on which process step is the
-    # bottleneck and how many resources are available.
+    sink: Sink = JsonFileSink(in_queue=result_queue, target_dir="tmp")
+    # sink: Sink = PrintSink(in_queue=result_queue)
 
     workers: List[Process] = []
 
+    # Allocate workers based on which process step is the
+    # bottleneck and how many resources are available.
     for _ in range(1):
         worker = Process(target=link_processor.run, daemon=True, args=())
         worker.start()
@@ -49,8 +51,8 @@ def main():
         worker.start()
         workers.append(worker)
 
-    # Since link feeder is lightweight, no need for
-    # multiprocessing here...
+    # To avoid race conditions if one feeder process finishes before the 
+    # other, run feeder only in a single process. 
     link_feeder.run()
 
     for worker in workers:
