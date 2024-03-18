@@ -2,6 +2,7 @@
 
 import json
 from multiprocessing import Queue
+import os
 
 from src.types_ import ParsingResult
 from .interface import Sink
@@ -17,9 +18,11 @@ class JsonFileSink(Sink):
     def __init__(
         self, in_queue: "Queue[ParsingResult]", target_dir: str = "tmp"
     ) -> None:
-        # TODO: create dir if not exists
         self.target_dir = target_dir
         self.in_queue = in_queue
+
+        if not os.path.exists(target_dir):
+            os.makedirs(target_dir)
 
     def run(self) -> None:
         while True:
