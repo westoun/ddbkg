@@ -8,6 +8,10 @@ from src.types_ import XmlObject
 
 
 class Feeder(ABC):
+    """Load xml objects as text from a source and put
+    them in a queue for downstream tasks to process.
+    """
+
     out_queue: "Queue[XmlObject]"
 
     @abstractmethod

@@ -8,6 +8,10 @@ from .interface import Sink
 
 
 class PrintSink(Sink):
+    """Print parsing results to stdout.
+    Mostly used for debugging and testing.
+    """
+
     in_queue: "Queue[ParsingResult]"
 
     def __init__(self, in_queue: "Queue[ParsingResult]") -> None:

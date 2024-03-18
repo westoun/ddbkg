@@ -327,12 +327,14 @@ class OriginalParser:
         self.view_fields.clear()
         self.provenance_fields.clear()
 
-        logging.debug(json.dumps(self.object_dict, indent=4, ensure_ascii=False))
-
         return self.object_dict
 
 
 class XmlParser(Processor):
+    """Parse xml objects from text according to the parsing 
+    logic of Ann Tan.
+    """
+
     in_queue: "Queue[XmlObject]"
     out_queue: "Queue[ParsingResult]"
     _parser: OriginalParser

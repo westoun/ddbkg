@@ -9,6 +9,8 @@ from src.types_ import XmlObject
 
 
 class Sqlite3Feeder(Feeder):
+    """Load xml objects as text from an sqlite3 database."""
+
     out_queue: "Queue[XmlObject]"
     db_path: str
 

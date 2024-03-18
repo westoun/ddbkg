@@ -8,10 +8,15 @@ from .interface import Sink
 
 
 class JsonFileSink(Sink):
+    """Store parsing results as json files to a specified
+    directory."""
+
     in_queue: "Queue[ParsingResult]"
     target_dir: str
 
-    def __init__(self, in_queue: "Queue[ParsingResult]", target_dir: str = "tmp") -> None:
+    def __init__(
+        self, in_queue: "Queue[ParsingResult]", target_dir: str = "tmp"
+    ) -> None:
         # TODO: create dir if not exists
         self.target_dir = target_dir
         self.in_queue = in_queue

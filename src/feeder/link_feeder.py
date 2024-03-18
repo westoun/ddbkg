@@ -9,6 +9,8 @@ from src.types_ import XmlObject
 
 
 class LinkFeeder(Feeder):
+    """Fetch xml objects as text from a list of links."""
+
     out_queue: "Queue[XmlObject]"
     links: List[str]
 

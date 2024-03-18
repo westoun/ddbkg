@@ -7,6 +7,10 @@ from src.types_ import ParsingResult
 
 
 class Sink(ABC):
+    """Get parsing results from a queue and store them
+    accordingly.
+    """
+
     in_queue: "Queue[ParsingResult]"
 
     @abstractmethod

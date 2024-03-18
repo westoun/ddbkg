@@ -8,6 +8,11 @@ from src.types_ import XmlObject, ParsingResult
 
 
 class Processor(ABC):
+    """Get xml objects from a queue, parse them accordingly
+    and put the result in an output queue for downstream
+    tasks to process/store.
+    """
+
     in_queue: "Queue[XmlObject]"
     out_queue: "Queue[ParsingResult]"
 
