@@ -1,3 +1,3 @@
 from .interface import Feeder
-from .link_feeder import LinkFeeder
+from .link_list_feeder import LinkListFeeder
 from .sqlite3_feeder import Sqlite3Feeder

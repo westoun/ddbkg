@@ -3,7 +3,7 @@
 from multiprocessing import Queue, Process
 from typing import List
 
-from src.feeder import Feeder, LinkFeeder, Sqlite3Feeder
+from src.feeder import Feeder, LinkListFeeder, Sqlite3Feeder
 from src.processors import Processor, XmlParser
 from src.sink import Sink, JsonFileSink, PrintSink, JsonlFileSink
 from src.types_ import ParsingResult, XmlObject
@@ -17,7 +17,7 @@ def main():
     # sqlite3_feeder: Feeder = Sqlite3Feeder(
     #     out_queue=xml_object_queue, db_path="sector2.sqlite3"
     # )
-    link_feeder: Feeder = LinkFeeder(
+    link_feeder: Feeder = LinkListFeeder(
         links=[
             "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH",
             "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH",
