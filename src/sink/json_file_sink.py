@@ -3,6 +3,7 @@
 import json
 from multiprocessing import Queue
 import os
+from os import getenv
 
 from src.types_ import ParsingResult
 from .interface import Sink
@@ -12,12 +13,17 @@ class JsonFileSink(Sink):
     """Store parsing results as json files to a specified
     directory."""
 
+    TYPE: str = "json"
+
     in_queue: "Queue[ParsingResult]"
     target_dir: str
 
-    def __init__(
-        self, in_queue: "Queue[ParsingResult]", target_dir: str = "tmp"
-    ) -> None:
+    def __init__(self, in_queue: "Queue[ParsingResult]") -> None:
+        target_dir = getenv("SINK_TARGET_DIR")
+
+        if target_dir is None:
+            target_dir = "tmp"
+
         self.target_dir = target_dir
         self.in_queue = in_queue
 

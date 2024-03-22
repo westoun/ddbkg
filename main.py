@@ -6,7 +6,7 @@ from typing import List
 
 from src.feeder import Feeder, FeederFactory
 from src.processors import Processor, XmlParser
-from src.sink import Sink, JsonFileSink, PrintSink, JsonlFileSink
+from src.sink import Sink, SinkFactory
 from src.types_ import ParsingResult, XmlObject
 
 load_dotenv()
@@ -20,8 +20,7 @@ def main():
     feeder: Feeder = FeederFactory.get_feeder(out_queue=xml_object_queue)
 
     parser: Processor = XmlParser(in_queue=xml_object_queue, out_queue=result_queue)
-    sink: Sink = JsonlFileSink(in_queue=result_queue, target_dir="tmp", batch_size=10)
-    # sink: Sink = PrintSink(in_queue=result_queue)
+    sink: Sink = SinkFactory.get_sink(in_queue=result_queue)
 
     workers: List[Process] = []
 

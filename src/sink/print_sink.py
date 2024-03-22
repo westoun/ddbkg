@@ -12,6 +12,8 @@ class PrintSink(Sink):
     Mostly used for debugging and testing.
     """
 
+    TYPE: str = "print"
+
     in_queue: "Queue[ParsingResult]"
 
     def __init__(self, in_queue: "Queue[ParsingResult]") -> None:

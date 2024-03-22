@@ -11,6 +11,8 @@ class Sink(ABC):
     accordingly.
     """
 
+    TYPE: str
+
     in_queue: "Queue[ParsingResult]"
 
     @abstractmethod

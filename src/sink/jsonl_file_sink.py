@@ -3,6 +3,7 @@
 import json
 from multiprocessing import Queue
 import os
+from os import getenv
 from typing import List
 from uuid import uuid4
 
@@ -13,16 +14,25 @@ from .interface import Sink
 class JsonlFileSink(Sink):
     """Store parsing results in bulks to jsonl files."""
 
+    TYPE: str = "jsonl"
+
     in_queue: "Queue[ParsingResult]"
     target_dir: str
     batch_size: int
 
-    def __init__(
-        self,
-        in_queue: "Queue[ParsingResult]",
-        target_dir: str = "tmp",
-        batch_size: int = 10,
-    ) -> None:
+    def __init__(self, in_queue: "Queue[ParsingResult]") -> None:
+        target_dir = getenv("SINK_TARGET_DIR")
+
+        if target_dir is None:
+            target_dir = "tmp"
+
+        batch_size = getenv("BATCH_SIZE")
+
+        if batch_size is None:
+            batch_size = 10
+        else:
+            batch_size = int(batch_size.strip())
+
         self.target_dir = target_dir
         self.in_queue = in_queue
         self.batch_size = batch_size
