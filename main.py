@@ -3,7 +3,8 @@
 from multiprocessing import Queue, Process
 from typing import List
 
-from src.feeder import Feeder, LinkListFeeder, Sqlite3Feeder
+from src.feeder import Feeder, LinkListFeeder, Sqlite3Feeder, \
+    LinkFileFeeder
 from src.processors import Processor, XmlParser
 from src.sink import Sink, JsonFileSink, PrintSink, JsonlFileSink
 from src.types_ import ParsingResult, XmlObject
@@ -17,13 +18,17 @@ def main():
     # sqlite3_feeder: Feeder = Sqlite3Feeder(
     #     out_queue=xml_object_queue, db_path="sector2.sqlite3"
     # )
-    link_feeder: Feeder = LinkListFeeder(
-        links=[
-            "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH",
-            "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH",
-        ],
+    link_feeder: Feeder = LinkFileFeeder(
+        path = "links.txt",
         out_queue=xml_object_queue,
     )
+    # link_feeder: Feeder = LinkListFeeder(
+    #     links=[
+    #         "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH",
+    #         "http://deutsche-digitale-bibliothek.de/item/xml/SXWUDEQ3XNNHGZAIBUEEVH43ONU7TKOH",
+    #     ],
+    #     out_queue=xml_object_queue,
+    # )
     parser: Processor = XmlParser(in_queue=xml_object_queue, out_queue=result_queue)
     sink: Sink = JsonlFileSink(in_queue=result_queue, target_dir="tmp", batch_size=10)
     # sink: Sink = PrintSink(in_queue=result_queue)
