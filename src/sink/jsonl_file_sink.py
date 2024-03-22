@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+
+import json
+from multiprocessing import Queue
+import os
+from typing import List
+from uuid import uuid4
+
+from src.types_ import ParsingResult
+from .interface import Sink
+
+
+class JsonlFileSink(Sink):
+    """Store parsing results in bulks to jsonl files."""
+
+    in_queue: "Queue[ParsingResult]"
+    target_dir: str
+    batch_size: int
+
+    def __init__(
+        self,
+        in_queue: "Queue[ParsingResult]",
+        target_dir: str = "tmp",
+        batch_size: int = 10,
+    ) -> None:
+        self.target_dir = target_dir
+        self.in_queue = in_queue
+        self.batch_size = batch_size
+
+        if not os.path.exists(target_dir):
+            os.makedirs(target_dir)
+
+    def run(self) -> None:
+        batch_results: List[ParsingResult] = []
+        while True:
+            parsing_result: ParsingResult = self.in_queue.get()
+
+            if parsing_result is None:
+                self.in_queue.put(None)  # Alert other workers
+                self.store_batch(batch_results)
+                break
+
+            batch_results.append(parsing_result)
+
+            if len(batch_results) >= self.batch_size:
+                self.store_batch(batch_results)
+                batch_results = []
+
+    def store_batch(self, parsing_results: List[ParsingResult]) -> None:
+        target_path = f"{self.target_dir}/{uuid4()}.jsonl"
+        with open(target_path, "w") as target_file:
+            for result in parsing_results:
+                target_file.write(json.dumps([result.object_id, result.content]) + "\n")

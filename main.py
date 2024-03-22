@@ -5,7 +5,7 @@ from typing import List
 
 from src.feeder import Feeder, LinkFeeder, Sqlite3Feeder
 from src.processors import Processor, XmlParser
-from src.sink import Sink, JsonFileSink, PrintSink
+from src.sink import Sink, JsonFileSink, PrintSink, JsonlFileSink
 from src.types_ import ParsingResult, XmlObject
 
 
@@ -25,7 +25,7 @@ def main():
         out_queue=xml_object_queue,
     )
     parser: Processor = XmlParser(in_queue=xml_object_queue, out_queue=result_queue)
-    sink: Sink = JsonFileSink(in_queue=result_queue, target_dir="tmp")
+    sink: Sink = JsonlFileSink(in_queue=result_queue, target_dir="tmp", batch_size=10)
     # sink: Sink = PrintSink(in_queue=result_queue)
 
     workers: List[Process] = []
