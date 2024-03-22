@@ -12,6 +12,8 @@ class Feeder(ABC):
     them in a queue for downstream tasks to process.
     """
 
+    TYPE: str
+
     out_queue: "Queue[XmlObject]"
 
     @abstractmethod

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from multiprocessing import Queue
+from os import getenv
 import sqlite3
 from typing import Any, List
 
@@ -11,12 +12,19 @@ from src.types_ import XmlObject
 class Sqlite3Feeder(Feeder):
     """Load xml objects as text from an sqlite3 database."""
 
+    TYPE: str = "sqlite3"
+
     out_queue: "Queue[XmlObject]"
     db_path: str
 
-    def __init__(
-        self, out_queue: "Queue[XmlObject]", db_path: str = "sector2.sqlite3"
-    ) -> None:
+    def __init__(self, out_queue: "Queue[XmlObject]") -> None:
+        db_path = getenv("SQLITE3_PATH")
+
+        assert db_path is not None, (
+            f"If the feeder type '{self.TYPE}' is selected, the environment variable "
+            "'SQLITE3_PATH' also has to be specified."
+        )
+
         self.db_path = db_path
         self.out_queue = out_queue
 

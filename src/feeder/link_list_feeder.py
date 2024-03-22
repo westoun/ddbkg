@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from multiprocessing import Queue
+from os import getenv
 import requests
 from typing import Any, List
 
@@ -11,11 +12,20 @@ from src.types_ import XmlObject
 class LinkListFeeder(Feeder):
     """Fetch xml objects as text from a list of links."""
 
+    TYPE: str = "link-list"
+
     out_queue: "Queue[XmlObject]"
     links: List[str]
 
-    def __init__(self, links: str, out_queue: "Queue[XmlObject]") -> None:
-        self.links = links
+    def __init__(self, out_queue: "Queue[XmlObject]") -> None:
+        links_str = getenv("LINKS")
+
+        assert links_str is not None, (
+            f"If the feeder type '{self.TYPE}' is selected, the environment variable 'LINKS' "
+            f"also has to be specified (comma separated)."
+        )
+
+        self.links = [link.strip() for link in links_str.split(",")]
         self.out_queue = out_queue
 
     def run(self) -> None:

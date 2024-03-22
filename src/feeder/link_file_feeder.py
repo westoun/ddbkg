@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from multiprocessing import Queue
+from os import getenv
 import requests
 from typing import Any, List
 
@@ -12,10 +13,19 @@ class LinkFileFeeder(Feeder):
     """Fetch xml objects as text from a file that contains links
     separated by new line.."""
 
+    TYPE: str = "link-file"
+
     out_queue: "Queue[XmlObject]"
     links: List[str]
 
-    def __init__(self, path: str, out_queue: "Queue[XmlObject]") -> None:
+    def __init__(self, out_queue: "Queue[XmlObject]") -> None:
+        path = getenv("LINK_FILE_PATH")
+
+        assert path is not None, (
+            f"If the feeder type '{self.TYPE}' is selected, the environment variable "
+            "'LINK_FILE_PATH' also has to be specified."
+        )
+
         self.links = self.load_links(path)
         self.out_queue = out_queue
 
