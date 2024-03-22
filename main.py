@@ -2,6 +2,7 @@
 
 from dotenv import load_dotenv
 from multiprocessing import Queue, Process
+from os import getenv
 from typing import List
 
 from src.feeder import Feeder, FeederFactory
@@ -14,6 +15,18 @@ load_dotenv()
 
 def main():
 
+    parser_worker_count = getenv("PARSER_WORKER_COUNT")
+    if parser_worker_count is None:
+        parser_worker_count = 1
+    else:
+        parser_worker_count = int(parser_worker_count.strip())
+    
+    sink_worker_count = getenv("SINK_WORKER_COUNT")
+    if sink_worker_count is None:
+        sink_worker_count = 1
+    else:
+        sink_worker_count = int(sink_worker_count.strip())
+
     xml_object_queue: Queue[XmlObject] = Queue(1000)
     result_queue: Queue[ParsingResult] = Queue(1000)
 
@@ -23,15 +36,12 @@ def main():
     sink: Sink = SinkFactory.get_sink(in_queue=result_queue)
 
     workers: List[Process] = []
-
-    # Allocate workers based on which process step is the
-    # bottleneck and how many resources are available.
-    for _ in range(1):
+    for _ in range(parser_worker_count):
         worker = Process(target=parser.run, daemon=True, args=())
         worker.start()
         workers.append(worker)
 
-    for _ in range(1):
+    for _ in range(sink_worker_count):
         worker = Process(target=sink.run, daemon=True, args=())
         worker.start()
         workers.append(worker)
